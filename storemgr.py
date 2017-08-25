@@ -11,10 +11,24 @@ class StoreManger(object):
     
         client = MongoClient(uri)
     
-        db = client['recommond']
+        self.db = client['recommond']
         
-        self.coll = db['recommond']
+        self.coll = self.db['recommond']
         
+    def checkUser(self, name, pwd):
+    
+        usercoll = self.db['users']
+
+        user = usercoll.find({'name': name})
+
+        for u in user:
+    
+            if u['pwd'] == pwd:
+                
+                return True
+
+        return False
+    
     def saveToDb(self, data):
     
         self.coll.insert_one(data)
