@@ -1,6 +1,6 @@
 from cx_Freeze import setup, Executable
 
-build_exe_options = {"packages": ["jwt"]}
+build_exe_options = {"packages": ["jwt", 'appdirs']}
 
 setup(
     name = 'pack',
