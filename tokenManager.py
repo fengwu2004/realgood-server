@@ -12,7 +12,10 @@ class TokenManager(object):
         
     def checkToken(self, token):
         
-        dc = jwt.decode(token, secretKey, algorithms=['HS256'])
+        try:
+            dc = jwt.decode(token, secretKey, algorithms = ['HS256'])
+        except:
+            return False
         
         print(dc)
         
@@ -20,7 +23,7 @@ class TokenManager(object):
     
     def createToken(self, userName):
         
-        token = jwt.encode({'user': userName}, secretKey + userName, algorithm = 'HS256').decode('utf-8')
+        token = jwt.encode({'user': userName}, secretKey, algorithm = 'HS256').decode('utf-8')
 
         return token
 
