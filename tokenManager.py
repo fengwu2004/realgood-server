@@ -1,4 +1,4 @@
-import jwt
+from jwt import JWT
 
 secretKey = 'jsdjfiofjenwkdsjlskjslkdfjsdlfk'
 
@@ -12,7 +12,7 @@ class TokenManager(object):
         
     def checkToken(self, token):
         
-        dc = jwt.decode(token, secretKey, algorithms=['HS256'])
+        dc = JWT.decode(token, secretKey, algorithms=['HS256'])
         
         print(dc)
         
@@ -30,7 +30,7 @@ class TokenManager(object):
     
     def createToken(self, userName):
         
-        token = jwt.encode({'user': userName}, secretKey + userName, algorithm = 'HS256').decode('utf-8')
+        token = JWT.encode({'user': userName}, secretKey + userName, algorithm = 'HS256').decode('utf-8')
 
         return token
 
