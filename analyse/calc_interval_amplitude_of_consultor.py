@@ -18,6 +18,10 @@ class RangeTrend(object):
         self.min = 0
         # 出现最大值的时间
         self.maxOffset = 0
+        
+    def toJson(self):
+        
+        return self.__dict__
 
 def getTime (value):
     
@@ -52,7 +56,11 @@ def getRangeTrend(index, offset, dayvalues):
 def getTradeInfoAfter(date, stockname):
     
     stock = Stock.fromJson(loadStock(stockname))
-    
+
+    if stock is None:
+        
+        return None
+
     index = 0
 
     for dayvalue in stock.dayvalues:
@@ -79,27 +87,33 @@ def getTradeInfoAfter(date, stockname):
             
             trend = getRangeTrend(index, i, stock.dayvalues)
 
-            results.append(trend)
+            results.append(trend.toJson())
             
     return results
 
-def calc(consultorname):
+def doRun(consultorname):
     
     recommonds = []
     
-    stockOfTrend = dict()
-
     items = storemgr.intance().findInfoWith({'consultor.name': consultorname})
 
     for item in items:
         
         recommonds.append(RecommondUnit.fromJson(item))
 
+    results = []
+    
     for recommond in recommonds:
         
-        stockOfTrend['recommond'] = recommond
+        stockOfTrend = dict()
+        
+        stockOfTrend['recommond'] = recommond.toJson()
     
         stockOfTrend['trend'] = getTradeInfoAfter(time.strptime(recommond.date, '%Y-%m-%dT%H:%M:%S.%fZ'),
                                                        recommond.stockname)
+
+        results.append(stockOfTrend)
         
-    return stockOfTrend
+    print(results)
+        
+    return results

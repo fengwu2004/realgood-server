@@ -82,5 +82,3 @@ def loadStock(stockname):
         return obj
 
     return None
-
-# saveToDB()

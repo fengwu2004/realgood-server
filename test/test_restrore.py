@@ -1,6 +1,6 @@
 # 将推荐数据重新存储
 from pymongo import MongoClient
-from recommond_unit import RecommondUnit, Consultor
+from data.recommond_unit import RecommondUnit, Consultor
 
 uri = "mongodb://yanli:9394@123.207.213.131:27017/recommond?authMechanism=SCRAM-SHA-1"
 

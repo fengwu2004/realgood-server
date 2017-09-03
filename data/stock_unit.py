@@ -80,6 +80,10 @@ class Stock(object):
     @classmethod
     def fromJson(cls, jsonvalue):
         
+        if jsonvalue is None:
+            
+            return None
+        
         obj = Stock()
         
         obj.id = jsonvalue['id']

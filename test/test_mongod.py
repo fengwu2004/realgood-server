@@ -2,9 +2,9 @@ from pymongo import MongoClient
 import storemgr
 import json
 import time
-from recommond_unit import RecommondUnit
-from stock.storemgr import loadStock
-from stock.stock_unit import Stock
+from data.recommond_unit import RecommondUnit
+from stock.stockstoremgr import loadStock
+from data.stock_unit import Stock
 
 uri = "mongodb://yanli:9394@123.207.213.131:27017/recommond?authMechanism=SCRAM-SHA-1"
 

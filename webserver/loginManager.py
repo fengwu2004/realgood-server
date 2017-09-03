@@ -1,7 +1,9 @@
-from tokenManager import TokenManagerInstance
-from RequestBaseManager import RequestBaseManager
 import json
+
 import storemgr
+from webserver.RequestBaseManager import RequestBaseManager
+from webserver.tokenManager import TokenManagerInstance
+
 
 class loginManager(RequestBaseManager):
     

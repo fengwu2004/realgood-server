@@ -6,5 +6,5 @@ setup(
     name = 'pack',
     version = '0.1',
     options = {'build_exe': build_exe_options},
-    executables = [Executable('storemgr.py', base = None)]
+    executables = [Executable('stockstoremgr.py', base = None)]
 )

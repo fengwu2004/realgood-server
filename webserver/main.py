@@ -1,13 +1,15 @@
 import tornado.escape
 import tornado.ioloop
 import tornado.web
-from saveRecommond import SaveRecommond
-from loginManager import loginManager
 
+from webserver.calc_range_trend import CalcRangeTrend
+from webserver.save_recommond import SaveRecommond
+from webserver.loginManager import loginManager
 
 def make_app():
     return tornado.web.Application([
         (r"/save/saverecommondinfo", SaveRecommond),
+        (r"/analyse/rangetrend", CalcRangeTrend),
         (r"/login", loginManager),
     ])
 
