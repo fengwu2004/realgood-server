@@ -1,8 +1,8 @@
 # 计算区间振幅
-from data.recommond_unit import RecommondUnit, RangeTrend
+from data.recommond_unit import RecommondUnit, RangeTrend, Recommond, RecommondTrends
 from stock.stockstoremgr import loadStock
 import time
-from data.stock_unit import Stock
+from data.stock_unit import Stock, DayValue
 
 import storemgr
 
@@ -10,7 +10,7 @@ def getTime (value):
     
     return time.strptime(value, '%Y/%m/%d')
 
-def getRangeTrend(index, offset, dayvalues):
+def getRangeTrend(index, offset, dayvalues:[DayValue]):
     
     trend = RangeTrend()
 
@@ -34,6 +34,10 @@ def getRangeTrend(index, offset, dayvalues):
             
             trend.min = dayvlaue.min
             
+    trend.maxPercent = (trend.max - dayvalues[index].open)/dayvalues[index].open
+
+    trend.maxPercent *= 100
+            
     return trend
     
 def getTradeInfoAfter(date, stockname):
@@ -42,7 +46,7 @@ def getTradeInfoAfter(date, stockname):
 
     if stock is None:
         
-        return None
+        return []
 
     index = 0
 
@@ -58,7 +62,7 @@ def getTradeInfoAfter(date, stockname):
         
     if index >= len(stock.dayvalues):
         
-        return None
+        return []
     
     days = [1, 3, 5, 10, 20, 40, 60]
         
@@ -70,32 +74,24 @@ def getTradeInfoAfter(date, stockname):
             
             trend = getRangeTrend(index, i, stock.dayvalues)
 
-            results.append(trend.toJson())
+            results.append(trend)
             
     return results
 
-def doRun(consultorname):
+def doRun(reommonds:[Recommond]) -> [RecommondTrends]:
     
-    recommonds = []
-    
-    items = storemgr.intance().findInfoWith({'consultor.name': consultorname})
-
-    for item in items:
-        
-        recommonds.append(RecommondUnit.fromJson(item))
-
     results = []
     
-    for recommond in recommonds:
+    for recommond in reommonds:
         
-        stockOfTrend = dict()
-        
-        stockOfTrend['recommond'] = recommond.toJson()
-    
-        stockOfTrend['trend'] = getTradeInfoAfter(time.strptime(recommond.date, '%Y-%m-%dT%H:%M:%S.%fZ'),
+        obj = RecommondTrends()
+
+        obj.recommond = recommond
+
+        obj.trends = getTradeInfoAfter(time.strptime(recommond.date, '%Y-%m-%dT%H:%M:%S.%fZ'),
                                                        recommond.stockname)
 
-        results.append(stockOfTrend)
+        results.append(obj)
         
     print(results)
         

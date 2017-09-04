@@ -1,10 +1,8 @@
 # 计算区间涨跌幅度
 import json
-
 from webserver.RequestBaseManager import RequestBaseManager
-
-from analyse import calc_interval_amplitude_of_consultor
 from webserver.tokenManager import TokenManagerInstance
+import storemgr
 
 class CalcRangeTrend(RequestBaseManager):
 
@@ -18,8 +16,8 @@ class CalcRangeTrend(RequestBaseManager):
             
             self.write(res)
         
-        results = calc_interval_amplitude_of_consultor.doRun(data['consultor'])
-
+        results = storemgr.intance().findInfoIn('recommondtrends', {'consultor.name':data['consultor']})
+        
         res = {'success': 1, 'data': results}
         
         self.write(res)

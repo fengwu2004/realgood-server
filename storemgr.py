@@ -44,6 +44,8 @@ class StoreManger(object):
     def saveManyTo(self, collectionName, datas):
     
         coll = self.db[collectionName]
+
+        coll.remove({})
     
         coll.insert_many(datas)
         
@@ -52,6 +54,12 @@ class StoreManger(object):
         coll = self.db['recommond_clone']
     
         return coll.find(condition, {'_id':0})
+
+    def findInfoIn(self, collectionName, condition):
+    
+        coll = self.db[collectionName]
+    
+        return coll.find(condition, {'_id': 0})
     
     def loadConsultors(self) -> [ConsultorWithRecommonds]:
     

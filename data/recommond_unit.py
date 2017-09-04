@@ -4,6 +4,8 @@ class RangeTrend(object):
         self.range = 0
         # 最大值
         self.max = 0
+        # 最大百分比
+        self.maxPercent = 0
         # 最小值
         self.min = 0
         # 出现最大值的时间
@@ -23,6 +25,8 @@ class RecommondTrends(object):
     def toJson(self):
         
         trends = []
+        
+        print(self.recommond.toJson())
         
         for item in self.trends:
         

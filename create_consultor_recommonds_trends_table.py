@@ -2,16 +2,20 @@ import storemgr
 from data.recommond_unit import ConsultorWithRecommonds, ConsultorRecommondsTrends
 from analyse import calc_interval_amplitude_of_consultor
 
-consultors = storemgr.intance().loadConsultors()
+def doRun():
 
-results = []
-
-for consultorWithRecoommond in consultors:
+    consultors = storemgr.intance().loadConsultors()
     
-    temp = ConsultorRecommondsTrends()
-
-    temp.consultor = consultorWithRecoommond.consultor
+    results = []
     
-    for item in consultorWithRecoommond.recommonds:
+    for consultorWithRecoommond in consultors:
         
-        pass
+        temp = ConsultorRecommondsTrends()
+    
+        temp.consultor = consultorWithRecoommond.consultor
+    
+        temp.recommondsTrends = calc_interval_amplitude_of_consultor.doRun(consultorWithRecoommond.recommonds)
+        
+        results.append(temp.toJson())
+        
+    storemgr.intance().saveManyTo('recommondtrends', results)
