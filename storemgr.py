@@ -37,7 +37,7 @@ class StoreManger(object):
     
     def saveToDb(self, data):
     
-        coll = self.db['recommond_clone']
+        coll = self.db['recommond']
     
         coll.insert_one(data)
         
@@ -51,7 +51,7 @@ class StoreManger(object):
         
     def findInfoWith(self, condition):
     
-        coll = self.db['recommond_clone']
+        coll = self.db['recommond']
     
         return coll.find(condition, {'_id':0})
 
@@ -77,7 +77,7 @@ class StoreManger(object):
     
     def loadRecommondUnit(self) -> [RecommondUnit]:
     
-        coll = self.db['recommond_clone']
+        coll = self.db['recommond']
         
         items = coll.find({}, {'_id':0})
         
