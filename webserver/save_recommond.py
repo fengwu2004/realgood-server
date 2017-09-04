@@ -1,7 +1,7 @@
 import json
 
 import storemgr
-from data.recommond_unit import RecommondUnit, Consultor
+from data.recommond_unit import RecommondUnit, Consultor, Recommond
 from webserver import tokenManager
 from webserver.RequestBaseManager import RequestBaseManager
 
@@ -17,13 +17,15 @@ def serializationRecommondUnit(item):
     
     ruitem.consultor.pm = item['ispm']
     
-    ruitem.stockname = item['focus']
+    ruitem.recommond = Recommond()
     
-    ruitem.date = item['date']
+    ruitem.recommond.stockname = item['focus']
     
-    ruitem.urgent = item['urgent']
+    ruitem.recommond.date = item['date']
     
-    ruitem.amorpm = item['amorpm']
+    ruitem.recommond.urgent = item['urgent']
+    
+    ruitem.recommond.amorpm = item['amorpm']
     
     return ruitem
 

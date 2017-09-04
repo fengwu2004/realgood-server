@@ -1,6 +1,6 @@
 # 将推荐数据重新存储
 from pymongo import MongoClient
-from data.recommond_unit import RecommondUnit, Consultor
+from data.recommond_unit import RecommondUnit, Consultor, Recommond
 
 uri = "mongodb://yanli:9394@123.207.213.131:27017/recommond?authMechanism=SCRAM-SHA-1"
 
@@ -27,14 +27,16 @@ for item in items:
     ruitem.consultor.company = item['company']
     
     ruitem.consultor.pm = item['ispm']
+
+    ruitem.recommond = Recommond()
     
-    ruitem.stockname = item['focus']
+    ruitem.recommond.stockname = item['focus']
     
-    ruitem.date = item['date']
+    ruitem.recommond.date = item['date']
     
-    ruitem.urgent = item['urgent']
+    ruitem.recommond.urgent = item['urgent']
     
-    ruitem.amorpm = item['amorpm']
+    ruitem.recommond.amorpm = item['amorpm']
 
     results.append(ruitem.toJson())
     

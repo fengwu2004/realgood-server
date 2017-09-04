@@ -1,27 +1,10 @@
 # 计算区间振幅
-from data.recommond_unit import RecommondUnit
+from data.recommond_unit import RecommondUnit, RangeTrend
 from stock.stockstoremgr import loadStock
 import time
 from data.stock_unit import Stock
 
 import storemgr
-
-class RangeTrend(object):
-    
-    def __init__(self):
-        
-        # 区间
-        self.range = 0
-        # 最大值
-        self.max = 0
-        # 最小值
-        self.min = 0
-        # 出现最大值的时间
-        self.maxOffset = 0
-        
-    def toJson(self):
-        
-        return self.__dict__
 
 def getTime (value):
     

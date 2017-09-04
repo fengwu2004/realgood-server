@@ -1,7 +1,8 @@
 
 from pymongo import MongoClient
 
-coll = None
+from data.recommond_unit import RecommondUnit, ConsultorWithRecommonds
+
 
 class StoreManger(object):
 
@@ -13,8 +14,6 @@ class StoreManger(object):
         client = MongoClient(uri)
     
         self.db = client['recommond']
-        
-        self.coll = self.db['recommond_clone']
         
     def checkUser(self, name, pwd):
     
@@ -30,15 +29,59 @@ class StoreManger(object):
 
         return False
     
+    def saveToConsultor(self, dataList):
+        
+        consultorColl = self.db['consultors']
+
+        consultorColl.insert_many(dataList)
+    
     def saveToDb(self, data):
     
-        self.coll.insert_one(data)
+        coll = self.db['recommond_clone']
+    
+        coll.insert_one(data)
+        
+    def saveManyTo(self, collectionName, datas):
+    
+        coll = self.db[collectionName]
+    
+        coll.insert_many(datas)
         
     def findInfoWith(self, condition):
     
-        return self.coll.find(condition, {'_id':0})
-        
+        coll = self.db['recommond_clone']
+    
+        return coll.find(condition, {'_id':0})
+    
+    def loadConsultors(self) -> [ConsultorWithRecommonds]:
+    
+        coll = self.db['consultors']
 
+        items = coll.find({}, {'_id': 0})
+
+        results = []
+
+        for item in items:
+            
+            results.append(ConsultorWithRecommonds.fromJson(item))
+
+        return results
+    
+    def loadRecommondUnit(self) -> [RecommondUnit]:
+    
+        coll = self.db['recommond_clone']
+        
+        items = coll.find({}, {'_id':0})
+        
+        results = []
+        
+        for item in items:
+            
+            results.append(RecommondUnit.fromJson(item))
+            
+        return results
+        
+        
 _instance = None
 
 def intance():
