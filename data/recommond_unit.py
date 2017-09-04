@@ -13,7 +13,9 @@ class RangeTrend(object):
     
     def toJson (self):
         return self.__dict__
-    
+
+
+# RecommondTrends
 class RecommondTrends(object):
     
     def __init__(self):
@@ -37,6 +39,21 @@ class RecommondTrends(object):
             'trends':trends
         }
     
+    @classmethod
+    def fromJson(cls, jsonvalue):
+    
+        obj = RecommondTrends()
+    
+        obj.recommond = Recommond.fromJson(jsonvalue['recommond'])
+    
+        for item in jsonvalue['trends']:
+            
+            obj.trends.append(RangeTrend.fromJson(item))
+    
+        return obj
+    
+    
+# ConsultorRecommondsTrends
 class ConsultorRecommondsTrends(object):
     
     def __init__(self):
@@ -57,7 +74,22 @@ class ConsultorRecommondsTrends(object):
             'consultor':self.consultor.toJson(),
             'recommondsTrends':temps
         }
+    
+    @classmethod
+    def fromJson(cls, jsonvalue):
+        
+        obj = ConsultorRecommondsTrends()
+        
+        obj.consultor = Consultor.fromJson(jsonvalue['consultor'])
 
+        for item in jsonvalue['recommondsTrends']:
+            
+            obj.recommondsTrends.append(RecommondTrends.fromJson(item))
+            
+        return obj
+
+
+# Consultor
 class Consultor(object):
     def __init__ (self):
         self.name = None
@@ -81,6 +113,8 @@ class Consultor(object):
         
         return obj
     
+    
+# Recommond
 class Recommond(object):
     
     def __init__ (self):
@@ -113,6 +147,8 @@ class Recommond(object):
         
         return obj
 
+
+# RecommondUnit
 class RecommondUnit(object):
     
     def __init__(self):
@@ -138,7 +174,9 @@ class RecommondUnit(object):
         obj.consultor = Consultor.fromJson(jsonvalue['consultor'])
         
         return obj
-    
+
+
+# ConsultorWithRecommonds
 class ConsultorWithRecommonds(object):
     
     def __init__(self):

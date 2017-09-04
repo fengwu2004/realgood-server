@@ -39,11 +39,11 @@ class SaveRecommond(RequestBaseManager):
 
         res = {'success': -1}
         
-        if not tokenManager.TokenManagerInstance().checkToken(token):
-        
-            self.write(res)
-            
-            return
+        # if not tokenManager.TokenManagerInstance().checkToken(token):
+        #
+        #     self.write(res)
+        #
+        #     return
 
         ruitem = serializationRecommondUnit(data)
         

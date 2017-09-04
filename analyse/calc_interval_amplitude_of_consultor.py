@@ -34,9 +34,9 @@ def getRangeTrend(index, offset, dayvalues:[DayValue]):
             
             trend.min = dayvlaue.min
             
-    trend.maxPercent = (trend.max - dayvalues[index].open)/dayvalues[index].open
-
-    trend.maxPercent *= 100
+    p = ((trend.max - dayvalues[index].open)/dayvalues[index].open) * 100
+    
+    trend.maxPercent = '%.1f' % p
             
     return trend
     
