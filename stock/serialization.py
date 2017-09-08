@@ -1,6 +1,6 @@
 from pymongo import MongoClient
 import json
-import jsonpickle
+from data.stock_unit import Stock
 
 def loadFromDB():
     
@@ -14,18 +14,8 @@ def loadFromDB():
     
     results = coll.find({}, {'_id': 0})
 
-    strValues = []
-    
     for r in results:
-
-        strValue = json.dumps(r)
-
-        strValues.append(strValue)
-
-    for strvalue in strValues:
         
-        obj = jsonpickle.decode(strvalue)
-
-        stocks.append(obj)
+        stocks.append(Stock.fromJson(r))
 
     return stocks

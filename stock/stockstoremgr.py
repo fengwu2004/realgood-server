@@ -31,6 +31,8 @@ def saveToDB():
     db = client["test"]
     
     coll = db['stocks']
+
+    coll.remove({})
     
     coll.insert_many(stocks)
 

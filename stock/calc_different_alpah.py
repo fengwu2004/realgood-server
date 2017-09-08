@@ -29,9 +29,12 @@ def save():
     name = "alpha_increase_%s" % alpha
     
     coll = db[name]
+
+    coll.remove({})
         
     v = json.loads(jsonpickle.encode(results))
     
     coll.insert_many(v)
     
 save()
+
