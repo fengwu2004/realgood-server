@@ -1,4 +1,4 @@
-from data.stock_info import StockInfo
+from data.stock_info import StockInfo, SuggestStock
 from data.recommond_unit import RecommondUnit
 import time
 
@@ -7,46 +7,51 @@ import storemgr
 results = dict()
 
 #
-def save(stockId:int, recommondunit:RecommondUnit):
+def save(stockId:int, unit:SuggestStock):
     
     if not stockId in results:
         
         results[stockId] = list()
 
-    results[stockId].append(recommondunit)
+    results[stockId].append(unit)
 
 #
 def findRecommondAfter(date:time.struct_time):
     
-    recommonds = storemgr.intance().loadRecommondUnit()
+    suggeststocks = storemgr.intance().loadSuggests()
 
-    for recommondunit in recommonds:
+    for suggeststock in suggeststocks:
         
-        if time.strptime(recommondunit.recommond.date, '%Y-%m-%dT%H:%M:%S.%fZ') < date:
+        print(suggeststock.stockName)
+        
+        if time.strptime(suggeststock.date, '%Y-%m-%d') < date:
             
             continue
         
-        stockId = storemgr.intance().getStockId(recommondunit.recommond.stockname)
+        stockId = storemgr.intance().getStockId(suggeststock.stockName)
         
         if stockId is not None:
             
-            save(stockId, recommondunit)
-            
+            save(stockId, suggeststock)
             
 def doSortWithData():
 
     for key in results.keys():
         
-        results[key] = sorted(results[key], key = lambda k:time.strptime(k.recommond.date, '%Y-%m-%dT%H:%M:%S.%fZ'))
+        results[key] = sorted(results[key], key = lambda k:time.strptime(k.date, '%Y-%m-%d'))
         
 
-theTime = time.gmtime(time.time() - 30 * 24 * 3600)
+def getHistorySuggest(day:int):
+    
+    results.clear()
 
-findRecommondAfter(theTime)
+    theTime = time.gmtime(time.time() - day * 24 * 3600)
 
-doSortWithData()
+    findRecommondAfter(theTime)
 
-print(results)
+    doSortWithData()
+
+    return results
     
     
     

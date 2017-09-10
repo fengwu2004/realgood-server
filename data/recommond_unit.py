@@ -1,3 +1,6 @@
+from data.stock_info import SuggestStock
+
+
 class RangeTrend(object):
     def __init__ (self):
         # 区间
@@ -14,6 +17,38 @@ class RangeTrend(object):
     def toJson (self):
         return self.__dict__
 
+class SuggestTrends(object):
+    
+    def __init__ (self):
+        
+        self.suggeststock = None
+        
+        self.trends = []
+    
+    def toJson (self):
+        
+        trends = []
+        
+        print(self.suggeststock.toJson())
+        
+        for item in self.trends:
+            
+            trends.append(item.toJson())
+        
+        return {'suggeststock': self.suggeststock.toJson(), 'trends': trends}
+    
+    @classmethod
+    def fromJson (cls, jsonvalue):
+        
+        obj = RecommondTrends()
+        
+        obj.suggest = SuggestStock.fromJson(jsonvalue['suggeststock'])
+        
+        for item in jsonvalue['trends']:
+            
+            obj.trends.append(RangeTrend.fromJson(item))
+        
+        return obj
 
 # RecommondTrends
 class RecommondTrends(object):
@@ -211,4 +246,3 @@ class ConsultorWithRecommonds(object):
             'consultor':self.consultor.toJson(),
             'recommonds':recommonds
         }
-    

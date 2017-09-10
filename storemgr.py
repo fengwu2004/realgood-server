@@ -2,6 +2,7 @@
 from pymongo import MongoClient
 
 from data.recommond_unit import RecommondUnit, ConsultorWithRecommonds
+from data.stock_info import SuggestStock
 
 
 class StoreManger(object):
@@ -75,20 +76,34 @@ class StoreManger(object):
 
         return results
     
-    def loadRecommondUnit(self) -> [RecommondUnit]:
+    def loadSuggestOfConsultor(self, name, company) -> [SuggestStock]:
     
-        coll = self.db['recommond']
+        coll = self.db['suggest']
         
-        items = coll.find({}, {'_id':0})
+        items = coll.find({'name':name, 'company':company}, {'_id':0})
         
         results = []
         
         for item in items:
             
-            results.append(RecommondUnit.fromJson(item))
+            results.append(SuggestStock.fromJson(item))
             
         return results
-        
+
+    def getStockName(self, stockId):
+
+        coll = self.db['stockinfo']
+
+        items = coll.find({'id': stockId}, {'_id': 0})
+
+        results = []
+
+        for item in items:
+            
+            return item['name']
+
+        return None
+    
     def getStockId(self, name):
     
         coll = self.db['stockinfo']
@@ -102,6 +117,32 @@ class StoreManger(object):
             return item['id']
     
         return None
+    
+    def saveSuggests(self, items:[SuggestStock]):
+    
+        coll = self.db['suggest']
+        
+        reuslts = []
+        
+        for item in items:
+            
+            reuslts.append(item.toJson())
+        
+        coll.insert_many(reuslts)
+
+    def loadSuggests(self) -> [SuggestStock]:
+    
+        coll = self.db['suggest']
+    
+        items = coll.find({}, {'_id': 0})
+    
+        results = []
+    
+        for item in items:
+            
+            results.append(SuggestStock.fromJson(item))
+    
+        return results
         
 _instance = None
 
