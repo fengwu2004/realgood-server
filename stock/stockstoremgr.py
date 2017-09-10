@@ -2,7 +2,6 @@ from os import walk
 from stock.load import getLines, formatData
 from pymongo import MongoClient
 import json
-import jsonpickle
 
 def saveToDB():
     
@@ -37,34 +36,6 @@ def saveToDB():
     coll.insert_many(stocks)
 
 
-def loadFromDB():
-    
-    stocks = []
-    
-    client = MongoClient('localhost', 27017)
-    
-    db = client["test"]
-    
-    coll = db['stocks']
-    
-    results = coll.find({}, {'_id': 0})
-    
-    strValues = []
-    
-    for r in results:
-        
-        strValue = json.dumps(r)
-        
-        strValues.append(strValue)
-    
-    for strValue in strValues:
-        
-        obj = jsonpickle.decode(strValue)
-        
-        stocks.append(obj)
-    
-    return stocks
-
 def loadStock(stockname):
     
     client = MongoClient('localhost', 27017)
@@ -77,10 +48,6 @@ def loadStock(stockname):
 
     for r in results:
         
-        strValue = json.dumps(r)
-
-        obj = jsonpickle.decode(strValue)
-        
-        return obj
+        return r
 
     return None
