@@ -13,14 +13,12 @@ class FindHistorySuggest(RequestBaseManager):
         data = json.loads(self.request.body.decode('utf-8'))
         
         day = data['history']
-        
-        # token = data['token']
 
-        # if not tokenManager.TokenManagerInstance().checkToken(token):
-        #
-        #     self.write({'success': -1})
-        #
-        #     return
+        if not tokenManager.TokenManagerInstance().checkToken(data['token']):
+            
+            self.write({'success': -1})
+    
+            return
 
         results = getHistorySuggest(int(day))
 

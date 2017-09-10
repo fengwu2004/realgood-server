@@ -16,13 +16,11 @@ class FindStockSuggestHistory(RequestBaseManager):
         
         stockId = storemgr.intance().getStockId(stockname)
         
-        # token = data['token']
-        
-        # if not tokenManager.TokenManagerInstance().checkToken(token):
-        #
-        #     self.write({'success': -1})
-        #
-        #     return
+        if not tokenManager.TokenManagerInstance().checkToken(data['token']):
+
+            self.write({'success': -1})
+
+            return
         
         items = findAllSuggest(stockId)
 

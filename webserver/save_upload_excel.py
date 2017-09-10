@@ -44,11 +44,11 @@ class SaveRecommondExcel(RequestBaseManager):
         ws = wb.active
         
         storemgr.intance().saveSuggests(getItems(ws))
-        
-        # if not tokenManager.TokenManagerInstance().checkToken(token):
-        #
-        #     self.write({'success': -1})
-        #
-        #     return
+
+        if not tokenManager.TokenManagerInstance().checkToken(data['token']):
+            
+            self.write({'success': -1})
+    
+            return
 
         self.write({'success': 1})
