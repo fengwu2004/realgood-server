@@ -14,7 +14,7 @@ class FindHistorySuggest(RequestBaseManager):
         
         day = data['history']
 
-        if not tokenManager.TokenManagerInstance().checkToken(data['token']):
+        if not 'token' in data or not tokenManager.TokenManagerInstance().checkToken(data['token']):
             
             self.write({'success': -1})
     
