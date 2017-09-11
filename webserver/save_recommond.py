@@ -35,14 +35,10 @@ class SaveRecommond(RequestBaseManager):
         
         data = json.loads(self.request.body.decode('utf-8'))
         
-        token = data['token']
-
-        res = {'success': -1}
-        
-        if not tokenManager.TokenManagerInstance().checkToken(token):
-
-            self.write(res)
-
+        if not 'token' in data or not tokenManager.TokenManagerInstance().checkToken(data['token']):
+            
+            self.write({'success': -1})
+    
             return
 
         ruitem = serializationRecommondUnit(data)
