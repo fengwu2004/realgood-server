@@ -93,7 +93,7 @@ def doRun(reommonds:[Recommond]) -> [RecommondTrends]:
 
         results.append(obj)
         
-    print(results)
+    # print(results)
         
     return results
 
@@ -113,6 +113,6 @@ def findRangetrends(name, company) -> [RecommondTrends]:
         
         results.append(obj.toJson())
     
-    print(results)
+    # print(results)
     
     return results

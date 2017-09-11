@@ -6,6 +6,7 @@ from webserver import tokenManager
 from openpyxl import Workbook
 from openpyxl import load_workbook
 from webserver.RequestBaseManager import RequestBaseManager
+import time
 
 def getItems(ws) -> [SuggestStock]:
     
@@ -17,7 +18,7 @@ def getItems(ws) -> [SuggestStock]:
         
         index = str(i + 1)
         
-        temp = ws['A' + index].value
+        temp = str(ws['A' + index].value)
         
         obj.date = temp[0:10]
         
@@ -44,11 +45,5 @@ class SaveRecommondExcel(RequestBaseManager):
         ws = wb.active
         
         storemgr.intance().saveSuggests(getItems(ws))
-
-        if not 'token' in data or not tokenManager.TokenManagerInstance().checkToken(data['token']):
-            
-            self.write({'success': -1})
-    
-            return
 
         self.write({'success': 1})

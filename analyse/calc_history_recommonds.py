@@ -22,7 +22,7 @@ def findRecommondAfter(date:time.struct_time):
 
     for suggeststock in suggeststocks:
         
-        print(suggeststock.stockName)
+        # print(suggeststock.stockName)
         
         if time.strptime(suggeststock.date, '%Y-%m-%d') < date:
             

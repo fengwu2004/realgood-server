@@ -21,13 +21,22 @@ def saveToDB():
     
         filePath = mypath + file
         
+        if not filePath.find('.txt'):
+            
+            continue
+        
         stock = formatData(getLines(filePath))
     
         stocks.append(stock.toJson())
+
+    # uri = "mongodb://yanli:9394@localhost:27017/recommond?authMechanism=SCRAM-SHA-1"
+    uri = "mongodb://yanli:9394@123.207.213.131:27017/recommond?authMechanism=SCRAM-SHA-1"
+
+    client = MongoClient(uri)
     
-    client = MongoClient('localhost', 27017)
+    # client = MongoClient('localhost', 27017)
     
-    db = client["test"]
+    db = client["recommond"]
     
     coll = db['stocks']
 
@@ -35,12 +44,14 @@ def saveToDB():
     
     coll.insert_many(stocks)
 
-
 def loadStock(stockname):
     
-    client = MongoClient('localhost', 27017)
+    uri = "mongodb://yanli:9394@localhost:27017/recommond?authMechanism=SCRAM-SHA-1"
+    # uri = "mongodb://yanli:9394@123.207.213.131:27017/recommond?authMechanism=SCRAM-SHA-1"
     
-    db = client["test"]
+    client = MongoClient(uri)
+    
+    db = client["recommond"]
     
     coll = db['stocks']
     

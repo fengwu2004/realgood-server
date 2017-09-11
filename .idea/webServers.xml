@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="aab2cb1e-d37f-472f-aa4c-528a55248476" name="qc" url="http://123.207.213.131">
+        <fileTransfer host="123.207.213.131" port="22" rootFolder="/root/git/realgood-server" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

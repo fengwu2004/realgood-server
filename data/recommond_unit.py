@@ -29,7 +29,7 @@ class SuggestTrends(object):
         
         trends = []
         
-        print(self.suggeststock.toJson())
+        # print(self.suggeststock.toJson())
         
         for item in self.trends:
             
@@ -63,7 +63,7 @@ class RecommondTrends(object):
         
         trends = []
         
-        print(self.recommond.toJson())
+        # print(self.recommond.toJson())
         
         for item in self.trends:
         
