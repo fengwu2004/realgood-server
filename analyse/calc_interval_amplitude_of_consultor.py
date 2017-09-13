@@ -39,8 +39,43 @@ def getRangeTrend(index, offset, dayvalues:[DayValue]):
     trend.maxPercent = '%.1f' % p
             
     return trend
+
+def getCloseAfter(date, stockname, days) -> [int]:
     
-def getTradeInfoAfter(date, stockname):
+    stock = Stock.fromJson(loadStock(stockname))
+
+    if stock is None:
+        
+        return []
+
+    index = 0
+    
+    for dayvalue in stock.dayvalues:
+    
+        if getTime(dayvalue.date) > date:
+            
+            break
+    
+        index += 1
+
+    index -= 1
+
+    results = []
+
+    for i in days:
+    
+        if index + i < len(stock.dayvalues):
+            
+            results.append(100 * (stock.dayvalues[index + i].close - stock.dayvalues[index].close)/stock.dayvalues[index].close)
+        
+        else:
+    
+            results.append(0)
+            
+    return results
+
+    
+def getTradeInfoAfter(date, stockname, days) -> [RangeTrend]:
     
     stock = Stock.fromJson(loadStock(stockname))
 
@@ -64,8 +99,6 @@ def getTradeInfoAfter(date, stockname):
         
         return []
     
-    days = [1, 3, 5, 10, 20, 40, 60]
-        
     results = []
     
     for i in days:
@@ -89,7 +122,7 @@ def doRun(reommonds:[Recommond]) -> [RecommondTrends]:
         obj.recommond = recommond
 
         obj.trends = getTradeInfoAfter(time.strptime(recommond.date, '%Y-%m-%dT%H:%M:%S.%fZ'),
-                                                       recommond.stockname)
+                                                       recommond.stockname, [1, 3, 5, 10, 20, 40, 60])
 
         results.append(obj)
         
@@ -109,7 +142,7 @@ def findRangetrends(name, company) -> [RecommondTrends]:
         
         obj.suggeststock = suggeststock
         
-        obj.trends = getTradeInfoAfter(time.strptime(suggeststock.date, '%Y-%m-%d'), suggeststock.stockName)
+        obj.trends = getTradeInfoAfter(time.strptime(suggeststock.date, '%Y-%m-%d'), suggeststock.stockName, [1, 3, 5, 10, 20, 40, 60])
         
         results.append(obj.toJson())
     

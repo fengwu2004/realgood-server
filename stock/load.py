@@ -25,7 +25,13 @@ def formatData(lines):
         
         stock.id = values[0]
         
-        stock.name = values[1]
+        i = 1
+        
+        while values[i] != '日线':
+        
+            stock.name += values[i]
+            
+            i += 1
         
         lines.pop(0)
 

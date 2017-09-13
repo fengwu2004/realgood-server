@@ -21,7 +21,7 @@ def saveToDB():
     
         filePath = mypath + file
         
-        if not filePath.find('.txt'):
+        if filePath.find('.txt') == -1:
             
             continue
         
@@ -34,8 +34,6 @@ def saveToDB():
 
     client = MongoClient(uri)
     
-    # client = MongoClient('localhost', 27017)
-    
     db = client["recommond"]
     
     coll = db['stocks']
@@ -46,8 +44,8 @@ def saveToDB():
 
 def loadStock(stockname):
     
-    uri = "mongodb://yanli:9394@localhost:27017/recommond?authMechanism=SCRAM-SHA-1"
-    # uri = "mongodb://yanli:9394@123.207.213.131:27017/recommond?authMechanism=SCRAM-SHA-1"
+    # uri = "mongodb://yanli:9394@localhost:27017/recommond?authMechanism=SCRAM-SHA-1"
+    uri = "mongodb://yanli:9394@123.207.213.131:27017/recommond?authMechanism=SCRAM-SHA-1"
     
     client = MongoClient(uri)
     
@@ -62,3 +60,4 @@ def loadStock(stockname):
         return r
 
     return None
+

@@ -1,15 +1,22 @@
 import storemgr
 from pymongo import MongoClient
 
+from stock.serialization import loadFromDB
+
+
 def run():
 
-    stocks = storemgr.loadFromDB()
+    stocks = loadFromDB()
 
-    client = MongoClient('localhost', 27017)
+    uri = "mongodb://yanli:9394@123.207.213.131:27017/recommond?authMechanism=SCRAM-SHA-1"
 
-    db = client["test"]
+    client = MongoClient(uri)
+
+    db = client["recommond"]
     
     collection = db['stockinfo']
+
+    collection.remove({})
     
     result = []
     
@@ -72,6 +79,3 @@ def add():
         result.append(unit)
 
     collection.insert_many(result)
-
-    
-add()

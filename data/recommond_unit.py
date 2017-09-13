@@ -15,7 +15,14 @@ class RangeTrend(object):
         self.maxOffset = 0
     
     def toJson (self):
-        return self.__dict__
+        
+        return {
+            'range':self.range,
+            'max': self.max,
+            'maxPercent': self.maxPercent,
+            'min': self.min,
+            'maxOffset': self.maxOffset,
+        }
 
 class SuggestTrends(object):
     
