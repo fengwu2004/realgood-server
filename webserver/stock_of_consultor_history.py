@@ -1,7 +1,7 @@
 import json
 
 import storemgr
-from analyse.calc_history_suggest_of_stock import findAllSuggest
+from analyse import SuggestHistoryManager
 from webserver import tokenManager
 from webserver.RequestBaseManager import RequestBaseManager
 
@@ -22,7 +22,7 @@ class FindStockSuggestHistory(RequestBaseManager):
     
             return
         
-        items = findAllSuggest(stockId)
+        items = SuggestHistoryManager.instance().findAllSuggest(stockId)
 
         jsonvalue = list()
         

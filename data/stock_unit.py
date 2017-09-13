@@ -12,7 +12,7 @@ class DayValue(object):
         
         self.max = 0
         
-        self.date = time.strptime('2013/1/01', '%Y/%m/%d')
+        self.date = ''
         
         self.tradeamount = 0
         
@@ -61,6 +61,23 @@ class Stock(object):
         
         self.dayvalues = []
         
+    def getDayIndex(self, date:str):
+    
+        t0 = time.strptime(date, '%Y-%m-%dT')
+        
+        index = 0
+        
+        for dayvalue in self.dayvalues:
+            
+            t = time.strptime(dayvalue.date, '%Y/%m/%dT')
+            
+            if t < t0:
+                index += 1
+            else:
+                break
+                
+        return index
+    
     def toJson(self):
         
         dayvalues = []

@@ -1,5 +1,4 @@
 from pymongo import MongoClient
-import json
 from data.stock_unit import Stock
 
 def loadFromDB():

@@ -96,8 +96,6 @@ class StoreManger(object):
 
         items = coll.find({'id': stockId}, {'_id': 0})
 
-        results = []
-
         for item in items:
             
             return item['name']

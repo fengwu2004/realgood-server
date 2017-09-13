@@ -1,12 +1,8 @@
-import json
 from io import BytesIO
 import storemgr
-from data.stock_info import SuggestStock
-from webserver import tokenManager
-from openpyxl import Workbook
+from data.stock_info import SuggestStock, Consultor
 from openpyxl import load_workbook
 from webserver.RequestBaseManager import RequestBaseManager
-import time
 
 def getItems(ws) -> [SuggestStock]:
     
@@ -21,15 +17,20 @@ def getItems(ws) -> [SuggestStock]:
         temp = str(ws['A' + index].value)
         
         obj.date = temp[0:10]
-        
-        obj.company = ws['B' + index].value
-        
-        obj.name = ws['C' + index].value
-        
-        obj.stockId = ws['D' + index].value
-        
-        obj.stockName = storemgr.intance().getStockName(obj.stockId)
 
+        obj.stockId = ws['D' + index].value
+
+        obj.stockName = storemgr.intance().getStockName(obj.stockId)
+        
+        if obj.stockName is None:
+            
+            continue
+        
+        obj.consultor = Consultor.fromJson({
+            'company':ws['B' + index].value,
+            'name':ws['C' + index].value
+        })
+        
         results.append(obj)
         
     return results
@@ -40,7 +41,7 @@ class SaveRecommondExcel(RequestBaseManager):
         
         data = self.request.files['upload'][0].body
 
-        wb = load_workbook(filename=BytesIO(data))
+        wb = load_workbook(filename = BytesIO(data))
         
         ws = wb.active
         

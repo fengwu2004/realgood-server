@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="719e5223-de70-49d4-a2ab-afe0f484a8ca" name="Default" comment="" />
+    <list default="true" id="719e5223-de70-49d4-a2ab-afe0f484a8ca" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/analyse/SuggestHistoryManager.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/analyse/calc_history_recommonds.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webserver/save_recommond.py" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/analyse/test_time.py" afterPath="$PROJECT_DIR$/test/test_time.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/stock_info.py" afterPath="$PROJECT_DIR$/data/stock_info.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/stock_unit.py" afterPath="$PROJECT_DIR$/data/stock_unit.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock/serialization.py" afterPath="$PROJECT_DIR$/stock/serialization.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storemgr.py" afterPath="$PROJECT_DIR$/storemgr.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/save_upload_excel.py" afterPath="$PROJECT_DIR$/webserver/save_upload_excel.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/stock_of_consultor_history.py" afterPath="$PROJECT_DIR$/webserver/stock_of_consultor_history.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/suggest_history.py" afterPath="$PROJECT_DIR$/webserver/suggest_history.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +33,7 @@
     <SUITE FILE_PATH="coverage/realgood_server$test_float.coverage" NAME="test_float Coverage Results" MODIFIED="1504519706849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/realgood_server$tokenManager.coverage" NAME="tokenManager Coverage Results" MODIFIED="1503735249200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/realgood_server$testmongod.coverage" NAME="testmongod Coverage Results" MODIFIED="1504414758176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/realgood_server$test_time.coverage" NAME="test_time Coverage Results" MODIFIED="1505206833884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/analyse" />
+    <SUITE FILE_PATH="coverage/realgood_server$test_time.coverage" NAME="test_time Coverage Results" MODIFIED="1505281956908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/analyse" />
     <SUITE FILE_PATH="coverage/realgood_server$calc_interval_amplitude.coverage" NAME="calc_interval_amplitude Coverage Results" MODIFIED="1504417585754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/realgood_server$test_stock_info.coverage" NAME="test_stock_info Coverage Results" MODIFIED="1505195126085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/realgood_server$test_save_suggest.coverage" NAME="test_save_suggest Coverage Results" MODIFIED="1505043269018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
@@ -27,6 +41,7 @@
     <SUITE FILE_PATH="coverage/realgood_server$test_json.coverage" NAME="test_json Coverage Results" MODIFIED="1504407251354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/realgood_server$create_consultor_recommonds_trends_table.coverage" NAME="create_consultor_recommonds_trends_table Coverage Results" MODIFIED="1504496119328" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/realgood_server$test_restrore.coverage" NAME="test_restrore Coverage Results" MODIFIED="1504536027804" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/realgood_server$SuggestHistoryManager.coverage" NAME="SuggestHistoryManager Coverage Results" MODIFIED="1505283485392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/analyse" />
     <SUITE FILE_PATH="coverage/realgood_server$storemgr.coverage" NAME="storemgr Coverage Results" MODIFIED="1504414010467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stock" />
     <SUITE FILE_PATH="coverage/realgood_server$calc_history_recommonds.coverage" NAME="calc_history_recommonds Coverage Results" MODIFIED="1504883817877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/analyse" />
     <SUITE FILE_PATH="coverage/realgood_server$stockstoremgr.coverage" NAME="stockstoremgr Coverage Results" MODIFIED="1505123983487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stock" />
@@ -46,83 +61,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="every_day_run.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/every_day_run.py">
+      <file leaf-file-name="calc_interval_amplitude_of_consultor.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/analyse/calc_interval_amplitude_of_consultor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="24" />
+            <state relative-caret-position="84">
+              <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="17" />
               <folding>
-                <element signature="e#0#36#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="26" column="20" lean-forward="true" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="suggest_history.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webserver/suggest_history.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="22" column="35" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="calc_history_recommonds.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/analyse/calc_history_recommonds.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="26" column="37" lean-forward="true" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_remove_the_same.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_remove_the_same.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_mongod.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_mongod.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="18" column="61" lean-forward="true" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="recommond_unit.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/data/recommond_unit.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="157" column="4" lean-forward="true" selection-start-line="157" selection-start-column="4" selection-end-line="157" selection-end-column="4" />
-              <folding>
-                <element signature="e#73#527#0" expanded="false" />
-                <element signature="e#567#1284#0" expanded="false" />
-                <element signature="e#1342#2069#0" expanded="false" />
-                <element signature="e#2147#2894#0" expanded="false" />
-                <element signature="e#2935#3369#0" expanded="false" />
+                <element signature="e#9#109#0" expanded="true" />
+                <element signature="e#1005#1594#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -131,8 +77,8 @@
       <file leaf-file-name="stockstoremgr.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stock/stockstoremgr.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+            <state relative-caret-position="191">
+              <caret line="53" column="11" lean-forward="false" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -140,25 +86,98 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="storemgr.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/storemgr.py">
+      <file leaf-file-name="serialization.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stock/serialization.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1074">
-              <caret line="140" column="26" lean-forward="true" selection-start-line="140" selection-start-column="26" selection-end-line="140" selection-end-column="26" />
+            <state relative-caret-position="45">
+              <caret line="21" column="17" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="21" selection-end-column="17" />
               <folding>
-                <element signature="e#1#32#0" expanded="true" />
-                <element signature="e#2416#2627#0" expanded="false" />
+                <element signature="e#0#31#0" expanded="true" />
+                <element signature="e#94#424#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stock_info.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/stock_info.py">
+      <file leaf-file-name="SuggestHistoryManager.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/analyse/SuggestHistoryManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="67" column="36" lean-forward="true" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="45" />
+            <state relative-caret-position="151">
+              <caret line="27" column="24" lean-forward="false" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#83#0" expanded="true" />
+                <element signature="e#779#1371#0" expanded="false" />
+                <element signature="e#2516#2716#0" expanded="false" />
+                <element signature="e#2790#3078#0" expanded="false" />
+                <element signature="e#3239#3299#0" expanded="false" />
+                <element signature="e#3717#4271#0" expanded="false" />
+                <element signature="e#4342#4814#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="codecs.py" pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/codecs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="310" column="0" lean-forward="false" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="calc_history_suggest_of_stock.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/analyse/calc_history_suggest_of_stock.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_time.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_time.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stock_unit.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/stock_unit.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="97" column="8" lean-forward="false" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_mongod.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_mongod.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="storemgr.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/storemgr.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="130" column="43" lean-forward="true" selection-start-line="130" selection-start-column="43" selection-end-line="130" selection-end-column="43" />
+              <folding>
+                <element signature="e#1#32#0" expanded="true" />
+                <element signature="e#2166#2343#0" expanded="false" />
+                <element signature="e#2394#2605#0" expanded="false" />
+                <element signature="e#2674#2863#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -174,21 +193,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>asctime</find>
-      <find>gmtime</find>
-      <find>SaveRecommondExcel</find>
-      <find>recommondunit</find>
-      <find>strptime</find>
-      <find>results</find>
-      <find>analyse/rangetrend</find>
-      <find>localhost:27017</find>
-      <find>123.207.213.131:27017</find>
-      <find>calc_interval_amplitude_of_consultor</find>
       <find>jsonpickle</find>
       <find>FindHistorySuggest</find>
       <find>history/suggest</find>
       <find>print</find>
-      <find>loadStock</find>
       <find>suggeststock</find>
       <find>FindHistorySuggestWithTrends</find>
       <find>uri = &quot;mongodb://yanli:9394@123.207.213.131:27017/recommond?authMechanism=SCRAM-SHA-1&quot;</find>
@@ -196,7 +204,6 @@
       <find>loadFromDB</find>
       <find>.date</find>
       <find>saveToDB</find>
-      <find>getTradeInfoAfter</find>
       <find>3600</find>
       <find>struct_time</find>
       <find>mktime</find>
@@ -204,6 +211,18 @@
       <find>openpyxl</find>
       <find>calc_history_recommonds</find>
       <find>findRecommondAfter</find>
+      <find>StockInfo</find>
+      <find>loadConsultors</find>
+      <find>SuggestHistoryManager</find>
+      <find>RecommondTrends</find>
+      <find>self.date</find>
+      <find>strptime</find>
+      <find>getDayIndex</find>
+      <find>getTradeInfoAfter</find>
+      <find>getRangeTrend</find>
+      <find>loadStock</find>
+      <find>db['stocks']</find>
+      <find>item</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -215,15 +234,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test_list.py" />
-        <option value="$PROJECT_DIR$/consultor.py" />
         <option value="$PROJECT_DIR$/test_mongod.py" />
         <option value="$PROJECT_DIR$/test_restrore.py" />
         <option value="$PROJECT_DIR$/test/test_json.py" />
         <option value="$PROJECT_DIR$/recommond_unit.py" />
         <option value="$PROJECT_DIR$/test/test_mongod.py" />
         <option value="$PROJECT_DIR$/webserver/saveRecommond.py" />
-        <option value="$PROJECT_DIR$/data/stock_unit.py" />
         <option value="$PROJECT_DIR$/create_consultor_table.py" />
         <option value="$PROJECT_DIR$/create_stock_consultors_table.py" />
         <option value="$PROJECT_DIR$/test/test_restrore.py" />
@@ -242,30 +258,33 @@
         <option value="$PROJECT_DIR$/data/stocks.py" />
         <option value="$PROJECT_DIR$/test/test_save_suggest.py" />
         <option value="$PROJECT_DIR$/analyse/calc_history_suggest_of_stock.py" />
-        <option value="$PROJECT_DIR$/webserver/stock_of_consultor_history.py" />
         <option value="$PROJECT_DIR$/webserver/save_recommond.py" />
         <option value="$PROJECT_DIR$/webserver/calc_range_trend.py" />
-        <option value="$PROJECT_DIR$/webserver/suggest_history.py" />
-        <option value="$PROJECT_DIR$/webserver/save_upload_excel.py" />
         <option value="$PROJECT_DIR$/webserver/suggest_history_with_trens.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/data/recommond_unit.py" />
-        <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$PROJECT_DIR$/stock/serialization.py" />
         <option value="$PROJECT_DIR$/stock/setup_stock_id_name.py" />
         <option value="$PROJECT_DIR$/test/test_stock_info.py" />
         <option value="$PROJECT_DIR$/stock/load.py" />
         <option value="$PROJECT_DIR$/stock/stockstoremgr.py" />
         <option value="$PROJECT_DIR$/analyse/test_time.py" />
         <option value="$PROJECT_DIR$/test/test_class.py" />
-        <option value="$PROJECT_DIR$/storemgr.py" />
         <option value="$PROJECT_DIR$/analyse/calc_interval_amplitude_of_consultor.py" />
         <option value="$PROJECT_DIR$/analyse/calc_detail_suggest.py" />
         <option value="$PROJECT_DIR$/webserver/suggest_history_with_trends.py" />
-        <option value="$PROJECT_DIR$/analyse/calc_history_recommonds.py" />
         <option value="$PROJECT_DIR$/every_day_run.py" />
         <option value="$PROJECT_DIR$/test/test_remove_the_same.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/storemgr.py" />
+        <option value="$PROJECT_DIR$/webserver/save_upload_excel.py" />
+        <option value="$PROJECT_DIR$/analyse/calc_history_recommonds.py" />
         <option value="$PROJECT_DIR$/data/stock_info.py" />
+        <option value="$PROJECT_DIR$/webserver/suggest_history.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/webserver/stock_of_consultor_history.py" />
+        <option value="$PROJECT_DIR$/data/stock_unit.py" />
+        <option value="$PROJECT_DIR$/test/test_time.py" />
+        <option value="$PROJECT_DIR$/stock/serialization.py" />
+        <option value="$PROJECT_DIR$/analyse/SuggestHistoryManager.py" />
       </list>
     </option>
   </component>
@@ -309,6 +328,11 @@
             <path>
               <item name="realgood-server" type="b2602c69:ProjectViewProjectNode" />
               <item name="realgood-server" type="462c0819:PsiDirectoryNode" />
+              <item name="analyse" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="realgood-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="realgood-server" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -336,7 +360,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="Docker" />
     <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v6.10.3/bin/node" />
     <property name="js.buildTools.grunt.grunt-cli.package" value="" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="" />
@@ -350,9 +374,9 @@
       <recent name="$PROJECT_DIR$/data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/webserver" />
-      <recent name="$PROJECT_DIR$/test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -367,7 +391,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.every_day_run">
+  <component name="RunManager" selected="Python.SuggestHistoryManager">
+    <configuration name="SuggestHistoryManager" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/analyse" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="realgood-server" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/analyse/SuggestHistoryManager.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <configuration default="true" type="js.build_tools.grunt" factoryName="Grunt.js">
       <node-interpreter value="project" />
       <envs />
@@ -434,24 +476,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="test_class" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="realgood-server" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_class.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
     <configuration name="test_time" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -465,7 +489,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="realgood-server" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/analyse/test_time.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_time.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -473,17 +497,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.main" />
       <item index="1" class="java.lang.String" itemvalue="Python.every_day_run" />
-      <item index="2" class="java.lang.String" itemvalue="Python.test_class" />
-      <item index="3" class="java.lang.String" itemvalue="Python.test_time" />
-      <item index="4" class="java.lang.String" itemvalue="Python.calc_detail_suggest" />
+      <item index="2" class="java.lang.String" itemvalue="Python.test_time" />
+      <item index="3" class="java.lang.String" itemvalue="Python.calc_detail_suggest" />
+      <item index="4" class="java.lang.String" itemvalue="Python.SuggestHistoryManager" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.every_day_run" />
-        <item index="1" class="java.lang.String" itemvalue="Python.main" />
-        <item index="2" class="java.lang.String" itemvalue="Python.calc_detail_suggest" />
-        <item index="3" class="java.lang.String" itemvalue="Python.test_class" />
-        <item index="4" class="java.lang.String" itemvalue="Python.test_time" />
+        <item index="0" class="java.lang.String" itemvalue="Python.SuggestHistoryManager" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test_time" />
+        <item index="2" class="java.lang.String" itemvalue="Python.every_day_run" />
+        <item index="3" class="java.lang.String" itemvalue="Python.main" />
+        <item index="4" class="java.lang.String" itemvalue="Python.calc_detail_suggest" />
       </list>
     </recent_temporary>
   </component>
@@ -521,10 +545,10 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2682334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298217" sideWeight="0.49196786" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38123167" sideWeight="0.49675852" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2404692" sideWeight="0.49675852" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3079179" sideWeight="0.493517" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53372437" sideWeight="0.493517" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298217" sideWeight="0.49196786" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -555,16 +579,6 @@
           <line>4</line>
           <option name="timeStamp" value="50" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/webserver/calc_range_trend.py</url>
-          <line>26</line>
-          <option name="timeStamp" value="114" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/analyse/test_time.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="140" />
-        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
@@ -576,7 +590,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="159" />
+      <option name="time" value="163" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -585,13 +599,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-429">
           <caret line="140" column="4" lean-forward="false" selection-start-line="140" selection-start-column="4" selection-end-line="140" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="1508" column="0" lean-forward="false" selection-start-line="1508" selection-start-column="0" selection-end-line="1508" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -639,13 +646,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webserver/stock_of_consultor_history.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="19" column="12" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Library/Caches/PyCharm2017.2/remote_sources/1367265699/249573927/_strptime.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8280">
@@ -678,48 +678,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webserver/RequestBaseManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webserver/save_recommond.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="40" column="4" lean-forward="false" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webserver/calc_range_trend.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="68" lean-forward="false" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="68" />
-          <folding>
-            <element signature="e#11#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/create_consultor_recommonds_trends_table.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stock/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -744,16 +702,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stock/serialization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -770,58 +718,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_stock_info.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stock/load.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
           <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2017.2/python_stubs/-2010535109/time.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1294">
-          <caret line="124" column="4" lean-forward="false" selection-start-line="124" selection-start-column="4" selection-end-line="124" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/analyse/test_time.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/analyse/calc_history_suggest_of_stock.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_class.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -842,24 +742,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/stock_unit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/analyse/calc_interval_amplitude_of_consultor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="68" column="33" lean-forward="false" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
-          <folding>
-            <element signature="e#9#109#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_restrore.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -868,21 +750,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webserver/save_upload_excel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/analyse/calc_detail_suggest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="45" column="4" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -908,65 +780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stock/stockstoremgr.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="26" column="20" lean-forward="true" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storemgr.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1074">
-          <caret line="140" column="26" lean-forward="true" selection-start-line="140" selection-start-column="26" selection-end-line="140" selection-end-column="26" />
-          <folding>
-            <element signature="e#1#32#0" expanded="true" />
-            <element signature="e#2416#2627#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/every_day_run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webserver/suggest_history.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="22" column="35" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/analyse/calc_history_recommonds.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="26" column="37" lean-forward="true" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -981,32 +794,252 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_mongod.py">
+    <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="18" column="61" lean-forward="true" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+        <state relative-caret-position="165">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/stock_info.py">
+    <entry file="file://$PROJECT_DIR$/webserver/save_recommond.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="67" column="36" lean-forward="true" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="45" />
+        <state relative-caret-position="390">
+          <caret line="31" column="6" lean-forward="false" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/create_consultor_recommonds_trends_table.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_stock_info.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_class.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webserver/RequestBaseManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/recommond_unit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="157" column="4" lean-forward="true" selection-start-line="157" selection-start-column="4" selection-end-line="157" selection-end-column="4" />
+        <state relative-caret-position="86">
+          <caret line="94" column="18" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="94" selection-end-column="18" />
           <folding>
             <element signature="e#73#527#0" expanded="false" />
             <element signature="e#567#1284#0" expanded="false" />
             <element signature="e#1342#2069#0" expanded="false" />
             <element signature="e#2147#2894#0" expanded="false" />
             <element signature="e#2935#3369#0" expanded="false" />
+            <element signature="e#3415#3961#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="225" column="8" lean-forward="false" selection-start-line="225" selection-start-column="8" selection-end-line="225" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/every_day_run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webserver/save_upload_excel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="37" column="6" lean-forward="false" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webserver/suggest_history.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webserver/stock_of_consultor_history.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="47" lean-forward="false" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webserver/calc_range_trend.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/stock_info.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="58" column="6" lean-forward="false" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="6" />
+          <folding>
+            <element signature="e#37#657#0" expanded="false" />
+            <element signature="e#693#1120#0" expanded="false" />
+            <element signature="e#1163#2146#0" expanded="false" />
+            <element signature="e#2178#2567#0" expanded="false" />
+            <element signature="e#2607#3272#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2017.2/python_stubs/-2010535109/time.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="200" column="12" lean-forward="false" selection-start-line="200" selection-start-column="4" selection-end-line="200" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_mongod.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_time.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analyse/calc_interval_amplitude_of_consultor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="17" />
+          <folding>
+            <element signature="e#9#109#0" expanded="true" />
+            <element signature="e#1005#1594#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analyse/calc_history_suggest_of_stock.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storemgr.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="130" column="43" lean-forward="true" selection-start-line="130" selection-start-column="43" selection-end-line="130" selection-end-column="43" />
+          <folding>
+            <element signature="e#1#32#0" expanded="true" />
+            <element signature="e#2166#2343#0" expanded="false" />
+            <element signature="e#2394#2605#0" expanded="false" />
+            <element signature="e#2674#2863#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stock/stockstoremgr.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="53" column="11" lean-forward="false" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stock/serialization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="21" column="17" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="21" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#94#424#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/stock_unit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="97" column="8" lean-forward="false" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="310" column="0" lean-forward="false" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analyse/SuggestHistoryManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="27" column="24" lean-forward="false" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#83#0" expanded="true" />
+            <element signature="e#779#1371#0" expanded="false" />
+            <element signature="e#2516#2716#0" expanded="false" />
+            <element signature="e#2790#3078#0" expanded="false" />
+            <element signature="e#3239#3299#0" expanded="false" />
+            <element signature="e#3717#4271#0" expanded="false" />
+            <element signature="e#4342#4814#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -1,7 +1,7 @@
 import json
 
 import storemgr
-from analyse.calc_history_recommonds import getHistorySuggest
+from analyse import SuggestHistoryManager
 from webserver import tokenManager
 from webserver.RequestBaseManager import RequestBaseManager
 
@@ -20,7 +20,7 @@ class FindHistorySuggest(RequestBaseManager):
     
             return
 
-        results = getHistorySuggest(int(day))
+        results = SuggestHistoryManager.instance().getHistorySuggest(int(day))
 
         jsonvalue = dict()
         

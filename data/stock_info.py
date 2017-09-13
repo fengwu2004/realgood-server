@@ -30,25 +30,6 @@ class SuggestInfo(object):
         
         return obj
 
-class StockInfo(object):
-    
-    def __init__(self):
-        
-        self.stockId = None
-        
-        self.count = 0
-        
-        self.lasttime = None
-    
-    def toJson(self):
-        
-        pass
-    
-    @classmethod
-    def fromJson(cls, jsonvalue):
-        
-        pass
-    
 class Consultor(object):
     
     def __init__(self):
@@ -65,7 +46,7 @@ class Consultor(object):
         }
     
     @classmethod
-    def fromJson(cls, jsonvalue) -> Consultor:
+    def fromJson(cls, jsonvalue):
         
         obj = Consultor()
         
@@ -74,7 +55,7 @@ class Consultor(object):
         obj.name = jsonvalue['name']
         
         return obj
-
+    
 class SuggestStock(object):
     
     def __init__(self):
@@ -83,11 +64,9 @@ class SuggestStock(object):
         
         self.stockId = None
         
-        self.name = ''
-        
         self.date = None
-        
-        self.company = ''
+
+        self.consultor = None
         
     def __eq__(self, other):
         
@@ -107,9 +86,8 @@ class SuggestStock(object):
         
             'stockName': self.stockName,
             'stockId': self.stockId,
-            'name': self.name,
             'date': self.date,
-            'company': self.company,
+            'consultor': self.consultor.toJson()
         }
     
     @classmethod
@@ -117,14 +95,59 @@ class SuggestStock(object):
     
         obj = SuggestStock()
         
-        obj.stockName = jsonvalue['stockName']
+        obj.consultor = Consultor.fromJson(jsonvalue['consultor'])
 
         obj.stockId = jsonvalue['stockId']
-
-        obj.name = jsonvalue['name']
+        
+        obj.stockName = jsonvalue['stockName']
 
         obj.date = jsonvalue['date']
 
-        obj.company = jsonvalue['company']
+        return obj
+
+class RangeTrend(object):
+    def __init__ (self):
+        # 区间
+        self.range = 0
+        # 最大值
+        self.max = 0
+        # 最大百分比
+        self.maxPercent = 0
+        # 最小值
+        self.min = 0
+        # 出现最大值的时间
+        self.maxOffset = 0
+    
+    def toJson (self):
+        return {'range': self.range, 'max': self.max, 'maxPercent': self.maxPercent, 'min': self.min,
+            'maxOffset': self.maxOffset, }
+
+class SuggestStockTrends(object):
+    def __init__ (self):
+        
+        self.suggeststock = None
+        
+        self.trends = []
+    
+    def toJson (self):
+        
+        trends = []
+        
+        for item in self.trends:
+            
+            trends.append(item.toJson())
+        
+        return {'suggeststock': self.suggeststock.toJson(), 'trends': trends}
+    
+    @classmethod
+    def fromJson (cls, jsonvalue):
+        
+        obj = SuggestStockTrends()
+        
+        obj.suggest = SuggestStock.fromJson(jsonvalue['suggeststock'])
+        
+        for item in jsonvalue['trends']:
+            
+            obj.trends.append(RangeTrend.fromJson(item))
         
         return obj
