@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="719e5223-de70-49d4-a2ab-afe0f484a8ca" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/analyse/calc_detail_suggest.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/analyse/test_time.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test_class.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test_remove_the_same.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test_stock_info.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webserver/suggest_history_with_trends.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/realgood-server.iml" afterPath="$PROJECT_DIR$/.idea/realgood-server.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analyse/calc_history_recommonds.py" afterPath="$PROJECT_DIR$/analyse/calc_history_recommonds.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analyse/calc_interval_amplitude_of_consultor.py" afterPath="$PROJECT_DIR$/analyse/calc_interval_amplitude_of_consultor.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/recommond_unit.py" afterPath="$PROJECT_DIR$/data/recommond_unit.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/stock_info.py" afterPath="$PROJECT_DIR$/data/stock_info.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/every_day_run.py" afterPath="$PROJECT_DIR$/every_day_run.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setup.py" afterPath="$PROJECT_DIR$/setup.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock/load.py" afterPath="$PROJECT_DIR$/stock/load.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock/serialization.py" afterPath="$PROJECT_DIR$/stock/serialization.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock/setup_stock_id_name.py" afterPath="$PROJECT_DIR$/stock/setup_stock_id_name.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock/stockstoremgr.py" afterPath="$PROJECT_DIR$/stock/stockstoremgr.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storemgr.py" afterPath="$PROJECT_DIR$/storemgr.py" />
-    </list>
+    <list default="true" id="719e5223-de70-49d4-a2ab-afe0f484a8ca" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -137,7 +115,7 @@
       <file leaf-file-name="recommond_unit.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data/recommond_unit.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
+            <state relative-caret-position="197">
               <caret line="157" column="4" lean-forward="true" selection-start-line="157" selection-start-column="4" selection-end-line="157" selection-end-column="4" />
               <folding>
                 <element signature="e#73#527#0" expanded="false" />
@@ -1021,7 +999,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/recommond_unit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="197">
           <caret line="157" column="4" lean-forward="true" selection-start-line="157" selection-start-column="4" selection-end-line="157" selection-end-column="4" />
           <folding>
             <element signature="e#73#527#0" expanded="false" />
