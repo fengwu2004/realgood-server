@@ -43,4 +43,3 @@ def doRun():
         
         temps.append(v.toJson())
         
-    storemgr.intance().saveManyTo('consultors', temps)

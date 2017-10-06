@@ -63,13 +63,13 @@ class Stock(object):
         
     def getDayIndex(self, date:str):
     
-        t0 = time.strptime(date, '%Y-%m-%dT')
+        t0 = time.strptime(date, '%Y-%m-%d')
         
         index = 0
         
         for dayvalue in self.dayvalues:
             
-            t = time.strptime(dayvalue.date, '%Y/%m/%dT')
+            t = time.strptime(dayvalue.date, '%Y/%m/%d')
             
             if t < t0:
                 index += 1

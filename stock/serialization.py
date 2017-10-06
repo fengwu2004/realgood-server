@@ -10,6 +10,8 @@ def loadFromDB():
     client = MongoClient(uri)
 
     db = client["recommond"]
+
+    client = MongoClient('localhost', 27017)
     
     coll = db['stocks']
     

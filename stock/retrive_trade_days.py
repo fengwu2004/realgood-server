@@ -1,0 +1,78 @@
+from datetime import datetime, timedelta
+import time
+
+holidays = [
+    '2017-01-01',
+    '2017-01-02',
+    '2017-01-27',
+    '2017-01-28',
+    '2017-01-29',
+    '2017-01-30',
+    '2017-01-31',
+    '2017-02-01',
+    '2017-02-02',
+    '2017-04-02',
+    '2017-04-03',
+    '2017-04-04',
+    '2017-04-29',
+    '2017-04-30',
+    '2017-05-01',
+    '2017-05-28',
+    '2017-05-29',
+    '2017-05-30',
+    '2017-10-01',
+    '2017-10-02',
+    '2017-10-03',
+    '2017-10-04',
+    '2017-10-05',
+    '2017-10-06',
+    '2017-10-07',
+    '2017-10-08']
+
+def dt2t(dt:datetime)->time.struct_time:
+    
+    timestr = dt.strftime('%Y-%m-%d')
+    
+    return time.strptime(timestr, '%Y-%m-%d')
+
+# time to datatime
+def t2dt(t:time.struct_time) -> datetime:
+    
+    return datetime(t.tm_year, t.tm_mon, t.tm_mday)
+
+#  is holiday of 2017(include weekend)
+def isHolidays(dt:datetime) -> bool:
+    
+    if dt.weekday() == 5 or dt.weekday() == 6:
+    
+        return True
+    
+    timestr = dt.strftime('%Y-%m-%d')
+    
+    for item in holidays:
+    
+        if timestr == item:
+            
+            return True
+        
+    return False
+
+def getNextTradeDay(date:str) -> datetime:
+
+    t = time.strptime(date, '%Y-%m-%d')
+
+    dt = t2dt(t)
+
+    dt = dt + timedelta(days = 1)
+
+    while isHolidays(dt):
+    
+        dt = dt + timedelta(days = 1)
+
+    return dt
+
+# test
+def test():
+    
+    print(getNextTradeDay('2017-10-2'))
+    

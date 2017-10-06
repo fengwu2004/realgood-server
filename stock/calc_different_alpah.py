@@ -1,4 +1,4 @@
-import stock.serialization
+from data.stock_unit import Stock
 from stock.wave_strategy import WaveStrategyUnit
 import jsonpickle
 from pymongo import MongoClient
@@ -6,21 +6,47 @@ from stock.strategy_find_increase import checkInAdjustWave
 
 import json
 
-stocks = stock.serialization.loadFromDB()
-
-results = []
-
 alpha = 0.12
 
-for stock in stocks:
+def loadFromDB ():
     
-    wavaUnit = WaveStrategyUnit(stock, alpha)
+    stocks = []
+
+    client = MongoClient('localhost', 27017)
+
+    db = client["test"]
+
+    coll = db['stocks']
     
-    if checkInAdjustWave(wavaUnit):
+    results = coll.find({}, {'_id': 0})
     
-        results.append(wavaUnit)
+    for r in results:
+        
+        stocks.append(Stock.fromJson(r))
+    
+    return stocks
+
+def load():
+    
+    stocks = loadFromDB()
+
+    results = []
+    
+    global alpha
+    
+    for stock in stocks:
+        
+        wavaUnit = WaveStrategyUnit(stock, alpha)
+        
+        if checkInAdjustWave(wavaUnit):
+        
+            results.append(wavaUnit)
+            
+    return results
 
 def save():
+    
+    results = load()
     
     client = MongoClient('localhost', 27017)
     
@@ -36,5 +62,22 @@ def save():
     
     coll.insert_many(v)
     
+def display():
+
+    client = MongoClient('localhost', 27017)
+    
+    db = client["test"]
+    
+    name = "alpha_increase_%s" % alpha
+    
+    coll = db[name]
+    
+    items = coll.find({}, {'_id':0})
+    
+    for item in items:
+        
+        print(item['id'] + ' ' + item['name'])
+        
 save()
 
+display()

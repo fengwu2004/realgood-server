@@ -5,8 +5,7 @@ from analyse import calc_interval_amplitude_of_consultor
 from data.recommond_unit import ConsultorRecommondsTrends
 from webserver import tokenManager
 from webserver.RequestBaseManager import RequestBaseManager
-from webserver.tokenManager import TokenManagerInstance
-import storemgr
+from data import storemgr
 
 class CalcRangeTrend(RequestBaseManager):
 
@@ -18,7 +17,7 @@ class CalcRangeTrend(RequestBaseManager):
 
         consultorCompany = data['company']
 
-        if not 'token' in data or not tokenManager.TokenManagerInstance().checkToken(data['token']):
+        if not self.checkToken():
             
             self.write({'success': -1})
     

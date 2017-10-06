@@ -1,23 +1,17 @@
 from data.stock_info import SuggestStock, SuggestStockTrends, Consultor, RangeTrend
 from data.stock_unit import Stock, DayValue
 import time
-import storemgr
-from pymongo import MongoClient
-from typing import Dict
 
-def loadFromDB() -> Dict[str, Stock]:
+from data import databasemgr
+from data import storemgr
+from typing import Dict, List
+
+
+def loadAllStockFromDB() -> Dict[str, Stock]:
     
     stocks = dict()
     
-    uri = "mongodb://yanli:9394@123.207.213.131:27017/recommond?authMechanism=SCRAM-SHA-1"
-    
-    client = MongoClient(uri)
-    
-    db = client["recommond"]
-    
-    coll = db['stocks']
-    
-    items = coll.find({}, {'_id': 0})
+    items = databasemgr.instance().stocks.find({}, {'_id': 0})
     
     for item in items:
         
@@ -41,15 +35,21 @@ def getRangeTrend(index, offset, dayvalues: [DayValue]):
     
     for i in range(index + 1, index + offset + 1):
         
-        with dayvalues[i] as dayvlaue:
-        
-            if trend.max < dayvlaue.max:
-                trend.max = dayvlaue.max
-                
-                trend.maxOffset = i - index
+        if i >= len(dayvalues):
             
-            if trend.min > dayvlaue.min:
-                trend.min = dayvlaue.min
+            break
+
+        dayvlaue = dayvalues[i]
+        
+        if trend.max < dayvlaue.max:
+            
+            trend.max = dayvlaue.max
+            
+            trend.maxOffset = i - index
+        
+        if trend.min > dayvlaue.min:
+            
+            trend.min = dayvlaue.min
     
     p = ((trend.max - dayvalues[index].open) / dayvalues[index].open) * 100
     
@@ -63,7 +63,7 @@ class SuggestHistoryManager(object):
         
         self.results = dict()
         
-        self.stocks = loadFromDB()
+        self.stocks = loadAllStockFromDB()
     
     def save(self, stockId:int, unit:SuggestStock):
         
@@ -75,7 +75,7 @@ class SuggestHistoryManager(object):
 
     def findRecommondAfter(self, date:time.struct_time):
         
-        suggeststocks = storemgr.intance().loadSuggests()
+        suggeststocks = storemgr.loadSuggests()
     
         for suggeststock in suggeststocks:
             
@@ -121,14 +121,14 @@ class SuggestHistoryManager(object):
     
         return self.results
     
-    def getTradeInfoAfter (self, date:str, stockId:int, days:[int]) -> [RangeTrend]:
+    def getTradeInfoAfter (self, date:str, stockId:str, days:[int]) -> [RangeTrend]:
     
-        with self.stocks[stockId] as stock:
+        if not stockId in self.stocks:
+            
+            return []
+
+        stock = self.stocks[stockId]
         
-            if stock is None:
-                
-                return []
-                
         index = stock.getDayIndex(date)
     
         results = []
@@ -143,7 +143,7 @@ class SuggestHistoryManager(object):
     
         return results
 
-    def getCloseAfter(self, date:str, stockId:int, days:[int]) -> [int]:
+    def getCloseAfter(self, date:str, stockId:str, days:[int]) -> [int]:
     
         with self.stocks[stockId] as stock:
         
@@ -185,7 +185,26 @@ class SuggestHistoryManager(object):
         
             results.append(obj.toJson())
             
-        pass
+        return results
+    
+    @property
+    def findTrends(self) -> List[SuggestStockTrends]:
+    
+        suggeststocks = storemgr.loadSuggests()
+        
+        items = list()
+        
+        for suggeststock in suggeststocks:
+            
+            item = SuggestStockTrends()
+            
+            item.suggeststock = suggeststock
+            
+            item.trends = self.getTradeInfoAfter(suggeststock.date, suggeststock.stockId, [1, 3, 5, 10, 20, 40, 60])
+
+            items.append(item.toJson())
+            
+        return items
     
 _instance = None
 
@@ -198,5 +217,3 @@ def instance():
         _instance = SuggestHistoryManager()
         
     return _instance
-
-loadFromDB()

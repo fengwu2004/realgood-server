@@ -1,24 +1,22 @@
 import json
 
-import storemgr
 from analyse import SuggestHistoryManager
-from webserver import tokenManager
+from data import storemgr
 from webserver.RequestBaseManager import RequestBaseManager
-
 
 class FindHistorySuggest(RequestBaseManager):
     
     def post (self, *args, **kwargs):
         
-        data = json.loads(self.request.body.decode('utf-8'))
-        
-        day = data['history']
-
-        if not 'token' in data or not tokenManager.TokenManagerInstance().checkToken(data['token']):
+        if self.checkToken() is not True:
             
             self.write({'success': -1})
     
             return
+
+        data = json.loads(self.request.body.decode('utf-8'))
+        
+        day = data['history']
 
         results = SuggestHistoryManager.instance().getHistorySuggest(int(day))
 

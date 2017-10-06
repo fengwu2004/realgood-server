@@ -7,7 +7,7 @@ from webserver.loginManager import loginManager
 from webserver.save_upload_excel import SaveRecommondExcel
 from webserver.stock_of_consultor_history import FindStockSuggestHistory
 from webserver.suggest_history import FindHistorySuggest
-from webserver.suggest_history_with_trends import FindHistorySuggestWithTrends
+from webserver.suggestwithtrends import HandleSuggestTrends
 
 
 def make_app():
@@ -16,7 +16,7 @@ def make_app():
         (r"/history/suggest", FindHistorySuggest),
         (r"/history/suggest/detail", FindStockSuggestHistory),
         (r"/analyse/rangetrend", CalcRangeTrend),
-        (r"/history/suggestwithtrends", FindHistorySuggestWithTrends),
+        (r"/history/suggestwithtrends", HandleSuggestTrends),
         (r"/login", loginManager),
     ])
 

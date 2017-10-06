@@ -29,7 +29,7 @@ class TokenManager(object):
 
 __intance = 0
 
-def TokenManagerInstance():
+def instance():
     
     global __intance
     

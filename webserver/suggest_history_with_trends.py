@@ -50,7 +50,7 @@ class FindHistorySuggestWithTrends(RequestBaseManager):
     def post (self, *args, **kwargs):
         
         # data = json.loads(self.request.body.decode('utf-8'))
-        
+        #
         # if not 'token' in data or not tokenManager.TokenManagerInstance().checkToken(data['token']):
         #
         #     self.write({'success': -1})

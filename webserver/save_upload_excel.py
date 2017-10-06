@@ -1,5 +1,5 @@
 from io import BytesIO
-import storemgr
+from data import storemgr
 from data.stock_info import SuggestStock, Consultor
 from openpyxl import load_workbook
 from webserver.RequestBaseManager import RequestBaseManager
@@ -20,7 +20,7 @@ def getItems(ws) -> [SuggestStock]:
 
         obj.stockId = ws['D' + index].value
 
-        obj.stockName = storemgr.intance().getStockName(obj.stockId)
+        obj.stockName = storemgr.getStockName(obj.stockId)
         
         if obj.stockName is None:
             
@@ -45,6 +45,6 @@ class SaveRecommondExcel(RequestBaseManager):
         
         ws = wb.active
         
-        storemgr.intance().saveSuggests(getItems(ws))
+        storemgr.saveSuggests(getItems(ws))
 
         self.write({'success': 1})

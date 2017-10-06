@@ -36,8 +36,6 @@ class SuggestTrends(object):
         
         trends = []
         
-        # print(self.suggeststock.toJson())
-        
         for item in self.trends:
             
             trends.append(item.toJson())
@@ -69,8 +67,6 @@ class RecommondTrends(object):
     def toJson(self):
         
         trends = []
-        
-        # print(self.recommond.toJson())
         
         for item in self.trends:
         
@@ -134,24 +130,23 @@ class ConsultorRecommondsTrends(object):
 # Consultor
 class Consultor(object):
     def __init__ (self):
+        
         self.name = None
         
         self.company = None
         
-        self.pm = False
-    
     def toJson (self):
+        
         return self.__dict__
     
     @classmethod
     def fromJson (cls, jsonvalue):
+        
         obj = Consultor()
         
         obj.name = jsonvalue['name']
         
         obj.company = jsonvalue['company']
-        
-        obj.pm = jsonvalue['pm']
         
         return obj
     

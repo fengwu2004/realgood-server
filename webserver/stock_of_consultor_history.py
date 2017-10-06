@@ -1,33 +1,32 @@
 import json
 
-import storemgr
 from analyse import SuggestHistoryManager
 from webserver import tokenManager
 from webserver.RequestBaseManager import RequestBaseManager
-
+from data import storemgr
 
 class FindStockSuggestHistory(RequestBaseManager):
     
     def post (self, *args, **kwargs):
-        
-        data = json.loads(self.request.body.decode('utf-8'))
 
-        stockname = data['stockname']
-        
-        stockId = storemgr.intance().getStockId(stockname)
-
-        if not 'token' in data or not tokenManager.TokenManagerInstance().checkToken(data['token']):
+        if not self.checkToken():
             
             self.write({'success': -1})
     
             return
-        
-        items = SuggestHistoryManager.instance().findAllSuggest(stockId)
 
-        jsonvalue = list()
-        
-        for item in items:
+        data = json.loads(self.request.body.decode('utf-8'))
+
+        with data['stockname'] as stockname:
             
-            jsonvalue.append(item.toJson())
-        
-        self.write({'success': 1, 'data': jsonvalue})
+            stockId = storemgr.getStockId(stockname)
+            
+            items = SuggestHistoryManager.instance().findAllSuggest(stockId)
+    
+            jsonvalue = list()
+            
+            for item in items:
+                
+                jsonvalue.append(item.toJson())
+            
+            self.write({'success': 1, 'data': jsonvalue})

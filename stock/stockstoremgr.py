@@ -30,11 +30,12 @@ def saveToDB():
         stocks.append(stock.toJson())
 
     # uri = "mongodb://yanli:9394@localhost:27017/recommond?authMechanism=SCRAM-SHA-1"
-    uri = "mongodb://yanli:9394@123.207.213.131:27017/recommond?authMechanism=SCRAM-SHA-1"
+    # uri = "mongodb://yanli:9394@123.207.213.131:27017/recommond?authMechanism=SCRAM-SHA-1"
+    # client = MongoClient(uri)
 
-    client = MongoClient(uri)
+    client = MongoClient('localhost', 27017)
     
-    db = client["recommond"]
+    db = client["test"]
     
     coll = db['stocks']
 
@@ -60,4 +61,6 @@ def loadStock(stockname):
         return r
 
     return None
+
+# saveToDB()
 

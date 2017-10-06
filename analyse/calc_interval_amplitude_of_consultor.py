@@ -3,8 +3,7 @@ from data.recommond_unit import RecommondUnit, RangeTrend, Recommond, RecommondT
 from stock.stockstoremgr import loadStock
 import time
 from data.stock_unit import Stock, DayValue
-
-import storemgr
+from data import storemgr
 
 def getTime (value):
     
@@ -132,7 +131,7 @@ def doRun(reommonds:[Recommond]) -> [RecommondTrends]:
 
 def findRangetrends(name, company) -> [RecommondTrends]:
     
-    suggeststocks = storemgr.intance().loadSuggestOfConsultor(name, company)
+    suggeststocks = storemgr.loadSuggestOfConsultor(name, company)
     
     results = []
     

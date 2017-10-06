@@ -5,7 +5,7 @@ from analyse.calc_interval_amplitude_of_consultor import getTradeInfoAfter, getC
 from data.stock_info import SuggestInfo
 from data.stock_info import SuggestStock
 
-suggeststocks = storemgr.intance().loadSuggests()
+suggeststocks = storemgr.loadSuggests()
 #
 def getSuggestCount(suggeststock:SuggestStock, day):
     

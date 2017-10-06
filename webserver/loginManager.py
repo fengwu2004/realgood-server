@@ -1,8 +1,8 @@
 import json
 
-import storemgr
+from data import storemgr
 from webserver.RequestBaseManager import RequestBaseManager
-from webserver.tokenManager import TokenManagerInstance
+from webserver import tokenManager
 
 
 class loginManager(RequestBaseManager):
@@ -21,13 +21,13 @@ class loginManager(RequestBaseManager):
         
         password = data['pwd']
         
-        if storemgr.intance().checkUser(username, password):
+        if storemgr.checkUser(username, password):
             
             senddata = dict()
 
             senddata['success'] = 1
 
-            senddata['token'] = TokenManagerInstance().createToken(username)
+            senddata['token'] = tokenManager.instance().createToken(username)
             
             self.write(senddata)
             
