@@ -2,7 +2,8 @@
 from data.recommond_unit import RecommondUnit, ConsultorWithRecommonds, Consultor
 from data.stock_info import SuggestStock
 from data import databasemgr
-
+from datetime import datetime
+from typing import Tuple
 
 def checkUser (name, pwd):
     
@@ -50,7 +51,7 @@ def getStockId(name:str):
 
     return None
 
-def saveSuggests (items: [SuggestStock]):
+def saveSuggests(items: [SuggestStock]):
 
     reuslts = []
 
@@ -68,6 +69,18 @@ def loadSuggests() -> [SuggestStock]:
 
     for item in items:
         
+        results.append(SuggestStock.fromJson(item))
+
+    return results
+
+def loadSuggestsOfDate(date:str) -> [SuggestStock]:
+    
+    items = databasemgr.instance().suggests.find({'date':date}, {'_id': 0})
+
+    results = []
+
+    for item in items:
+    
         results.append(SuggestStock.fromJson(item))
 
     return results

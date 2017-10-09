@@ -64,6 +64,14 @@ class SuggestHistoryManager(object):
         self.results = dict()
         
         self.stocks = loadAllStockFromDB()
+
+    def getStock(self, stockId:str) -> Stock:
+
+        if stockId in self.stocks:
+
+            return self.stocks[stockId]
+
+        return None
     
     def save(self, stockId:int, unit:SuggestStock):
         

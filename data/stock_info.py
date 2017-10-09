@@ -1,3 +1,9 @@
+from datetime import datetime
+from typing import List
+from stock.retrive_trade_days import getNextTradeDay, getTradeDayCount
+from analyse import SuggestHistoryManager
+from stock.consulter_rate_system import getMaxIncrease, retriveConsulterRate, ConsultorWinsLevelManager
+
 
 class SuggestInfo(object):
     
@@ -37,6 +43,18 @@ class Consultor(object):
         self.name = ''
         
         self.company = ''
+
+    def __eq__(self, other):
+
+        if isinstance(other, Consultor):
+
+            return self.toJson() == other.toJson()
+
+        return False
+
+    def __hash__(self):
+
+        return hash(str(self.toJson()))
         
     def toJson(self):
         
@@ -55,7 +73,27 @@ class Consultor(object):
         obj.name = jsonvalue['name']
         
         return obj
-    
+
+class ConsultorWinsLevel(Consultor):
+
+    def __init__(self):
+
+        self.suggest_wins = []
+
+        self.average = 0
+
+    def addScore(self, score:float):
+
+        self.suggest_wins.append(score)
+
+        sumscore = 0
+
+        for score in self.suggest_wins:
+
+            sumscore += score
+
+        self.average = sumscore/len(self.suggest_wins)
+
 class SuggestStock(object):
     
     def __init__(self):
@@ -105,6 +143,69 @@ class SuggestStock(object):
 
         return obj
 
+class SuggestScore(SuggestStock):
+
+    def __init__(self, score, suggest:SuggestStock):
+
+        super().__init__()
+
+        self.stockId = suggest.stockId
+
+        self.stockName = suggest.stockName
+
+        self.date = suggest.date
+
+        self.consultor = suggest.consultor
+
+        self.score = score
+
+class PoolStock(object):
+    
+    def __init__(self):
+        
+        self.stockId = ''
+        
+        self.addedDate = ''
+        
+        self.live = 20
+
+        self.weight = 0
+        
+        self.living = True
+        
+        self.suggests = []
+        
+    def checkDie(self, dt:datetime) -> bool:
+
+        startdt = datetime.strptime(self.addedDate, '%Y-%m-%d')
+
+        count = getTradeDayCount(startdt, dt)
+
+        return count > self.live
+
+    def addSuggest(self, suggest:SuggestStock):
+        
+        self.suggests.append(suggest)
+        
+        if len(self.suggests) > 1:
+            
+            self.live = 30
+            
+        self.weight += 1
+        
+    def updateConsultorScore(self, dt:datetime):
+
+        for suggest in self.suggests:
+
+            startdt = datetime.strptime(suggest.date, '%Y-%m-%d')
+
+            increase = getMaxIncrease(self.stockId, startdt, dt)
+
+            score = retriveConsulterRate(increase[0], increase[1])
+
+            ConsultorWinsLevelManager.instance().addConsultorScore(score, suggest)
+
+
 class RangeTrend(object):
     def __init__ (self):
         # 区间
@@ -123,6 +224,7 @@ class RangeTrend(object):
             'maxOffset': self.maxOffset, }
 
 class SuggestStockTrends(object):
+
     def __init__ (self):
         
         self.suggeststock = None

@@ -58,21 +58,52 @@ def isHolidays(dt:datetime) -> bool:
     return False
 
 def getNextTradeDay(date:str) -> datetime:
-
-    t = time.strptime(date, '%Y-%m-%d')
-
-    dt = t2dt(t)
+    
+    dt = datetime.strptime(date, '%Y-%m-%d')
 
     dt = dt + timedelta(days = 1)
 
     while isHolidays(dt):
     
         dt = dt + timedelta(days = 1)
+        
+    if dt > datetime.now():
+        
+        return None
 
     return dt
 
+def getTradeDayCount(dt1:datetime, dt2:datetime) -> int:
+
+    days = (dt2 - dt1).days
+
+    dt = dt1 + timedelta(days = 1)
+
+    count = 0
+
+    while days > 0:
+
+        days -= 1
+
+        if isHolidays(dt) is not True:
+
+            count += 1
+
+        dt = dt + timedelta(days = 1)
+
+    return count
+
 # test
 def test():
+
+    dt1 = datetime.strptime('2017-10-1', '%Y-%m-%d' )
+
+    dt2 = datetime.strptime('2017-10-16', '%Y-%m-%d')
+
+    d = getTradeDayCount(dt1, dt2)
+
+    print(d)
     
     print(getNextTradeDay('2017-10-2'))
     
+# test()
