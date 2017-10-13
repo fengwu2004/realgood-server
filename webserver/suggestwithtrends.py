@@ -1,4 +1,4 @@
-from analyse import SuggestHistoryManager
+from data import SuggestHistoryManager
 from webserver.RequestBaseManager import RequestBaseManager
 
 class HandleSuggestTrends(RequestBaseManager):

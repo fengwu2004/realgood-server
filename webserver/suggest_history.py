@@ -1,8 +1,8 @@
 import json
 
-from analyse import SuggestHistoryManager
-from data import storemgr
+from data import storemgr, SuggestHistoryManager
 from webserver.RequestBaseManager import RequestBaseManager
+
 
 class FindHistorySuggest(RequestBaseManager):
     

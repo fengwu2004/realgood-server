@@ -1,11 +1,28 @@
 
-from data.recommond_unit import RecommondUnit, ConsultorWithRecommonds, Consultor
-from data.stock_info import SuggestStock
+from data.suggest import Suggest, Consultor, SuggestScore
 from data import databasemgr
-from datetime import datetime
-from typing import Tuple
 
-def checkUser (name, pwd):
+def getStockLevel(stockId:str) -> int:
+
+    items = databasemgr.instance().stockLevels.find({'id':stockId})
+
+    for item in items:
+
+        return item['level']
+
+    return -1
+
+def getConsultorLevel(consultor:Consultor) -> int:
+
+    items = databasemgr.instance().consultorLevels.find({'name':consultor.name, 'company':consultor.company})
+
+    for item in items:
+
+        return item['level']
+
+    return -1
+
+def checkUser(name, pwd):
     
     user = databasemgr.instance().users.find({'name': name})
     
@@ -17,7 +34,7 @@ def checkUser (name, pwd):
     
     return False
 
-def loadSuggestOfConsultor(name, company) -> [SuggestStock]:
+def loadSuggestOfConsultor(name, company) -> [Suggest]:
 
     items = databasemgr.instance().suggests.find({'name': name, 'company': company}, {'_id': 0})
 
@@ -25,7 +42,7 @@ def loadSuggestOfConsultor(name, company) -> [SuggestStock]:
 
     for item in items:
         
-        results.append(SuggestStock.fromJson(item))
+        results.append(Suggest.fromJson(item))
 
     return results
 
@@ -51,7 +68,7 @@ def getStockId(name:str):
 
     return None
 
-def saveSuggests(items: [SuggestStock]):
+def saveSuggests(items: [Suggest]):
 
     reuslts = []
 
@@ -61,7 +78,7 @@ def saveSuggests(items: [SuggestStock]):
 
     databasemgr.instance().suggests.insert_many(reuslts)
 
-def loadSuggests() -> [SuggestStock]:
+def loadSuggests() -> [Suggest]:
 
     items = databasemgr.instance().suggests.find({}, {'_id': 0})
 
@@ -69,11 +86,11 @@ def loadSuggests() -> [SuggestStock]:
 
     for item in items:
         
-        results.append(SuggestStock.fromJson(item))
+        results.append(Suggest.fromJson(item))
 
     return results
 
-def loadSuggestsOfDate(date:str) -> [SuggestStock]:
+def loadSuggestsOfDate(date:str) -> [Suggest]:
     
     items = databasemgr.instance().suggests.find({'date':date}, {'_id': 0})
 
@@ -81,7 +98,7 @@ def loadSuggestsOfDate(date:str) -> [SuggestStock]:
 
     for item in items:
     
-        results.append(SuggestStock.fromJson(item))
+        results.append(Suggest.fromJson(item))
 
     return results
 
@@ -93,7 +110,7 @@ def formatSuggests():
     
     for item in items:
         
-        obj = SuggestStock()
+        obj = Suggest()
         
         obj.stockId = item['stockId']
 

@@ -21,6 +21,17 @@ class DatabaseMgr(object):
         
         return self.db['stocks']
 
+
+    @property
+    def consultorLevels(self):
+
+        return self.db['consultor_level']
+
+    @property
+    def stockLevels(self):
+
+        return self.db['stock_level']
+
     @property
     def suggests(self):
         

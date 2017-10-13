@@ -1,4 +1,4 @@
-from data.stock_unit import Stock
+from data.stock import Stock
 from stock.wave_strategy import WaveStrategyUnit
 import jsonpickle
 from pymongo import MongoClient

@@ -1,5 +1,5 @@
 from pymongo import MongoClient
-from data.stock_unit import Stock
+from data.stock import Stock
 
 def loadFromDB():
     

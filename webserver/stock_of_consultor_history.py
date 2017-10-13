@@ -1,9 +1,8 @@
 import json
 
-from analyse import SuggestHistoryManager
-from webserver import tokenManager
+from data import storemgr, SuggestHistoryManager
 from webserver.RequestBaseManager import RequestBaseManager
-from data import storemgr
+
 
 class FindStockSuggestHistory(RequestBaseManager):
     

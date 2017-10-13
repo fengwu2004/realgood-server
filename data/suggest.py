@@ -1,9 +1,6 @@
 from datetime import datetime
-from typing import List
-from stock.retrive_trade_days import getNextTradeDay, getTradeDayCount
-from analyse import SuggestHistoryManager
-from stock.consulter_rate_system import getMaxIncrease, retriveConsulterRate, ConsultorWinsLevelManager
-
+from typing import List, Tuple
+from functools import reduce
 
 class SuggestInfo(object):
     
@@ -28,7 +25,7 @@ class SuggestInfo(object):
         
         obj = SuggestInfo()
         
-        obj.suggeststock = SuggestStock.fromJson(jsonvalue['suggeststock'])
+        obj.suggeststock = Suggest.fromJson(jsonvalue['suggeststock'])
         
         obj.counts = jsonvalue['counts']
         
@@ -94,7 +91,7 @@ class ConsultorWinsLevel(Consultor):
 
         self.average = sumscore/len(self.suggest_wins)
 
-class SuggestStock(object):
+class Suggest(object):
     
     def __init__(self):
         
@@ -108,7 +105,7 @@ class SuggestStock(object):
         
     def __eq__(self, other):
         
-        if isinstance(other, SuggestStock):
+        if isinstance(other, Suggest):
             
             return self.toJson() == other.toJson()
         
@@ -131,7 +128,7 @@ class SuggestStock(object):
     @classmethod
     def fromJson(cls, jsonvalue):
     
-        obj = SuggestStock()
+        obj = Suggest()
         
         obj.consultor = Consultor.fromJson(jsonvalue['consultor'])
 
@@ -143,9 +140,9 @@ class SuggestStock(object):
 
         return obj
 
-class SuggestScore(SuggestStock):
+class SuggestScore(Suggest):
 
-    def __init__(self, score, suggest:SuggestStock):
+    def __init__(self, score, suggest:Suggest):
 
         super().__init__()
 
@@ -158,53 +155,6 @@ class SuggestScore(SuggestStock):
         self.consultor = suggest.consultor
 
         self.score = score
-
-class PoolStock(object):
-    
-    def __init__(self):
-        
-        self.stockId = ''
-        
-        self.addedDate = ''
-        
-        self.live = 20
-
-        self.weight = 0
-        
-        self.living = True
-        
-        self.suggests = []
-        
-    def checkDie(self, dt:datetime) -> bool:
-
-        startdt = datetime.strptime(self.addedDate, '%Y-%m-%d')
-
-        count = getTradeDayCount(startdt, dt)
-
-        return count > self.live
-
-    def addSuggest(self, suggest:SuggestStock):
-        
-        self.suggests.append(suggest)
-        
-        if len(self.suggests) > 1:
-            
-            self.live = 30
-            
-        self.weight += 1
-        
-    def updateConsultorScore(self, dt:datetime):
-
-        for suggest in self.suggests:
-
-            startdt = datetime.strptime(suggest.date, '%Y-%m-%d')
-
-            increase = getMaxIncrease(self.stockId, startdt, dt)
-
-            score = retriveConsulterRate(increase[0], increase[1])
-
-            ConsultorWinsLevelManager.instance().addConsultorScore(score, suggest)
-
 
 class RangeTrend(object):
     def __init__ (self):
@@ -222,6 +172,37 @@ class RangeTrend(object):
     def toJson (self):
         return {'range': self.range, 'max': self.max, 'maxPercent': self.maxPercent, 'min': self.min,
             'maxOffset': self.maxOffset, }
+
+class SuggestTrends(object):
+
+    def __init__(self):
+
+        self.suggeststock = None
+
+        self.trends = []
+
+    def toJson(self):
+
+        trends = []
+
+        for item in self.trends:
+
+            trends.append(item.toJson())
+
+        return {'suggeststock': self.suggeststock.toJson(), 'trends': trends}
+
+    @classmethod
+    def fromJson(cls, jsonvalue):
+
+        obj = SuggestTrends()
+
+        obj.suggest = Suggest.fromJson(jsonvalue['suggeststock'])
+
+        for item in jsonvalue['trends']:
+
+            obj.trends.append(RangeTrend.fromJson(item))
+
+        return obj
 
 class SuggestStockTrends(object):
 
@@ -246,7 +227,7 @@ class SuggestStockTrends(object):
         
         obj = SuggestStockTrends()
         
-        obj.suggest = SuggestStock.fromJson(jsonvalue['suggeststock'])
+        obj.suggest = Suggest.fromJson(jsonvalue['suggeststock'])
         
         for item in jsonvalue['trends']:
             

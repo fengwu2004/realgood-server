@@ -1,8 +1,8 @@
 # 计算区间振幅
-from data.recommond_unit import RecommondUnit, RangeTrend, Recommond, RecommondTrends, SuggestTrends
 from stock.stockstoremgr import loadStock
 import time
-from data.stock_unit import Stock, DayValue
+from data.suggest import RangeTrend
+from data.stock import Stock, DayValue
 from data import storemgr
 
 def getTime (value):
@@ -108,43 +108,4 @@ def getTradeInfoAfter(date, stockname, days) -> [RangeTrend]:
 
             results.append(trend)
             
-    return results
-
-def doRun(reommonds:[Recommond]) -> [RecommondTrends]:
-    
-    results = []
-    
-    for recommond in reommonds:
-        
-        obj = RecommondTrends()
-
-        obj.recommond = recommond
-
-        obj.trends = getTradeInfoAfter(time.strptime(recommond.date, '%Y-%m-%dT%H:%M:%S.%fZ'),
-                                                       recommond.stockname, [1, 3, 5, 10, 20, 40, 60])
-
-        results.append(obj)
-        
-    # print(results)
-        
-    return results
-
-def findRangetrends(name, company) -> [RecommondTrends]:
-    
-    suggeststocks = storemgr.loadSuggestOfConsultor(name, company)
-    
-    results = []
-    
-    for suggeststock in suggeststocks:
-        
-        obj = SuggestTrends()
-        
-        obj.suggeststock = suggeststock
-        
-        obj.trends = getTradeInfoAfter(time.strptime(suggeststock.date, '%Y-%m-%d'), suggeststock.stockName, [1, 3, 5, 10, 20, 40, 60])
-        
-        results.append(obj.toJson())
-    
-    # print(results)
-    
     return results

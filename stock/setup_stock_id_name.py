@@ -1,8 +1,7 @@
-import storemgr
+from data import storemgr
 from pymongo import MongoClient
 
 from stock.serialization import loadFromDB
-
 
 def run():
 

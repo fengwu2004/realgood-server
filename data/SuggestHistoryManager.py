@@ -1,11 +1,10 @@
-from data.stock_info import SuggestStock, SuggestStockTrends, Consultor, RangeTrend
-from data.stock_unit import Stock, DayValue
+from data.stock import Stock, DayValue
+from data.suggest import Suggest, SuggestStockTrends, Consultor, RangeTrend
 import time
 
 from data import databasemgr
 from data import storemgr
 from typing import Dict, List
-
 
 def loadAllStockFromDB() -> Dict[str, Stock]:
     
@@ -73,7 +72,7 @@ class SuggestHistoryManager(object):
 
         return None
     
-    def save(self, stockId:int, unit:SuggestStock):
+    def save(self, stockId:int, unit:Suggest):
         
         if not stockId in self.results:
             

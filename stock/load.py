@@ -1,5 +1,5 @@
 import time
-from data.stock_unit import Stock, DayValue
+from data.stock import Stock, DayValue
 
 def getLines(file):
 

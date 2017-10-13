@@ -2,12 +2,12 @@ import time
 
 import storemgr
 from analyse.calc_interval_amplitude_of_consultor import getTradeInfoAfter, getCloseAfter
-from data.stock_info import SuggestInfo
-from data.stock_info import SuggestStock
+from data.suggest import SuggestInfo
+from data.suggest import Suggest
 
 suggeststocks = storemgr.loadSuggests()
 #
-def getSuggestCount(suggeststock:SuggestStock, day):
+def getSuggestCount(suggeststock:Suggest, day):
     
     count = 0
 
@@ -26,7 +26,7 @@ def getSuggestCount(suggeststock:SuggestStock, day):
     return count
 
 #
-def getSuggestCounts(suggeststock:SuggestStock, days:[int]):
+def getSuggestCounts(suggeststock:Suggest, days:[int]):
     
     results = []
     
@@ -37,7 +37,7 @@ def getSuggestCounts(suggeststock:SuggestStock, days:[int]):
     return results
 
 #
-def getSuggestTrends(suggeststock:SuggestStock, days:[int]):
+def getSuggestTrends(suggeststock:Suggest, days:[int]):
     
     items = getCloseAfter(time.strptime(suggeststock.date, '%Y-%m-%d'), suggeststock.stockName, days)
     

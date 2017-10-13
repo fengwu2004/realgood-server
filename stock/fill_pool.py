@@ -1,7 +1,7 @@
 from data import storemgr
 from datetime import datetime
 from stock.retrive_trade_days import getNextTradeDay
-from stock.pool_a import PoolA
+from stock.pool import PoolA
 
 pool = PoolA()
 
@@ -22,6 +22,5 @@ while dt:
     pool.run(dt)
 
     dt = getNextTradeDay(dtstr)
-        
-pool.display()
-        
+
+pool.show()

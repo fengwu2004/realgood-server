@@ -1,4 +1,4 @@
-from data.stock_info import SuggestStock
+from data.suggest import Suggest
 import time
 
 import storemgr
@@ -7,7 +7,7 @@ results = list()
 
 
 #
-def save (stockId: int, unit: SuggestStock):
+def save (stockId: int, unit: Suggest):
     if not stockId in results:
         results[stockId] = list()
     

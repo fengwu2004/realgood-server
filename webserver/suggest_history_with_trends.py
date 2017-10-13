@@ -1,5 +1,5 @@
 import json
-from data.stock_info import SuggestInfo
+from data.suggest import SuggestInfo
 from openpyxl import Workbook
 from analyse import calc_detail_suggest
 from webserver import tokenManager

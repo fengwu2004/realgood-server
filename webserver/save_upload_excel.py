@@ -1,16 +1,16 @@
 from io import BytesIO
 from data import storemgr
-from data.stock_info import SuggestStock, Consultor
+from data.suggest import Suggest, Consultor
 from openpyxl import load_workbook
 from webserver.RequestBaseManager import RequestBaseManager
 
-def getItems(ws) -> [SuggestStock]:
+def getItems(ws) -> [Suggest]:
     
     results = []
     
     for i in range(1, ws.max_row):
     
-        obj = SuggestStock()
+        obj = Suggest()
         
         index = str(i + 1)
         
