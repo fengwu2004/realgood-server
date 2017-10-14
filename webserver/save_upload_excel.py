@@ -2,6 +2,7 @@ from io import BytesIO
 from data import storemgr
 from data.suggest import Suggest, Consultor
 from openpyxl import load_workbook
+from stock.consultor_manager import ConsultorManager
 from webserver.RequestBaseManager import RequestBaseManager
 
 def getItems(ws) -> [Suggest]:
@@ -25,12 +26,13 @@ def getItems(ws) -> [Suggest]:
         if obj.stockName is None:
             
             continue
-        
-        obj.consultor = Consultor.fromJson({
-            'company':ws['B' + index].value,
-            'name':ws['C' + index].value
-        })
-        
+
+        consultorName = ws['C' + index].value
+
+        consultorCompany = ws['B' + index].value
+
+        obj.consultor = ConsultorManager.instance().retriveConsultor(consultorName, consultorCompany)
+
         results.append(obj)
         
     return results

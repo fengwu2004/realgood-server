@@ -1,5 +1,7 @@
 from data import storemgr
 from datetime import datetime
+
+from stock.consultor_score_manager import ConsultorScoreManager
 from stock.retrive_trade_days import getNextTradeDay
 from stock.pool import PoolA
 
@@ -24,3 +26,5 @@ while dt:
     dt = getNextTradeDay(dtstr)
 
 pool.show()
+
+ConsultorScoreManager.instance().show()

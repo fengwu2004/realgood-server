@@ -35,11 +35,13 @@ class SuggestInfo(object):
 
 class Consultor(object):
     
-    def __init__(self):
+    def __init__(self, name:str, company:str, id:int):
         
-        self.name = ''
+        self.name = name
         
-        self.company = ''
+        self.company = company
+
+        self.id = id
 
     def __eq__(self, other):
 
@@ -56,6 +58,7 @@ class Consultor(object):
     def toJson(self):
         
         return {
+            'id':self.id,
             'name':self.name,
             'company':self.company
         }
@@ -63,13 +66,7 @@ class Consultor(object):
     @classmethod
     def fromJson(cls, jsonvalue):
         
-        obj = Consultor()
-        
-        obj.company = jsonvalue['company']
-
-        obj.name = jsonvalue['name']
-        
-        return obj
+        return Consultor(jsonvalue['name'], jsonvalue['company'], jsonvalue['id'])
 
 class ConsultorWinsLevel(Consultor):
 
@@ -101,18 +98,18 @@ class Suggest(object):
         
         self.date = None
 
-        self.consultor = None
-        
+        self.consultorId = -1
+
     def __eq__(self, other):
-        
+
         if isinstance(other, Suggest):
-            
+
             return self.toJson() == other.toJson()
-        
+
         return False
-        
+
     def __hash__(self):
-        
+
         return hash(str(self.toJson()))
         
     def toJson(self):
@@ -122,7 +119,7 @@ class Suggest(object):
             'stockName': self.stockName,
             'stockId': self.stockId,
             'date': self.date,
-            'consultor': self.consultor.toJson()
+            'consultorId': self.consultorId
         }
     
     @classmethod
@@ -130,7 +127,7 @@ class Suggest(object):
     
         obj = Suggest()
         
-        obj.consultor = Consultor.fromJson(jsonvalue['consultor'])
+        obj.consultorId = jsonvalue['consultorId']
 
         obj.stockId = jsonvalue['stockId']
         
@@ -152,9 +149,26 @@ class SuggestScore(Suggest):
 
         self.date = suggest.date
 
-        self.consultor = suggest.consultor
+        self.consultorId = suggest.consultorId
 
         self.score = score
+
+    def toJson(self):
+
+        data = super().toJson()
+
+        data['data'] = self.score
+
+        return data
+
+    @classmethod
+    def fromJson(cls, jsonvalue):
+
+        suggest = Suggest.fromJson(jsonvalue)
+
+        score = jsonvalue['score']
+
+        return SuggestScore(score, suggest)
 
 class RangeTrend(object):
     def __init__ (self):

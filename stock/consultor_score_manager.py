@@ -3,6 +3,7 @@ from collections import defaultdict
 from data.suggest import SuggestScore, Suggest, Consultor
 from openpyxl import load_workbook
 
+from stock.analyse_setting_manager import AnalyseSettingManager
 
 _ratesettings = []
 
@@ -78,6 +79,26 @@ class ConsultorScoreManager(object):
         def getScores(self, consultor: Consultor) -> [SuggestScore]:
 
             return self.consultorscores[consultor]
+
+        def show(self):
+
+            for consultor in self.consultorscores:
+
+                print(consultor.toJson())
+
+                print(self.getConsultorWeight(consultor))
+
+        def getConsultorWeight(self, consultor: Consultor) -> int:
+
+            scores = ConsultorScoreManager.instance().getScores(consultor)
+
+            if len(scores) == 0:
+
+                return 0
+
+            total = sum(list(map(lambda x: x.score, scores)))
+
+            return total / len(scores)
 
         def saveToDB(self):
 

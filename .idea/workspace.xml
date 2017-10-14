@@ -2,38 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="719e5223-de70-49d4-a2ab-afe0f484a8ca" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stock/analyse_setting_manager.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stock/consultor_score_manager.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/create_consultor_recommonds_trends_table.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/create_consultor_stocks_table.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stock/consulter_rate_system.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/test_mongod.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/test_restrore.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/test_save_suggest.py" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/analyse/SuggestHistoryManager.py" afterPath="$PROJECT_DIR$/data/SuggestHistoryManager.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/stock_info.py" afterPath="$PROJECT_DIR$/data/suggest.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/stock_unit.py" afterPath="$PROJECT_DIR$/data/stock.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/stock/fill_pool_a.py" afterPath="$PROJECT_DIR$/stock/fill_pool.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/stock/pool_a.py" afterPath="$PROJECT_DIR$/stock/pool.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stock/consultor_manager.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analyse/calc_detail_suggest.py" afterPath="$PROJECT_DIR$/analyse/calc_detail_suggest.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analyse/calc_history_suggest_of_stock.py" afterPath="$PROJECT_DIR$/analyse/calc_history_suggest_of_stock.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analyse/calc_interval_amplitude_of_consultor.py" afterPath="$PROJECT_DIR$/analyse/calc_interval_amplitude_of_consultor.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/databasemgr.py" afterPath="$PROJECT_DIR$/data/databasemgr.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/recommond_unit.py" afterPath="$PROJECT_DIR$/data/recommond_unit.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/storemgr.py" afterPath="$PROJECT_DIR$/data/storemgr.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/every_day_run.py" afterPath="$PROJECT_DIR$/every_day_run.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock/calc_different_alpah.py" afterPath="$PROJECT_DIR$/stock/calc_different_alpah.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock/load.py" afterPath="$PROJECT_DIR$/stock/load.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock/serialization.py" afterPath="$PROJECT_DIR$/stock/serialization.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock/setup_stock_id_name.py" afterPath="$PROJECT_DIR$/stock/setup_stock_id_name.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/calc_range_trend.py" afterPath="$PROJECT_DIR$/webserver/calc_range_trend.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/suggest.py" afterPath="$PROJECT_DIR$/data/suggest.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock/analyse_setting_manager.py" afterPath="$PROJECT_DIR$/stock/analyse_setting_manager.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock/consultor_score_manager.py" afterPath="$PROJECT_DIR$/stock/consultor_score_manager.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock/fill_pool.py" afterPath="$PROJECT_DIR$/stock/fill_pool.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock/pool.py" afterPath="$PROJECT_DIR$/stock/pool.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/save_upload_excel.py" afterPath="$PROJECT_DIR$/webserver/save_upload_excel.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/stock_of_consultor_history.py" afterPath="$PROJECT_DIR$/webserver/stock_of_consultor_history.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/suggest_history.py" afterPath="$PROJECT_DIR$/webserver/suggest_history.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/suggest_history_with_trends.py" afterPath="$PROJECT_DIR$/webserver/suggest_history_with_trends.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/suggestwithtrends.py" afterPath="$PROJECT_DIR$/webserver/suggestwithtrends.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -65,7 +41,7 @@
     <SUITE FILE_PATH="coverage/realgood_server$calc_different_alpah.coverage" NAME="calc_different_alpah Coverage Results" MODIFIED="1506173229649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stock" />
     <SUITE FILE_PATH="coverage/realgood_server$retrive_trade_days.coverage" NAME="retrive_trade_days Coverage Results" MODIFIED="1507431053767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stock" />
     <SUITE FILE_PATH="coverage/realgood_server$test_time.coverage" NAME="test_time Coverage Results" MODIFIED="1505281956908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/analyse" />
-    <SUITE FILE_PATH="coverage/realgood_server$fill_pool.coverage" NAME="fill_pool Coverage Results" MODIFIED="1507886101009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stock" />
+    <SUITE FILE_PATH="coverage/realgood_server$fill_pool.coverage" NAME="fill_pool Coverage Results" MODIFIED="1507888922637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stock" />
     <SUITE FILE_PATH="coverage/realgood_server$calc_interval_amplitude.coverage" NAME="calc_interval_amplitude Coverage Results" MODIFIED="1504417585754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/realgood_server$test_save_suggest.coverage" NAME="test_save_suggest Coverage Results" MODIFIED="1505043269018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/realgood_server$test_class.coverage" NAME="test_class Coverage Results" MODIFIED="1505207642941" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
@@ -86,20 +62,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="suggest.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="suggest.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data/suggest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="93" column="6" lean-forward="false" selection-start-line="93" selection-start-column="6" selection-end-line="93" selection-end-column="6" />
+            <state relative-caret-position="15">
+              <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="112" selection-end-column="39" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
                 <element signature="e#127#742#0" expanded="false" />
-                <element signature="e#778#1417#0" expanded="false" />
-                <element signature="e#1461#1767#0" expanded="false" />
-                <element signature="e#2810#3071#0" expanded="false" />
-                <element signature="e#3103#3492#0" expanded="false" />
-                <element signature="e#3528#4076#0" expanded="false" />
-                <element signature="e#4117#4777#0" expanded="false" />
+                <element signature="e#778#1442#0" expanded="false" />
+                <element signature="e#1486#1792#0" expanded="false" />
+                <element signature="e#2762#3319#0" expanded="false" />
+                <element signature="e#3351#3740#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -108,10 +82,21 @@
       <file leaf-file-name="fill_pool.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stock/fill_pool.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="25" column="9" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="9" />
+            <state relative-caret-position="45">
+              <caret line="3" column="63" lean-forward="false" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stock.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/stock.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="53" column="20" lean-forward="false" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
               <folding>
-                <element signature="e#0#25#0" expanded="true" />
+                <element signature="e#46#1014#0" expanded="false" />
+                <element signature="e#1054#2291#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -120,12 +105,12 @@
       <file leaf-file-name="consultor_score_manager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stock/consultor_score_manager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="117">
+              <caret line="74" column="39" lean-forward="false" selection-start-line="74" selection-start-column="27" selection-end-line="74" selection-end-column="39" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
-                <element signature="e#225#343#0" expanded="false" />
-                <element signature="e#803#990#0" expanded="false" />
+                <element signature="e#289#407#0" expanded="false" />
+                <element signature="e#867#1054#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -134,55 +119,37 @@
       <file leaf-file-name="save_upload_excel.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webserver/save_upload_excel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="34" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="storemgr.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/storemgr.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="48" column="16" lean-forward="true" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="16" />
+            <state relative-caret-position="442">
+              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding>
-                <element signature="e#1#58#0" expanded="true" />
+                <element signature="e#0#22#0" expanded="true" />
+                <element signature="e#985#1254#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pool.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="consultor_manager.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stock/consultor_manager.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="67">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pool.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stock/pool.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="62" column="24" lean-forward="true" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
+            <state relative-caret-position="540">
+              <caret line="36" column="75" lean-forward="false" selection-start-line="36" selection-start-column="75" selection-end-line="36" selection-end-column="75" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
-                <element signature="e#2804#2863#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="datetime.py" pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/datetime.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20370">
-              <caret line="1359" column="6" lean-forward="false" selection-start-line="1359" selection-start-column="6" selection-end-line="1359" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="retrive_trade_days.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stock/retrive_trade_days.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
+                <element signature="e#2810#2869#0" expanded="false" />
+                <element signature="e#4135#4525#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -191,15 +158,24 @@
       <file leaf-file-name="SuggestHistoryManager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/SuggestHistoryManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="58" column="6" lean-forward="false" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="6" />
+            <state relative-caret-position="91">
+              <caret line="186" column="18" lean-forward="false" selection-start-line="186" selection-start-column="18" selection-end-line="186" selection-end-column="18" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
                 <element signature="e#269#551#0" expanded="false" />
                 <element signature="e#619#1266#0" expanded="false" />
-                <element signature="e#4922#5361#0" expanded="false" />
                 <element signature="e#5410#5540#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="calc_different_alpah.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stock/calc_different_alpah.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="403">
+              <caret line="64" column="14" lean-forward="false" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -207,8 +183,8 @@
       <file leaf-file-name="analyse_setting_manager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stock/analyse_setting_manager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="49" lean-forward="true" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
+            <state relative-caret-position="345">
+              <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
               <folding>
                 <element signature="e#1#26#0" expanded="true" />
               </folding>
@@ -227,19 +203,14 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>consultors_wins_level</find>
-      <find>@classmethod</find>
-      <find>ConsultorWinsLevelManager</find>
       <find>ConsultorWinsLevelManagerCons</find>
       <find>SuggestStock</find>
-      <find>consultor</find>
       <find>reduce</find>
       <find>stock_info</find>
       <find>storemgr</find>
       <find>datetime</find>
       <find>getNextTradeDay</find>
       <find>SuggestStockTrends</find>
-      <find>Consultor</find>
       <find>Recommond</find>
       <find>SuggestTrends</find>
       <find>RecommondUnit</find>
@@ -247,16 +218,21 @@
       <find>RecommondTrends</find>
       <find>ConsultorRecommondsTrends</find>
       <find>data</find>
-      <find>Suggest</find>
       <find>getMaxIncrease</find>
       <find>retriveConsulterRate</find>
       <find>_ratesettings</find>
-      <find>AnalyseSettingManager</find>
       <find>getTradeDayCount</find>
-      <find>ConsultorScoreManager</find>
-      <find>getConsultorWeight</find>
       <find>SuggestHistoryManager</find>
       <find>load_workbook</find>
+      <find>map(</find>
+      <find>get</find>
+      <find>AnalyseSettingManager</find>
+      <find>getConsultorWeight</find>
+      <find>ConsultorScoreManager</find>
+      <find>fromJson</find>
+      <find>Suggest</find>
+      <find>consultor</find>
+      <find>Consultor</find>
     </findStrings>
     <replaceStrings>
       <replace>Suggest</replace>
@@ -272,7 +248,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/stock/load.py" />
         <option value="$PROJECT_DIR$/analyse/test_time.py" />
         <option value="$PROJECT_DIR$/test/test_class.py" />
         <option value="$PROJECT_DIR$/test/test_remove_the_same.py" />
@@ -290,7 +265,6 @@
         <option value="$PROJECT_DIR$/webserver/stock_of_consultor_history.py" />
         <option value="$PROJECT_DIR$/webserver/RequestBaseManager.py" />
         <option value="$PROJECT_DIR$/webserver/loginManager.py" />
-        <option value="$PROJECT_DIR$/webserver/save_upload_excel.py" />
         <option value="$PROJECT_DIR$/create_consultor_stocks_table.py" />
         <option value="$PROJECT_DIR$/data/stock_unit.py" />
         <option value="$PROJECT_DIR$/webserver/suggestwithtrends.py" />
@@ -317,12 +291,14 @@
         <option value="$PROJECT_DIR$/data/SuggestHistoryManager.py" />
         <option value="$PROJECT_DIR$/analyse/calc_interval_amplitude_of_consultor.py" />
         <option value="$PROJECT_DIR$/data/consultor_rate.py" />
-        <option value="$PROJECT_DIR$/data/suggest.py" />
         <option value="$PROJECT_DIR$/data/storemgr.py" />
-        <option value="$PROJECT_DIR$/stock/analyse_setting_manager.py" />
-        <option value="$PROJECT_DIR$/stock/consultor_score_manager.py" />
         <option value="$PROJECT_DIR$/stock/fill_pool.py" />
         <option value="$PROJECT_DIR$/stock/pool.py" />
+        <option value="$PROJECT_DIR$/stock/analyse_setting_manager.py" />
+        <option value="$PROJECT_DIR$/stock/consultor_score_manager.py" />
+        <option value="$PROJECT_DIR$/stock/consultor_manager.py" />
+        <option value="$PROJECT_DIR$/webserver/save_upload_excel.py" />
+        <option value="$PROJECT_DIR$/data/suggest.py" />
       </list>
     </option>
   </component>
@@ -413,8 +389,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -624,16 +600,17 @@
     <frame x="0" y="23" width="1276" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33144248" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21260998" sideWeight="0.50648296" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298217" sideWeight="0.49196786" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45601174" sideWeight="0.493517" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8504399" sideWeight="0.493517" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2111437" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3973607" sideWeight="0.493517" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27228525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298217" sideWeight="0.49196786" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31671554" sideWeight="0.49675852" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38856304" sideWeight="0.493517" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298217" sideWeight="0.49196786" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -643,7 +620,6 @@
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298217" sideWeight="0.50803214" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31671554" sideWeight="0.49675852" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -677,28 +653,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="190" />
+      <option name="time" value="193" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/webserver/suggest_history.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/简要说明.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare/stock/cons.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
@@ -724,6 +683,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
           <caret line="255" column="6" lean-forward="false" selection-start-line="255" selection-start-column="6" selection-end-line="255" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -752,6 +712,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="140" column="4" lean-forward="false" selection-start-line="140" selection-start-column="4" selection-end-line="140" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -806,13 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stock/strategy_find_increase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="15" lean-forward="true" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stock/serialization.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -824,13 +778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stock/load.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -897,13 +844,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stock/calc_different_alpah.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="64" column="14" lean-forward="false" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/databasemgr.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -920,35 +860,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/stock.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="53" column="20" lean-forward="false" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/suggest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="93" column="6" lean-forward="false" selection-start-line="93" selection-start-column="6" selection-end-line="93" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-            <element signature="e#127#742#0" expanded="false" />
-            <element signature="e#778#1417#0" expanded="false" />
-            <element signature="e#1461#1767#0" expanded="false" />
-            <element signature="e#2810#3071#0" expanded="false" />
-            <element signature="e#3103#3492#0" expanded="false" />
-            <element signature="e#3528#4076#0" expanded="false" />
-            <element signature="e#4117#4777#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/datetime.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20370">
           <caret line="1359" column="6" lean-forward="false" selection-start-line="1359" selection-start-column="6" selection-end-line="1359" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -957,51 +872,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stock/analyse_setting_manager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="49" lean-forward="true" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
-          <folding>
-            <element signature="e#1#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/SuggestHistoryManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="58" column="6" lean-forward="false" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-            <element signature="e#269#551#0" expanded="false" />
-            <element signature="e#619#1266#0" expanded="false" />
-            <element signature="e#4922#5361#0" expanded="false" />
-            <element signature="e#5410#5540#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webserver/save_upload_excel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="34" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stock/consultor_score_manager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-            <element signature="e#225#343#0" expanded="false" />
-            <element signature="e#803#990#0" expanded="false" />
+            <element signature="e#0#40#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1016,23 +887,136 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stock/fill_pool.py">
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2017.2/python_stubs/-2010535109/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="25" column="9" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="54375">
+          <caret line="3625" column="8" lean-forward="false" selection-start-line="3625" selection-start-column="8" selection-end-line="3625" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stock/strategy_find_increase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="15" lean-forward="true" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stock/load.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stock/pool.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="62" column="24" lean-forward="true" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
+        <state relative-caret-position="540">
+          <caret line="36" column="75" lean-forward="false" selection-start-line="36" selection-start-column="75" selection-end-line="36" selection-end-column="75" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
-            <element signature="e#2804#2863#0" expanded="false" />
+            <element signature="e#2810#2869#0" expanded="false" />
+            <element signature="e#4135#4525#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stock/analyse_setting_manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+          <folding>
+            <element signature="e#1#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stock/calc_different_alpah.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="64" column="14" lean-forward="false" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stock/consultor_score_manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="74" column="39" lean-forward="false" selection-start-line="74" selection-start-column="27" selection-end-line="74" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#289#407#0" expanded="false" />
+            <element signature="e#867#1054#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stock/fill_pool.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="63" lean-forward="false" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/stock.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="53" column="20" lean-forward="false" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
+          <folding>
+            <element signature="e#46#1014#0" expanded="false" />
+            <element signature="e#1054#2291#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webserver/save_upload_excel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#985#1254#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stock/consultor_manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/SuggestHistoryManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="186" column="18" lean-forward="false" selection-start-line="186" selection-start-column="18" selection-end-line="186" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#269#551#0" expanded="false" />
+            <element signature="e#619#1266#0" expanded="false" />
+            <element signature="e#5410#5540#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/suggest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="112" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+            <element signature="e#127#742#0" expanded="false" />
+            <element signature="e#778#1442#0" expanded="false" />
+            <element signature="e#1486#1792#0" expanded="false" />
+            <element signature="e#2762#3319#0" expanded="false" />
+            <element signature="e#3351#3740#0" expanded="false" />
           </folding>
         </state>
       </provider>

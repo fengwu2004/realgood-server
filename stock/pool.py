@@ -34,7 +34,7 @@ class PoolStock(object):
 
     def getConsultorWeight(self):
 
-        return sum(map(lambda suggest:AnalyseSettingManager.instance().getConsultorWeight(suggest.consultor), self.suggests))
+        return sum(list(map(lambda suggest:ConsultorScoreManager.instance().getConsultorWeight(suggest.consultor), self.suggests)))
 
     def updateWeight(self, day: datetime):
 
@@ -120,7 +120,7 @@ class PoolA(object):
 
         self.removeDeathSuggest()
 
-        sorted(self.stocks, key = lambda poolstock: poolstock.weight)
+        self.stocks.sort(key = lambda poolstock: poolstock.weight, reverse = True)
 
     def retivePoolStock(self, suggest:Suggest) -> PoolStock:
         
