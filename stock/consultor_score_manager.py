@@ -2,6 +2,7 @@ from typing import List
 from collections import defaultdict
 from data.suggest import SuggestScore, Suggest, Consultor
 from openpyxl import load_workbook
+from stock.consultor_manager import ConsultorManager
 
 from stock.analyse_setting_manager import AnalyseSettingManager
 
@@ -74,29 +75,29 @@ class ConsultorScoreManager(object):
 
         suggestscore = SuggestScore(score, suggest)
 
-        self.consultorscores[suggest.consultor].append(suggestscore)
+        self.consultorscores[suggest.consultorId].append(suggestscore)
 
-    def getScores(self, consultor: Consultor) -> [SuggestScore]:
+    def getScores(self, consultorId: int) -> [SuggestScore]:
 
-        return self.consultorscores[consultor]
+        return self.consultorscores[consultorId]
 
     def show(self):
 
-        for consultor in self.consultorscores:
+        for consultorId in self.consultorscores:
 
-            print(consultor.toJson())
+            print(ConsultorManager.instance().retriveConsultorBy(consultorId).toJson(), self.getConsultorWeight(consultorId))
 
-            print(self.getConsultorWeight(consultor))
+    def getConsultorWeight(self, consultorId: int) -> int:
 
-    def getConsultorWeight(self, consultor: Consultor) -> int:
-
-        scores = ConsultorScoreManager.instance().getScores(consultor)
+        scores = self.getScores(consultorId)
 
         if len(scores) == 0:
 
             return 0
 
         total = sum(list(map(lambda x: x.score, scores)))
+
+        return total
 
         return total / len(scores)
 

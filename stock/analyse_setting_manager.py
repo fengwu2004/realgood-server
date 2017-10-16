@@ -23,11 +23,20 @@ class AnalyseSettingManager(object):
 
         return _instance
 
-
     def getStockWeight(self, stockId:str) -> int:
 
         return 0
 
-    def getPredayIncreaseWeight(self, stockId:str, day:datetime) -> int:
+    def getPredayIncreaseWeight(self, stockId:str, dt:datetime) -> int:
+
+        dayvalue = storemgr.getStockDayvalue(stockId, dt.strftime('%Y-%m-%d'))
+
+        if dayvalue is None:
+
+            return 0
+
+        if (dayvalue.close - dayvalue.open)/dayvalue.open > 0.05:
+
+            return 20
 
         return 0

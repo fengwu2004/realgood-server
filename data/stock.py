@@ -60,6 +60,14 @@ class Stock(object):
         self.name = ''
         
         self.dayvalues = []
+
+    def getDayValue(self, index:int):
+
+        if index <=0 or index >= len(self.dayvalues):
+
+            return None
+
+        return self.dayvalues[index]
         
     def getDayIndex(self, date:str):
     
@@ -72,6 +80,7 @@ class Stock(object):
             t = time.strptime(dayvalue.date, '%Y/%m/%d')
             
             if t < t0:
+
                 index += 1
             else:
                 break

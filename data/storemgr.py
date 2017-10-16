@@ -1,4 +1,6 @@
+from datetime import datetime
 
+from data.stock import Stock, DayValue
 from data.suggest import Suggest, Consultor, SuggestScore
 from data.databasemgr import DatabaseMgr
 
@@ -33,6 +35,24 @@ def checkUser(name, pwd):
             return True
     
     return False
+
+def getStock(stockId:str):
+
+    items = DatabaseMgr.instance().stocks.find({'id': stockId}, {'_id': 0})
+
+    for item in items:
+
+        return Stock.fromJson(item)
+
+    return None
+
+def getStockDayvalue(stockId:str, day:str) -> DayValue:
+
+    stock = getStock(stockId)
+
+    index = stock.getDayIndex(day)
+
+    return stock.getDayValue(index - 1)
 
 def loadSuggestOfConsultor(name, company) -> [Suggest]:
 

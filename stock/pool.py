@@ -34,7 +34,7 @@ class PoolStock(object):
 
     def getConsultorWeight(self):
 
-        return sum(list(map(lambda suggest:ConsultorScoreManager.instance().getConsultorWeight(suggest.consultor), self.suggests)))
+        return sum(list(map(lambda suggest:ConsultorScoreManager.instance().getConsultorWeight(suggest.consultorId), self.suggests)))
 
     def updateWeight(self, day: datetime):
 
