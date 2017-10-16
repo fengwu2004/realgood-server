@@ -32,11 +32,11 @@ class DatabaseMgr(object):
     @property
     def stocks(self):
         
-        client = MongoClient('localhost', 27017)
+        # client = MongoClient('localhost', 27017)
+        #
+        # db = client["test"]
     
-        db = client["test"]
-    
-        return db['stocks']
+        # return db['stocks']
         
         return self.db['stocks']
 
