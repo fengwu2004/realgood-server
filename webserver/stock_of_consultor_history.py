@@ -16,12 +16,12 @@ class FindStockSuggestHistory(RequestBaseManager):
 
         data = json.loads(self.request.body.decode('utf-8'))
 
-        with data['stockname'] as stockname:
-            
-            stockId = storemgr.getStockId(stockname)
-            
-            items = SuggestHistoryManager.instance().findAllSuggest(stockId)
-    
-            jsonvalue = list(map(lambda item: item.toJson(), items))
-            
-            self.write({'success': 1, 'data': jsonvalue})
+        stockname = data['stockname']
+
+        stockId = storemgr.getStockId(stockname)
+
+        items = SuggestHistoryManager.instance().findAllSuggest(stockId)
+
+        jsonvalue = list(map(lambda item: item.toJson(), items))
+
+        self.write({'success': 1, 'data': jsonvalue})

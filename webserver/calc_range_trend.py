@@ -2,9 +2,12 @@
 import json
 
 from analyse import calc_interval_amplitude_of_consultor
+from data.suggest import Consultor
+from stock.consultor_manager import ConsultorManager
 from webserver import tokenManager
 from webserver.RequestBaseManager import RequestBaseManager
 from data import storemgr
+from data import SuggestHistoryManager
 
 class CalcRangeTrend(RequestBaseManager):
 
@@ -21,8 +24,10 @@ class CalcRangeTrend(RequestBaseManager):
             self.write({'success': -1})
     
             return
+
+        consltor = ConsultorManager.instance().retriveConsultor(consultorName, consultorCompany)
         
-        temps = calc_interval_amplitude_of_consultor.findRangetrends(consultorName, consultorCompany)
+        temps = SuggestHistoryManager.instance().findRangetrends(consltor)
     
         res = {'success': 1, 'data': temps}
 

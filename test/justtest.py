@@ -12,9 +12,11 @@ for item in items:
 
     suggest = Suggest()
 
-    c = ConsultorManager.instance().retriveConsultor(item['name'].strip(), item['company'].strip())
+    consultor = ConsultorManager.instance().retriveConsultorBy(item['consultorId'])
 
-    suggest.consultorId = c.id
+    suggest.consultor = consultor
+
+    suggest.consultorId = consultor.id
 
     suggest.stockId = item['stockId']
 
@@ -24,4 +26,4 @@ for item in items:
 
     results.append(suggest)
 
-# DatabaseMgr.instance().suggestscopy.insert_many(list(map(lambda suggest: suggest.toJson(), results)))
+DatabaseMgr.instance().suggestscopy.insert_many(list(map(lambda suggest: suggest.toJson(), results)))

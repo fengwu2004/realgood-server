@@ -98,6 +98,8 @@ class Suggest(object):
         
         self.date = None
 
+        self.consultor = None
+
         self.consultorId = -1
 
     def __eq__(self, other):
@@ -119,6 +121,7 @@ class Suggest(object):
             'stockName': self.stockName,
             'stockId': self.stockId,
             'date': self.date,
+            'consultor':self.consultor.toJson(),
             'consultorId': self.consultorId
         }
     
@@ -128,6 +131,8 @@ class Suggest(object):
         obj = Suggest()
         
         obj.consultorId = jsonvalue['consultorId']
+
+        obj.consultor = Consultor.fromJson(jsonvalue['consultor'])
 
         obj.stockId = jsonvalue['stockId']
         

@@ -33,6 +33,8 @@ def getItems(ws) -> [Suggest]:
 
         consultor = ConsultorManager.instance().retriveConsultor(consultorName, consultorCompany)
 
+        obj.consultor = consultor
+
         obj.consultorId = consultor.id
 
         results.append(obj)

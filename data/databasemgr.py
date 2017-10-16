@@ -17,8 +17,8 @@ class DatabaseMgr(object):
     
     def __init__(self):
         
-        uri = "mongodb://yanli:9394@123.207.213.131:27017/recommond?authMechanism=SCRAM-SHA-1"
-        # uri = "mongodb://yanli:9394@localhost:27017/recommond?authMechanism=SCRAM-SHA-1"
+        # uri = "mongodb://yanli:9394@123.207.213.131:27017/recommond?authMechanism=SCRAM-SHA-1"
+        uri = "mongodb://yanli:9394@localhost:27017/recommond?authMechanism=SCRAM-SHA-1"
     
         self.client = MongoClient(uri)
     
@@ -32,11 +32,11 @@ class DatabaseMgr(object):
     @property
     def stocks(self):
         
-        client = MongoClient('localhost', 27017)
-
-        db = client["test"]
-    
-        return db['stocks']
+        # client = MongoClient('localhost', 27017)
+        #
+        # db = client["test"]
+        #
+        # return db['stocks']
         
         return self.db['stocks']
 

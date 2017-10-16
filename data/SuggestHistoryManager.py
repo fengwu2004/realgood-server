@@ -114,41 +114,33 @@ class SuggestHistoryManager(object):
     
         return self.results
     
-    def findAllSuggest(self, stockId:int) -> dict:
-        
-        self.results.clear()
+    def getTradeInfoAfter(self, date:str, stockId:str, days:[int]) -> [RangeTrend]:
 
-        suggeststocks = storemgr.intance().loadSuggests()
-    
-        for suggeststock in suggeststocks:
-        
-            if suggeststock.stockId == stockId:
-                
-                self.results.append(suggeststock)
-    
-        return self.results
-    
-    def getTradeInfoAfter (self, date:str, stockId:str, days:[int]) -> [RangeTrend]:
-    
         if not stockId in self.stocks:
-            
+
             return []
 
         stock = self.stocks[stockId]
-        
+
         index = stock.getDayIndex(date)
-    
+
         results = []
-    
+
         for i in days:
-        
+
             if index + i < len(stock.dayvalues):
-                
+
                 trend = getRangeTrend(index, i, stock.dayvalues)
-            
+
                 results.append(trend)
-    
+
         return results
+    
+    def findAllSuggest(self, stockId:int) -> dict:
+
+        suggests = storemgr.loadSuggests()
+
+        return list(filter(lambda suggest:suggest.stockId == stockId, suggests))
 
     def getCloseAfter(self, date:str, stockId:str, days:[int]) -> [int]:
     
@@ -178,7 +170,7 @@ class SuggestHistoryManager(object):
     
     def findRangetrends(self, consultor:Consultor):
     
-        suggests = storemgr.intance().loadSuggestOfConsultor(consultor.name, consultor.company)
+        suggests = storemgr.loadSuggestOfConsultor(consultor.id)
     
         results = []
     

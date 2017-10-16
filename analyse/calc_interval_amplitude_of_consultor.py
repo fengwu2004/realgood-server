@@ -73,7 +73,6 @@ def getCloseAfter(date, stockname, days) -> [int]:
             
     return results
 
-    
 def getTradeInfoAfter(date, stockname, days) -> [RangeTrend]:
     
     stock = Stock.fromJson(loadStock(stockname))

@@ -54,9 +54,9 @@ def getStockDayvalue(stockId:str, day:str) -> DayValue:
 
     return stock.getDayValue(index - 1)
 
-def loadSuggestOfConsultor(name, company) -> [Suggest]:
+def loadSuggestOfConsultor(consultorId:int) -> [Suggest]:
 
-    items = DatabaseMgr.instance().suggests.find({'name': name, 'company': company}, {'_id': 0})
+    items = DatabaseMgr.instance().suggests.find({'consultorId': consultorId}, {'_id': 0})
 
     results = []
 
