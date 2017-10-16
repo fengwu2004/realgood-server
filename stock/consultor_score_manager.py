@@ -55,55 +55,55 @@ def retriveConsulterRate(v0:float, vMax:float) -> int:
 
 class ConsultorScoreManager(object):
 
-        @classmethod
-        def instance(cls):
+    @classmethod
+    def instance(cls):
 
-            global _instance
+        global _instance
 
-            if _instance is None:
+        if _instance is None:
 
-                _instance = ConsultorScoreManager()
+            _instance = ConsultorScoreManager()
 
-            return _instance
+        return _instance
 
-        def __init__(self):
+    def __init__(self):
 
-            self.consultorscores = defaultdict(list)
+        self.consultorscores = defaultdict(list)
 
-        def addConsultorScore(self, score: int, suggest: Suggest):
+    def addConsultorScore(self, score: int, suggest: Suggest):
 
-            suggestscore = SuggestScore(score, suggest)
+        suggestscore = SuggestScore(score, suggest)
 
-            self.consultorscores[suggest.consultor].append(suggestscore)
+        self.consultorscores[suggest.consultor].append(suggestscore)
 
-        def getScores(self, consultor: Consultor) -> [SuggestScore]:
+    def getScores(self, consultor: Consultor) -> [SuggestScore]:
 
-            return self.consultorscores[consultor]
+        return self.consultorscores[consultor]
 
-        def show(self):
+    def show(self):
 
-            for consultor in self.consultorscores:
+        for consultor in self.consultorscores:
 
-                print(consultor.toJson())
+            print(consultor.toJson())
 
-                print(self.getConsultorWeight(consultor))
+            print(self.getConsultorWeight(consultor))
 
-        def getConsultorWeight(self, consultor: Consultor) -> int:
+    def getConsultorWeight(self, consultor: Consultor) -> int:
 
-            scores = ConsultorScoreManager.instance().getScores(consultor)
+        scores = ConsultorScoreManager.instance().getScores(consultor)
 
-            if len(scores) == 0:
+        if len(scores) == 0:
 
-                return 0
+            return 0
 
-            total = sum(list(map(lambda x: x.score, scores)))
+        total = sum(list(map(lambda x: x.score, scores)))
 
-            return total / len(scores)
+        return total / len(scores)
 
-        def saveToDB(self):
+    def saveToDB(self):
 
-            pass
+        pass
 
-        def loadFromDB(self):
+    def loadFromDB(self):
 
-            pass
+        pass

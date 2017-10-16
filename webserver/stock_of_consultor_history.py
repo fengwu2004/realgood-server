@@ -22,10 +22,6 @@ class FindStockSuggestHistory(RequestBaseManager):
             
             items = SuggestHistoryManager.instance().findAllSuggest(stockId)
     
-            jsonvalue = list()
-            
-            for item in items:
-                
-                jsonvalue.append(item.toJson())
+            jsonvalue = list(map(lambda item: item.toJson(), items))
             
             self.write({'success': 1, 'data': jsonvalue})

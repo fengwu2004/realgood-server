@@ -1,6 +1,19 @@
 from pymongo import MongoClient
 
+_instance = None
+
 class DatabaseMgr(object):
+
+    @classmethod
+    def instance(cls):
+
+        global _instance
+
+        if _instance is None:
+
+            _instance = DatabaseMgr()
+
+        return _instance
     
     def __init__(self):
         
@@ -9,6 +22,11 @@ class DatabaseMgr(object):
         self.client = MongoClient(uri)
     
         self.db = self.client["recommond"]
+
+    @property
+    def consultors(self):
+
+        return self.db['consultors']
     
     @property
     def stocks(self):
@@ -20,7 +38,6 @@ class DatabaseMgr(object):
         return db['stocks']
         
         return self.db['stocks']
-
 
     @property
     def consultorLevels(self):
@@ -35,12 +52,12 @@ class DatabaseMgr(object):
     @property
     def suggests(self):
         
-        return self.db['suggestcopy']
+        return self.db['suggest']
 
     @property
     def suggestscopy(self):
         
-        return self.db['suggestcopy']
+        return self.db['suggest_copy']
 
     @property
     def stockInfos(self):
@@ -51,16 +68,3 @@ class DatabaseMgr(object):
     def users(self):
         
         return self.db['users']
-    
-_instance = None
-
-def instance():
-    
-    global _instance
-    
-    if _instance is None:
-        
-        _instance = DatabaseMgr()
-        
-    return _instance
-

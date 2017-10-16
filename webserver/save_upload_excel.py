@@ -31,13 +31,15 @@ def getItems(ws) -> [Suggest]:
 
         consultorCompany = ws['B' + index].value
 
-        obj.consultor = ConsultorManager.instance().retriveConsultor(consultorName, consultorCompany)
+        consultor = ConsultorManager.instance().retriveConsultor(consultorName, consultorCompany)
+
+        obj.consultorId = consultor.id
 
         results.append(obj)
         
     return results
 
-class SaveRecommondExcel(RequestBaseManager):
+class SaveSuggestExcel(RequestBaseManager):
     
     def post (self, *args, **kwargs):
         

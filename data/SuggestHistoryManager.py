@@ -1,8 +1,8 @@
 from data.stock import Stock, DayValue
-from data.suggest import Suggest, SuggestStockTrends, Consultor, RangeTrend
+from data.suggest import Suggest, SuggestTrends, Consultor, RangeTrend
 import time
 
-from data import databasemgr
+from data.databasemgr import DatabaseMgr
 from data import storemgr
 from typing import Dict, List
 
@@ -10,7 +10,7 @@ def loadAllStockFromDB() -> Dict[str, Stock]:
     
     stocks = dict()
     
-    items = databasemgr.instance().stocks.find({}, {'_id': 0})
+    items = DatabaseMgr.instance().stocks.find({}, {'_id': 0})
     
     for item in items:
         
@@ -80,23 +80,23 @@ class SuggestHistoryManager(object):
     
         self.results[stockId].append(unit)
 
-    def findRecommondAfter(self, date:time.struct_time):
+    def findSuggestAfter(self, date:time.struct_time):
         
         suggeststocks = storemgr.loadSuggests()
     
-        for suggeststock in suggeststocks:
+        for suggest in suggeststocks:
+
+            thetime = time.strptime(suggest.date, '%Y-%m-%d')
+
+            if thetime < date:
+
+                continue
             
-            with time.strptime(suggeststock.date, '%Y-%m-%d') as thetime:
-            
-                if thetime < date:
-                    
-                    continue
-            
-            if suggeststock.stockId is not None:
+            if suggest.stockId is not None:
                 
-                self.save(suggeststock.stockId, suggeststock)
+                self.save(suggest.stockId, suggest)
             
-    def doSortWithData(self):
+    def doSortWithDate(self):
     
         for key in self.results.keys():
             
@@ -108,16 +108,16 @@ class SuggestHistoryManager(object):
     
         theTime = time.gmtime(time.time() - day * 24 * 3600)
     
-        self.findRecommondAfter(theTime)
+        self.findSuggestAfter(theTime)
     
-        self.doSortWithData()
+        self.doSortWithDate()
     
         return self.results
     
     def findAllSuggest(self, stockId:int) -> dict:
         
         self.results.clear()
-    
+
         suggeststocks = storemgr.intance().loadSuggests()
     
         for suggeststock in suggeststocks:
@@ -178,24 +178,24 @@ class SuggestHistoryManager(object):
     
     def findRangetrends(self, consultor:Consultor):
     
-        suggeststocks = storemgr.intance().loadSuggestOfConsultor(consultor.name, consultor.company)
+        suggests = storemgr.intance().loadSuggestOfConsultor(consultor.name, consultor.company)
     
         results = []
     
-        for suggeststock in suggeststocks:
+        for suggest in suggests:
             
-            obj = SuggestStockTrends()
+            obj = SuggestTrends()
         
-            obj.suggeststock = suggeststock
+            obj.suggest = suggest
         
-            obj.trends = self.getTradeInfoAfter(suggeststock.date, suggeststock.stockId, [1, 3, 5, 10, 20, 40, 60])
+            obj.trends = self.getTradeInfoAfter(suggest.date, suggest.stockId, [1, 3, 5, 10, 20, 40, 60])
         
             results.append(obj.toJson())
             
         return results
     
     @property
-    def findTrends(self) -> List[SuggestStockTrends]:
+    def findTrends(self) -> List[SuggestTrends]:
     
         suggeststocks = storemgr.loadSuggests()
         
@@ -203,9 +203,9 @@ class SuggestHistoryManager(object):
         
         for suggeststock in suggeststocks:
             
-            item = SuggestStockTrends()
+            item = SuggestTrends()
             
-            item.suggeststock = suggeststock
+            item.suggest = suggeststock
             
             item.trends = self.getTradeInfoAfter(suggeststock.date, suggeststock.stockId, [1, 3, 5, 10, 20, 40, 60])
 

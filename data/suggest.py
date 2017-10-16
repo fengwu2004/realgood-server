@@ -189,40 +189,9 @@ class RangeTrend(object):
 
 class SuggestTrends(object):
 
-    def __init__(self):
-
-        self.suggeststock = None
-
-        self.trends = []
-
-    def toJson(self):
-
-        trends = []
-
-        for item in self.trends:
-
-            trends.append(item.toJson())
-
-        return {'suggeststock': self.suggeststock.toJson(), 'trends': trends}
-
-    @classmethod
-    def fromJson(cls, jsonvalue):
-
-        obj = SuggestTrends()
-
-        obj.suggest = Suggest.fromJson(jsonvalue['suggeststock'])
-
-        for item in jsonvalue['trends']:
-
-            obj.trends.append(RangeTrend.fromJson(item))
-
-        return obj
-
-class SuggestStockTrends(object):
-
     def __init__ (self):
         
-        self.suggeststock = None
+        self.suggest = None
         
         self.trends = []
     
@@ -234,12 +203,12 @@ class SuggestStockTrends(object):
             
             trends.append(item.toJson())
         
-        return {'suggeststock': self.suggeststock.toJson(), 'trends': trends}
+        return {'suggeststock': self.suggest.toJson(), 'trends': trends}
     
     @classmethod
     def fromJson (cls, jsonvalue):
         
-        obj = SuggestStockTrends()
+        obj = SuggestTrends()
         
         obj.suggest = Suggest.fromJson(jsonvalue['suggeststock'])
         

@@ -1,10 +1,10 @@
 
 from data.suggest import Suggest, Consultor, SuggestScore
-from data import databasemgr
+from data.databasemgr import DatabaseMgr
 
 def getStockLevel(stockId:str) -> int:
 
-    items = databasemgr.instance().stockLevels.find({'id':stockId})
+    items = DatabaseMgr.instance().stockLevels.find({'id':stockId})
 
     for item in items:
 
@@ -14,7 +14,7 @@ def getStockLevel(stockId:str) -> int:
 
 def getConsultorLevel(consultor:Consultor) -> int:
 
-    items = databasemgr.instance().consultorLevels.find({'name':consultor.name, 'company':consultor.company})
+    items = DatabaseMgr.instance().consultorLevels.find({'name':consultor.name, 'company':consultor.company})
 
     for item in items:
 
@@ -24,7 +24,7 @@ def getConsultorLevel(consultor:Consultor) -> int:
 
 def checkUser(name, pwd):
     
-    user = databasemgr.instance().users.find({'name': name})
+    user = DatabaseMgr.instance().users.find({'name': name})
     
     for u in user:
         
@@ -36,7 +36,7 @@ def checkUser(name, pwd):
 
 def loadSuggestOfConsultor(name, company) -> [Suggest]:
 
-    items = databasemgr.instance().suggests.find({'name': name, 'company': company}, {'_id': 0})
+    items = DatabaseMgr.instance().suggests.find({'name': name, 'company': company}, {'_id': 0})
 
     results = []
 
@@ -46,9 +46,9 @@ def loadSuggestOfConsultor(name, company) -> [Suggest]:
 
     return results
 
-def getStockName (stockId:str):
+def getStockName(stockId:str):
 
-    items = databasemgr.instance().stocks.find({'id': stockId}, {'_id': 0})
+    items = DatabaseMgr.instance().stocks.find({'id': stockId}, {'_id': 0})
 
     for item in items:
         
@@ -58,7 +58,7 @@ def getStockName (stockId:str):
 
 def getStockId(name:str):
 
-    items = databasemgr.instance().stockInfos.find({'name': name}, {'_id': 0})
+    items = DatabaseMgr.instance().stockInfos.find({'name': name}, {'_id': 0})
 
     results = []
 
@@ -70,29 +70,19 @@ def getStockId(name:str):
 
 def saveSuggests(items: [Suggest]):
 
-    reuslts = []
+    reuslts = list(map(lambda item: item.toJson(), items))
 
-    for item in items:
-        
-        reuslts.append(item.toJson())
-
-    databasemgr.instance().suggests.insert_many(reuslts)
+    DatabaseMgr.instance().suggests.insert_many(reuslts)
 
 def loadSuggests() -> [Suggest]:
 
-    items = databasemgr.instance().suggests.find({}, {'_id': 0})
+    items = DatabaseMgr.instance().suggests.find({}, {'_id': 0})
 
-    results = []
-
-    for item in items:
-        
-        results.append(Suggest.fromJson(item))
-
-    return results
+    return list(map(lambda item: Suggest.fromJson(item), items))
 
 def loadSuggestsOfDate(date:str) -> [Suggest]:
     
-    items = databasemgr.instance().suggests.find({'date':date}, {'_id': 0})
+    items = DatabaseMgr.instance().suggests.find({'date':date}, {'_id': 0})
 
     results = []
 
@@ -104,7 +94,7 @@ def loadSuggestsOfDate(date:str) -> [Suggest]:
 
 def formatSuggests():
     
-    items = databasemgr.instance().suggests.find({}, {'_id': 0})
+    items = DatabaseMgr.instance().suggests.find({}, {'_id': 0})
     
     results = []
     
@@ -118,12 +108,12 @@ def formatSuggests():
 
         obj.stockName = item['stockName']
         
-        obj.consultor = Consultor.fromJson(item)
+        obj.consultorId = item['consultorId']
         
         results.append(obj.toJson())
 
-    databasemgr.instance().suggestscopy.remove({})
-    
-    databasemgr.instance().suggestscopy.insert_many(results)
+    DatabaseMgr.instance().suggestscopy.remove({})
+
+    DatabaseMgr.instance().suggestscopy.insert_many(results)
         
         
