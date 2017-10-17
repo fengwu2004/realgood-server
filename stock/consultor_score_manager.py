@@ -28,7 +28,7 @@ def initRateSetting() -> List[RateSetting]:
 
         return _ratesettings
 
-    wb = load_workbook('./ratesetting.xlsx')
+    wb = load_workbook('./stock/ratesetting.xlsx')
 
     ws = wb.active
 
@@ -83,9 +83,15 @@ class ConsultorScoreManager(object):
 
     def show(self):
 
-        for consultorId in self.consultorscores:
+        temps = list(map(lambda consultorId:(consultorId, self.getConsultorWeight(consultorId)), self.consultorscores))
 
-            print(ConsultorManager.instance().retriveConsultorBy(consultorId).toJson(), self.getConsultorWeight(consultorId))
+        temps.sort(key = lambda item:item[1])
+
+        for item in temps:
+
+            consultor = ConsultorManager.instance().retriveConsultorBy(item[0])
+
+            print(consultor.name, consultor.company, item[1])
 
     def getConsultorWeight(self, consultorId: int) -> int:
 
@@ -97,7 +103,7 @@ class ConsultorScoreManager(object):
 
         total = sum(list(map(lambda x: x.score, scores)))
 
-        return total
+        # return total
 
         return total / len(scores)
 
@@ -108,3 +114,5 @@ class ConsultorScoreManager(object):
     def loadFromDB(self):
 
         pass
+
+# initRateSetting()

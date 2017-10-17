@@ -5,26 +5,28 @@ from stock.consultor_score_manager import ConsultorScoreManager
 from stock.retrive_trade_days import getNextTradeDay
 from stock.pool import PoolA
 
-pool = PoolA()
+def getPool():
 
-dt = getNextTradeDay('2017-5-31')
+    pool = PoolA()
 
-while dt:
+    dt = getNextTradeDay('2017-4-30')
 
-    dtstr = dt.strftime('%Y-%m-%d')
-    
-    allSuggests = storemgr.loadSuggestsOfDate(dtstr)
+    while dt:
 
-    for suggest in allSuggests:
-        
-        if pool.addSuggest(suggest):
-            
-            continue
+        dtstr = dt.strftime('%Y-%m-%d')
 
-    pool.run(dt)
+        allSuggests = storemgr.loadSuggestsOfDate(dtstr)
 
-    dt = getNextTradeDay(dtstr)
+        for suggest in allSuggests:
 
-pool.show()
+            if pool.addSuggest(suggest):
 
-ConsultorScoreManager.instance().show()
+                continue
+
+        pool.run(dt)
+
+        dt = getNextTradeDay(dtstr)
+
+    pool.show()
+
+    return pool

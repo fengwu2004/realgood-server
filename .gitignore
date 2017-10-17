@@ -8,3 +8,5 @@
 webserver/__pycache__/loginManager.cpython-36.pyc
 
 *.pyc
+
+*.pyc

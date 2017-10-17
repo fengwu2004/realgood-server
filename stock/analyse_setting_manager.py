@@ -37,6 +37,6 @@ class AnalyseSettingManager(object):
 
         if (dayvalue.close - dayvalue.open)/dayvalue.open > 0.05:
 
-            return 20
+            return 60
 
         return 0

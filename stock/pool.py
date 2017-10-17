@@ -8,6 +8,7 @@ from stock.retrive_trade_days import getTradeDayCount, getNextTradeDay
 from stock.consultor_score_manager import retriveConsulterRate, ConsultorScoreManager
 from data import SuggestHistoryManager
 from data.storemgr import *
+from collections import namedtuple
 
 class PoolStock(object):
     def __init__(self):
@@ -19,6 +20,8 @@ class PoolStock(object):
         self.live = 20
 
         self.weight = 0
+
+        self.predayincreaseweight = 0
 
         self.living = True
 
@@ -42,7 +45,9 @@ class PoolStock(object):
 
         self.weight += self.getConsultorWeight()
 
-        self.weight += self.getPredayIncreaseWeight(day)
+        self.predayincreaseweight += self.getPredayIncreaseWeight(day)
+
+        self.weight += self.predayincreaseweight
 
     def checkDie(self, dt: datetime) -> bool:
 
@@ -106,11 +111,66 @@ class PoolA(object):
         
         self.sortStocks()
 
-    def show(self):
+    def getReuslt(self):
+
+        dtstr = datetime.now().strftime('%Y-%m-%d')
+
+        Item = namedtuple('Item', 'name adddate consultor trend total increase')
+
+        results = []
 
         for poolstock in self.stocks:
 
-            print(getStockName(poolstock.stockId))
+            stock = getStock(poolstock.stockId)
+
+            close0 = stock.getDayValue(stock.getDayIndex(poolstock.addedDate)).close
+
+            close1 = stock.getDayValue(stock.getDayIndex(dtstr)).close
+
+            predayweight = poolstock.predayincreaseweight
+
+            consultorweight = '%.1f' % (poolstock.weight - predayweight)
+
+            totalweight = '%.1f' % poolstock.weight
+
+            increase = '%.1f' % ((close1 - close0) * 100 / close0)
+
+            item = Item(name = getStockName(poolstock.stockId),
+                        adddate = poolstock.addedDate,
+                        consultor = consultorweight,
+                        trend = predayweight,
+                        total = totalweight,
+                        increase = increase)
+
+            results.append(item._asdict())
+
+        return results
+
+    def show(self):
+
+        dtstr = datetime.now().strftime('%Y-%m-%d')
+
+        for poolstock in self.stocks:
+
+            stock = getStock(poolstock.stockId)
+
+            close0 = stock.getDayValue(stock.getDayIndex(poolstock.addedDate)).close
+
+            close1 = stock.getDayValue(stock.getDayIndex(dtstr)).close
+
+            predayweight = poolstock.predayincreaseweight
+
+            consultorweight = '%.1f' % (poolstock.weight - predayweight)
+
+            totalweight = '%.1f' % poolstock.weight
+
+            increase = '%.1f' % ((close1 - close0) * 100/close0)
+
+            print(getStockName(poolstock.stockId),
+                  poolstock.addedDate,
+                  predayweight,
+                  consultorweight,
+                  increase)
 
     def removeDeathSuggest(self):
 

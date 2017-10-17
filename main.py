@@ -2,6 +2,7 @@ import tornado.escape
 import tornado.ioloop
 import tornado.web
 
+from webserver.analyse_pool_stocks import FindPoolStocks
 from webserver.calc_range_trend import CalcRangeTrend
 from webserver.loginManager import loginManager
 from webserver.save_upload_excel import SaveSuggestExcel
@@ -17,6 +18,7 @@ def make_app():
         (r"/history/suggest/detail", FindStockSuggestHistory),
         (r"/analyse/rangetrend", CalcRangeTrend),
         (r"/history/suggestwithtrends", HandleSuggestTrends),
+        (r"/analyse/poolstock", FindPoolStocks),
         (r"/login", loginManager),
     ])
 

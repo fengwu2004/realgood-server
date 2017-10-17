@@ -36,7 +36,7 @@ def checkUser(name, pwd):
     
     return False
 
-def getStock(stockId:str):
+def getStock(stockId:str) -> Stock:
 
     items = DatabaseMgr.instance().stocks.find({'id': stockId}, {'_id': 0})
 

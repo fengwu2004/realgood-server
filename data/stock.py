@@ -61,11 +61,15 @@ class Stock(object):
         
         self.dayvalues = []
 
-    def getDayValue(self, index:int):
+    def getDayValue(self, index:int) -> DayValue:
 
-        if index <=0 or index >= len(self.dayvalues):
+        if index < 0:
 
-            return None
+            return self.dayvalues[0]
+
+        if index >= len(self.dayvalues):
+
+            return self.dayvalues[len(self.dayvalues) - 1]
 
         return self.dayvalues[index]
         
