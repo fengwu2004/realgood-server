@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="719e5223-de70-49d4-a2ab-afe0f484a8ca" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webserver/analyse_pool_stocks.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/databasemgr.py" afterPath="$PROJECT_DIR$/data/databasemgr.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/stock.py" afterPath="$PROJECT_DIR$/data/stock.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/storemgr.py" afterPath="$PROJECT_DIR$/data/storemgr.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock/analyse_setting_manager.py" afterPath="$PROJECT_DIR$/stock/analyse_setting_manager.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock/consultor_score_manager.py" afterPath="$PROJECT_DIR$/stock/consultor_score_manager.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock/fill_pool.py" afterPath="$PROJECT_DIR$/stock/fill_pool.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock/pool.py" afterPath="$PROJECT_DIR$/stock/pool.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock/stockstoremgr.py" afterPath="$PROJECT_DIR$/stock/stockstoremgr.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -80,16 +69,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pool.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pool.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stock/pool.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-22">
-              <caret line="113" column="8" lean-forward="false" selection-start-line="113" selection-start-column="8" selection-end-line="113" selection-end-column="8" />
+            <state relative-caret-position="8">
+              <caret line="138" column="54" lean-forward="true" selection-start-line="138" selection-start-column="54" selection-end-line="138" selection-end-column="54" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
                 <element signature="e#2496#2793#0" expanded="false" />
                 <element signature="e#3980#4611#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="databasemgr.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data/databasemgr.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="38" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -138,16 +137,6 @@
                 <element signature="e#2373#2377#0" expanded="false" />
                 <marker date="1508242399000" expanded="false" signature="2404:2418" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="suggestwithtrends.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webserver/suggestwithtrends.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -281,7 +270,6 @@
         <option value="$PROJECT_DIR$/analyse/calc_interval_amplitude_of_consultor.py" />
         <option value="$PROJECT_DIR$/webserver/calc_range_trend.py" />
         <option value="$PROJECT_DIR$/data/SuggestHistoryManager.py" />
-        <option value="$PROJECT_DIR$/data/databasemgr.py" />
         <option value="$PROJECT_DIR$/data/storemgr.py" />
         <option value="$PROJECT_DIR$/data/stock.py" />
         <option value="$PROJECT_DIR$/stock/stockstoremgr.py" />
@@ -291,6 +279,7 @@
         <option value="$PROJECT_DIR$/webserver/analyse_pool_stocks.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/stock/consultor_score_manager.py" />
+        <option value="$PROJECT_DIR$/data/databasemgr.py" />
       </list>
     </option>
   </component>
@@ -580,13 +569,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1276" height="777" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21260998" sideWeight="0.50648296" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4589443" sideWeight="0.493517" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2111437" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2521994" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2521994" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25850892" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298217" sideWeight="0.49196786" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38269794" sideWeight="0.49675852" order="1" side_tool="false" content_ui="tabs" />
@@ -897,13 +887,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/databasemgr.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stock/analyse_setting_manager.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -1002,13 +985,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stock/pool.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22">
-          <caret line="113" column="8" lean-forward="false" selection-start-line="113" selection-start-column="8" selection-end-line="113" selection-end-column="8" />
+        <state relative-caret-position="8">
+          <caret line="138" column="54" lean-forward="true" selection-start-line="138" selection-start-column="54" selection-end-line="138" selection-end-column="54" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
             <element signature="e#2496#2793#0" expanded="false" />
             <element signature="e#3980#4611#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/databasemgr.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="38" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
