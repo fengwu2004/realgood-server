@@ -44,6 +44,27 @@ def saveToDB():
     
     coll.insert_many(stocks)
 
+    db = client["recommond"]
+
+    collection = db['stockinfo']
+
+    collection.remove({})
+
+    result = []
+
+    for stock in stocks:
+
+        unit = dict()
+
+        unit['id'] = stock['id']
+
+        unit['name'] = stock['name']
+
+        result.append(unit)
+
+    collection.insert_many(result)
+
+
 def loadStock(stockname):
     
     # uri = "mongodb://yanli:9394@localhost:27017/recommond?authMechanism=SCRAM-SHA-1"
