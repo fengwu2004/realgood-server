@@ -9,7 +9,7 @@ def getPool():
 
     pool = PoolA()
 
-    dt = getNextTradeDay('2017-8-30')
+    dt = getNextTradeDay('2017-4-30')
 
     while dt:
 
@@ -30,3 +30,9 @@ def getPool():
     pool.show()
 
     return pool
+
+def test():
+
+    print(getPool().getReuslt())
+
+# test()
