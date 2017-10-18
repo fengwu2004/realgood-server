@@ -3,6 +3,13 @@ from stock.load import getLines, formatData
 from pymongo import MongoClient
 import json
 
+# uri = "mongodb://yanli:9394@localhost:27017/recommond?authMechanism=SCRAM-SHA-1"
+uri = "mongodb://yanli:9394@123.207.213.131:27017/recommond?authMechanism=SCRAM-SHA-1"
+
+client = MongoClient(uri)
+
+# client = MongoClient('localhost', 27017)
+
 def saveToDB():
     
     mypath = '/Users/yan/Desktop/export/'
@@ -29,13 +36,6 @@ def saveToDB():
     
         stocks.append(stock.toJson())
 
-    # uri = "mongodb://yanli:9394@localhost:27017/recommond?authMechanism=SCRAM-SHA-1"
-    uri = "mongodb://yanli:9394@123.207.213.131:27017/recommond?authMechanism=SCRAM-SHA-1"
-
-    client = MongoClient(uri)
-
-    # client = MongoClient('localhost', 27017)
-    
     db = client["recommond"]
     
     coll = db['stocks']
@@ -63,25 +63,5 @@ def saveToDB():
         result.append(unit)
 
     collection.insert_many(result)
-
-
-def loadStock(stockname):
-    
-    # uri = "mongodb://yanli:9394@localhost:27017/recommond?authMechanism=SCRAM-SHA-1"
-    uri = "mongodb://yanli:9394@123.207.213.131:27017/recommond?authMechanism=SCRAM-SHA-1"
-    
-    client = MongoClient(uri)
-    
-    db = client["recommond"]
-    
-    coll = db['stocks']
-    
-    results = coll.find({'name':stockname}, {'_id': 0})
-
-    for r in results:
-        
-        return r
-
-    return None
 
 # saveToDB()

@@ -9,7 +9,7 @@ def getPool():
 
     pool = PoolA()
 
-    dt = getNextTradeDay('2017-4-30')
+    dt = getNextTradeDay('2017-8-30')
 
     while dt:
 

@@ -1,7 +1,6 @@
 # 计算区间涨跌幅度
 import json
 
-from analyse import calc_interval_amplitude_of_consultor
 from data.suggest import Consultor
 from stock.consultor_manager import ConsultorManager
 from webserver import tokenManager
