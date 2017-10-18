@@ -166,12 +166,6 @@ class PoolA(object):
 
             increase = '%.1f' % ((close1 - close0) * 100/close0)
 
-            print(getStockName(poolstock.stockId),
-                  poolstock.addedDate,
-                  predayweight,
-                  consultorweight,
-                  increase)
-
     def removeDeathSuggest(self):
 
         self.stocks = list(filter(lambda x: x.living, self.stocks))
