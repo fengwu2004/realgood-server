@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="719e5223-de70-49d4-a2ab-afe0f484a8ca" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/SuggestHistoryManager.py" afterPath="$PROJECT_DIR$/data/SuggestHistoryManager.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock/fill_pool.py" afterPath="$PROJECT_DIR$/stock/fill_pool.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock/stockstoremgr.py" afterPath="$PROJECT_DIR$/stock/stockstoremgr.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/calc_range_trend.py" afterPath="$PROJECT_DIR$/webserver/calc_range_trend.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -85,11 +81,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="databasemgr.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="databasemgr.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/databasemgr.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+            <state relative-caret-position="300">
+              <caret line="37" column="9" lean-forward="true" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tokenManager.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webserver/tokenManager.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="23" column="19" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -98,45 +104,42 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="20" column="46" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="46" />
+            <state relative-caret-position="90">
+              <caret line="16" column="48" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SuggestHistoryManager.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="suggest_history.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webserver/suggest_history.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loginManager.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webserver/loginManager.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="251">
+              <caret line="30" column="12" lean-forward="true" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SuggestHistoryManager.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data/SuggestHistoryManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="107" column="8" lean-forward="true" selection-start-line="107" selection-start-column="8" selection-end-line="107" selection-end-column="8" />
+            <state relative-caret-position="240">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
-                <element signature="e#1510#1598#0" expanded="false" />
-                <element signature="e#2263#2415#0" expanded="false" />
-                <element signature="e#3416#3970#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stockstoremgr.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stock/stockstoremgr.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="66" column="12" lean-forward="true" selection-start-line="66" selection-start-column="12" selection-end-line="66" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="calc_interval_amplitude_of_consultor.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/analyse/calc_interval_amplitude_of_consultor.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="41" lean-forward="false" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="41" />
-              <folding>
-                <element signature="e#301#882#0" expanded="false" />
-                <element signature="e#1606#2182#0" expanded="false" />
+                <element signature="e#1472#1560#0" expanded="false" />
+                <element signature="e#2225#2377#0" expanded="false" />
+                <element signature="e#3378#3932#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -148,18 +151,6 @@
             <state relative-caret-position="180">
               <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="22" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="calc_range_trend.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webserver/calc_range_trend.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding>
-                <element signature="e#11#22#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -185,9 +176,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>朱婕</find>
-      <find>CalcRangeTrend</find>
-      <find>get</find>
       <find>dt.strftime</find>
       <find>getConsultorWeight</find>
       <find>history/suggest/stockhistory</find>
@@ -215,6 +203,9 @@
       <find>export</find>
       <find>calc_interval_amplitude_of_consultor</find>
       <find>开始加载</find>
+      <find>SuggestHistoryManager</find>
+      <find>createToken</find>
+      <find>history/suggest</find>
     </findStrings>
     <replaceStrings>
       <replace>Suggest</replace>
@@ -276,11 +267,11 @@
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/stock/consultor_score_manager.py" />
         <option value="$PROJECT_DIR$/stock/setup_stock_id_name.py" />
-        <option value="$PROJECT_DIR$/data/SuggestHistoryManager.py" />
         <option value="$PROJECT_DIR$/stock/fill_pool.py" />
         <option value="$PROJECT_DIR$/stock/stockstoremgr.py" />
         <option value="$PROJECT_DIR$/webserver/calc_range_trend.py" />
         <option value="$PROJECT_DIR$/data/databasemgr.py" />
+        <option value="$PROJECT_DIR$/data/SuggestHistoryManager.py" />
       </list>
     </option>
   </component>
@@ -622,7 +613,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/data/SuggestHistoryManager.py</url>
-          <line>118</line>
+          <line>114</line>
           <option name="timeStamp" value="218" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -632,17 +623,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/data/SuggestHistoryManager.py</url>
-          <line>112</line>
+          <line>108</line>
           <option name="timeStamp" value="220" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/data/SuggestHistoryManager.py</url>
-          <line>114</line>
+          <line>110</line>
           <option name="timeStamp" value="221" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/data/SuggestHistoryManager.py</url>
-          <line>116</line>
+          <line>112</line>
           <option name="timeStamp" value="222" />
         </line-breakpoint>
       </breakpoints>
@@ -656,7 +647,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="231" />
+      <option name="time" value="232" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -770,13 +761,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webserver/tokenManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="23" column="8" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/justtest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
@@ -843,6 +827,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -850,14 +835,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webserver/loginManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -937,14 +914,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webserver/suggest_history.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="29" column="68" lean-forward="false" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stock/stockstoremgr.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -982,14 +951,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="20" column="46" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webserver/analyse_pool_stocks.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1018,23 +979,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/SuggestHistoryManager.py">
+    <entry file="file://$PROJECT_DIR$/data/databasemgr.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="107" column="8" lean-forward="true" selection-start-line="107" selection-start-column="8" selection-end-line="107" selection-end-column="8" />
-          <folding>
-            <element signature="e#1510#1598#0" expanded="false" />
-            <element signature="e#2263#2415#0" expanded="false" />
-            <element signature="e#3416#3970#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="300">
+          <caret line="37" column="9" lean-forward="true" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/databasemgr.py">
+    <entry file="file://$PROJECT_DIR$/webserver/tokenManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        <state relative-caret-position="176">
+          <caret line="23" column="19" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="19" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webserver/loginManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="30" column="12" lean-forward="true" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="16" column="48" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webserver/suggest_history.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/SuggestHistoryManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="e#1472#1560#0" expanded="false" />
+            <element signature="e#2225#2377#0" expanded="false" />
+            <element signature="e#3378#3932#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

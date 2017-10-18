@@ -12,8 +12,6 @@ def loadAllStockFromDB() -> Dict[str, Stock]:
     
     items = DatabaseMgr.instance().stocks.find({}, {'_id': 0})
 
-    print('开始加载')
-
     for item in items:
         
         if 'id' in item:
@@ -21,8 +19,6 @@ def loadAllStockFromDB() -> Dict[str, Stock]:
             stockId = item['id']
         
             stocks[stockId] = Stock.fromJson(item)
-
-    print('加载完毕')
 
     return stocks
 
