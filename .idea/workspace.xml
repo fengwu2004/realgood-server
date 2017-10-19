@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="719e5223-de70-49d4-a2ab-afe0f484a8ca" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/test_remove_the_same.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/SuggestHistoryManager.py" afterPath="$PROJECT_DIR$/data/SuggestHistoryManager.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/storemgr.py" afterPath="$PROJECT_DIR$/data/storemgr.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/every_day_run.py" afterPath="$PROJECT_DIR$/every_day_run.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock/retrive_trade_days.py" afterPath="$PROJECT_DIR$/stock/retrive_trade_days.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock/stockstoremgr.py" afterPath="$PROJECT_DIR$/stock/stockstoremgr.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/save_upload_excel.py" afterPath="$PROJECT_DIR$/webserver/save_upload_excel.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/suggest_history.py" afterPath="$PROJECT_DIR$/webserver/suggest_history.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/databasemgr.py" afterPath="$PROJECT_DIR$/data/databasemgr.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -65,11 +57,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="suggest_history.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="suggest_history.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webserver/suggest_history.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="44" lean-forward="false" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+            <state relative-caret-position="255">
+              <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -94,6 +86,16 @@
                 <element signature="e#4433#4862#0" expanded="false" />
                 <element signature="e#4911#5041#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="databasemgr.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data/databasemgr.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="73">
+              <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -148,16 +150,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
               <caret line="59" column="4" lean-forward="false" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="datetime.pyi" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/datetime.pyi">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="111" column="8" lean-forward="false" selection-start-line="111" selection-start-column="8" selection-end-line="111" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -283,7 +275,6 @@
         <option value="$PROJECT_DIR$/stock/pool.py" />
         <option value="$PROJECT_DIR$/stock/fill_pool.py" />
         <option value="$PROJECT_DIR$/test/test_remove_the_same.py" />
-        <option value="$PROJECT_DIR$/data/databasemgr.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/every_day_run.py" />
         <option value="$PROJECT_DIR$/webserver/save_upload_excel.py" />
@@ -292,6 +283,7 @@
         <option value="$PROJECT_DIR$/data/SuggestHistoryManager.py" />
         <option value="$PROJECT_DIR$/stock/stockstoremgr.py" />
         <option value="$PROJECT_DIR$/webserver/suggest_history.py" />
+        <option value="$PROJECT_DIR$/data/databasemgr.py" />
       </list>
     </option>
   </component>
@@ -581,13 +573,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1276" height="777" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21260998" sideWeight="0.50648296" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.102639295" sideWeight="0.493517" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2111437" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2521994" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2521994" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26661265" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298217" sideWeight="0.49196786" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38269794" sideWeight="0.49675852" order="1" side_tool="false" content_ui="tabs" />
@@ -892,14 +885,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/databasemgr.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_remove_the_same.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="346">
@@ -1045,11 +1030,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webserver/suggest_history.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="44" lean-forward="false" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+        <state relative-caret-position="255">
+          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/databasemgr.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
