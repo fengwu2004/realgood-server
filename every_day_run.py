@@ -3,10 +3,8 @@ from stock.stockstoremgr import saveToDB
 from test import test_remove_the_same
 
 # saveToDB()
-# #
-# setup_stock_id_name.run()
 
-test_remove_the_same.run()
+# test_remove_the_same.run()
 
 # create_consultor_stocks_table.doRun()
 

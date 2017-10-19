@@ -64,4 +64,4 @@ def saveToDB():
 
     collection.insert_many(result)
 
-# saveToDB()
+saveToDB()

@@ -1,6 +1,6 @@
 import time
 from pymongo import MongoClient
-import storemgr
+from data.storemgr import *
 
 def run():
     uri = "mongodb://yanli:9394@123.207.213.131:27017/recommond?authMechanism=SCRAM-SHA-1"
@@ -11,24 +11,26 @@ def run():
     
     coll = db['suggest']
     
-    suggeststocks = storemgr.intance().loadSuggests()
+    suggeststocks = loadSuggests()
     
     # items = sorted(set(suggeststocks), key = lambda suggeststock: time.strptime(suggeststock.date, '%Y-%m-%d'), reverse = True)
     
-    result = []
+    result = set()
     
     for item in suggeststocks:
         
-        item.stockName = storemgr.intance().getStockName(item.stockId)
+        item.stockName = getStockName(item.stockId)
         
         if item.stockName is not None:
         
-            result.append(item.toJson())
+            result.add(item)
             
             print(item.toJson())
             
     coll.remove()
-    
-    coll.insert_many(result)
+
+    coll.insert_many(list(map(lambda suggest: suggest.toJson(), result)))
+
+run()
     
     
