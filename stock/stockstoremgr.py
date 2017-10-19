@@ -8,8 +8,6 @@ uri = "mongodb://yanli:9394@123.207.213.131:27017/recommond?authMechanism=SCRAM-
 
 client = MongoClient(uri)
 
-# client = MongoClient('localhost', 27017)
-
 def saveToDB():
     
     mypath = '/Users/yan/Desktop/export/'

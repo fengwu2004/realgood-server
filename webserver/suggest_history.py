@@ -2,16 +2,7 @@ import json
 
 from data import storemgr, SuggestHistoryManager
 from webserver.RequestBaseManager import RequestBaseManager
-from stock.consultor_manager import ConsultorManager
 from data.suggest import *
-
-def getSuggestInfo(suggest:Suggest):
-
-    data = suggest.toJson()
-
-    consultor = ConsultorManager.instance().retriveConsultorBy(suggest.consultorId)
-
-    return dict(data, **(consultor.toJson()))
 
 class FindHistorySuggest(RequestBaseManager):
     
@@ -27,18 +18,8 @@ class FindHistorySuggest(RequestBaseManager):
         
         day = data['history']
 
-        results = SuggestHistoryManager.instance().getHistorySuggest(int(day))
+        items = SuggestHistoryManager.instance().getHistorySuggest(int(day))
 
-        jsonvalue = dict()
-        
-        for stockId in results.keys():
-    
-            suggests = results[stockId]
+        results = list(map(lambda suggest: suggest.toJson(), items))
 
-            items = list(map(lambda suggest: getSuggestInfo(suggest), suggests))
-
-            stockName = storemgr.getStockName(stockId)
-
-            jsonvalue[stockName] = items
-
-        self.write({'success': 1, 'data':jsonvalue})
+        self.write({'success': 1, 'data':results})

@@ -57,6 +57,22 @@ def isHolidays(dt:datetime) -> bool:
         
     return False
 
+def getPreTradeDay(date:str) -> datetime:
+
+    dt = datetime.strptime(date, '%Y-%m-%d')
+
+    dt = dt - timedelta(days = 1)
+
+    while isHolidays(dt):
+
+        dt = dt - timedelta(days = 1)
+
+    if dt > datetime.now():
+
+        return None
+
+    return dt
+
 def getNextTradeDay(date:str) -> datetime:
     
     dt = datetime.strptime(date, '%Y-%m-%d')
@@ -104,6 +120,6 @@ def test():
 
     print(d)
     
-    print(getNextTradeDay('2017-10-2'))
+    print(getPreTradeDay('2017-10-2'))
     
-# test()
+test()

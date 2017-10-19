@@ -5,9 +5,9 @@ from openpyxl import load_workbook
 from stock.consultor_manager import ConsultorManager
 from webserver.RequestBaseManager import RequestBaseManager
 
-def getItems(ws) -> [Suggest]:
+def getItems(ws) -> set:
     
-    results = []
+    results = set()
     
     for i in range(1, ws.max_row):
     
@@ -37,7 +37,7 @@ def getItems(ws) -> [Suggest]:
 
         obj.consultorId = consultor.id
 
-        results.append(obj)
+        results.add(obj)
         
     return results
 

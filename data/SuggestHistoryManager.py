@@ -5,6 +5,8 @@ import time
 from data.databasemgr import DatabaseMgr
 from data import storemgr
 from typing import Dict, List
+from datetime import datetime
+from stock.retrive_trade_days import getPreTradeDay
 
 def loadAllStockFromDB() -> Dict[str, Stock]:
     
@@ -95,24 +97,24 @@ class SuggestHistoryManager(object):
             if suggest.stockId is not None:
                 
                 self.save(suggest.stockId, suggest)
-            
-    def doSortWithDate(self):
-    
-        for key in self.results.keys():
-            
-            self.results[key] = sorted(self.results[key], key = lambda k:time.strptime(k.date, '%Y-%m-%d'))
-        
+
     def getHistorySuggest(self, day:int) -> dict:
-        
-        self.results.clear()
-    
-        theTime = time.gmtime(time.time() - day * 24 * 3600)
-    
-        self.findSuggestAfter(theTime)
-    
-        self.doSortWithDate()
-    
-        return self.results
+
+        dt = datetime.now()
+
+        results = []
+
+        while day > 0:
+
+            dt = getPreTradeDay(dt.strftime('%Y-%m-%d'))
+
+            items = storemgr.loadSuggestsOfDate(dt.strftime('%Y-%m-%d'))
+
+            results.extend(items)
+
+            day -= 1
+
+        return results
     
     def getTradeInfoAfter(self, date:str, stockId:str, days:[int]) -> [RangeTrend]:
 

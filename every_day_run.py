@@ -1,6 +1,5 @@
 from stock import setup_stock_id_name
 from stock.stockstoremgr import saveToDB
-from test import test_remove_the_same
 
 # saveToDB()
 

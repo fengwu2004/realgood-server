@@ -88,9 +88,17 @@ def getStockId(name:str):
 
     return None
 
-def saveSuggests(items: [Suggest]):
+def saveSuggests(newsuggests: set):
 
-    reuslts = list(map(lambda item: item.toJson(), items))
+    suggests = loadSuggests()
+
+    suggests.append()
+
+    for suggest in suggests:
+
+        newsuggests.add(suggest)
+
+    reuslts = list(map(lambda item: item.toJson(), newsuggests))
 
     DatabaseMgr.instance().suggests.insert_many(reuslts)
 
@@ -101,16 +109,10 @@ def loadSuggests() -> [Suggest]:
     return list(map(lambda item: Suggest.fromJson(item), items))
 
 def loadSuggestsOfDate(date:str) -> [Suggest]:
-    
-    items = DatabaseMgr.instance().suggests.find({'date':date}, {'_id': 0})
 
-    results = []
+    suggests = loadSuggests()
 
-    for item in items:
-    
-        results.append(Suggest.fromJson(item))
-
-    return results
+    return list(filter(lambda suggest: suggest.date == date), suggests)
 
 def formatSuggests():
     
