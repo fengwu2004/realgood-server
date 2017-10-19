@@ -112,7 +112,7 @@ def loadSuggestsOfDate(date:str) -> [Suggest]:
 
     suggests = loadSuggests()
 
-    return list(filter(lambda suggest: suggest.date == date), suggests)
+    return list(filter(lambda suggest: suggest.date == date, suggests))
 
 def formatSuggests():
     
