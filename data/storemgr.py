@@ -92,13 +92,13 @@ def saveSuggests(newsuggests: set):
 
     suggests = loadSuggests()
 
-    suggests.append()
-
     for suggest in suggests:
 
         newsuggests.add(suggest)
 
     reuslts = list(map(lambda item: item.toJson(), newsuggests))
+
+    DatabaseMgr.instance().suggests.remove({})
 
     DatabaseMgr.instance().suggests.insert_many(reuslts)
 
