@@ -114,5 +114,3 @@ class ConsultorScoreManager(object):
     def loadFromDB(self):
 
         pass
-
-# initRateSetting()

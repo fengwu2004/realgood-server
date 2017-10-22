@@ -19,9 +19,7 @@ def getPool():
 
         for suggest in allSuggests:
 
-            if pool.addSuggest(suggest):
-
-                continue
+            pool.addSuggest(suggest)
 
         pool.run(dt)
 

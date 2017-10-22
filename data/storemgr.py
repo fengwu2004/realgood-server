@@ -137,5 +137,20 @@ def formatSuggests():
     DatabaseMgr.instance().suggestscopy.remove({})
 
     DatabaseMgr.instance().suggestscopy.insert_many(results)
-        
+
+def checkIsNewStock(stockId, dtstr:str):
+
+    stock = getStock(stockId)
+
+    if stock is None:
+
+        return True
+
+    index = stock.getDayIndex(dtstr)
+
+    if index <= 10:
+
+        return True
+
+    return False
         

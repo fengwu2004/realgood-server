@@ -19,7 +19,8 @@ def saveToDB():
         f.extend(filenames)
     
     print(f)
-    
+
+
     stocks = []
     
     for file in f:

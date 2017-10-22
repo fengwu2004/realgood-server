@@ -177,7 +177,11 @@ class PoolA(object):
         self.stocks.sort(key = lambda poolstock: poolstock.weight, reverse = True)
 
     def retivePoolStock(self, suggest:Suggest) -> PoolStock:
-        
+
+        if checkIsNewStock(suggest.stockId, suggest.date):
+
+            return None
+
         for poolstock in self.stocks:
             
             if poolstock.stockId == suggest.stockId:
@@ -200,7 +204,9 @@ class PoolA(object):
     
         poolstock = self.retivePoolStock(suggest)
 
-        poolstock.addSuggest(suggest)
+        if poolstock:
+
+            poolstock.addSuggest(suggest)
 
 def getDayValues(stockId:str, dt0:datetime, dt1:datetime):
 

@@ -4,6 +4,7 @@ from data.suggest import Suggest, Consultor
 from openpyxl import load_workbook
 from stock.consultor_manager import ConsultorManager
 from webserver.RequestBaseManager import RequestBaseManager
+from datetime import datetime
 
 def getItems(ws) -> set:
     
@@ -17,7 +18,7 @@ def getItems(ws) -> set:
         
         temp = str(ws['A' + index].value)
         
-        obj.date = temp[0:10]
+        obj.date = datetime.strptime(temp[0:10], '%Y-%m-%d').strftime('%Y-%m-%d')
 
         obj.stockId = ws['D' + index].value
 
