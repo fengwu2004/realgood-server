@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="719e5223-de70-49d4-a2ab-afe0f484a8ca" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/databasemgr.py" afterPath="$PROJECT_DIR$/data/databasemgr.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/storemgr.py" afterPath="$PROJECT_DIR$/data/storemgr.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/suggest_manager.py" afterPath="$PROJECT_DIR$/data/suggest_manager.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -76,6 +73,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="27" column="43" lean-forward="true" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="pool.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stockmgr/pool.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -101,12 +108,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="network.py" pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pymongo/network.py">
+      <file leaf-file-name="suggest.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data/suggest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="168" column="0" lean-forward="false" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="171">
+              <caret line="96" column="13" lean-forward="false" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
+              <folding>
+                <element signature="e#127#742#0" expanded="false" />
+                <element signature="e#778#1442#0" expanded="false" />
+                <element signature="e#1486#1792#0" expanded="false" />
+                <element signature="e#2910#3467#0" expanded="false" />
+                <element signature="e#3499#3888#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -129,23 +142,11 @@
       <file leaf-file-name="suggest_manager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/suggest_manager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="65" column="8" lean-forward="false" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
+            <state relative-caret-position="182">
+              <caret line="111" column="71" lean-forward="false" selection-start-line="111" selection-start-column="71" selection-end-line="111" selection-end-column="71" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
                 <element signature="e#361#1008#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_float.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_float.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="37" lean-forward="false" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#29#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -173,11 +174,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="databasemgr.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="databasemgr.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/databasemgr.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+            <state relative-caret-position="175">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -194,8 +195,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>_instance</find>
-      <find>storemgr</find>
       <find>getStock</find>
       <find>getPreTradeDay</find>
       <find>self.stoc</find>
@@ -206,7 +205,6 @@
       <find>retrive_trade_days</find>
       <find>stock</find>
       <find>localhost</find>
-      <find>suggest_manager</find>
       <find>loadSuggests</find>
       <find>loadSuggestsOfDate</find>
       <find>results</find>
@@ -224,6 +222,9 @@
       <find>getStockDayvalue</find>
       <find>loadSuggestOfConsultor</find>
       <find>getStockName</find>
+      <find>module/historydetail</find>
+      <find>suggest_manager</find>
+      <find>suggest.stock</find>
     </findStrings>
     <replaceStrings>
       <replace>Suggest</replace>
@@ -288,8 +289,8 @@
         <option value="$PROJECT_DIR$/test/test_float.py" />
         <option value="$PROJECT_DIR$/stockmgr/stockstoremgr.py" />
         <option value="$PROJECT_DIR$/data/databasemgr.py" />
-        <option value="$PROJECT_DIR$/data/suggest_manager.py" />
         <option value="$PROJECT_DIR$/data/storemgr.py" />
+        <option value="$PROJECT_DIR$/data/suggest_manager.py" />
       </list>
     </option>
   </component>
@@ -704,6 +705,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
           <caret line="659" column="8" lean-forward="false" selection-start-line="659" selection-start-column="8" selection-end-line="659" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -866,27 +868,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/suggest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="2" column="28" lean-forward="false" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-          <folding>
-            <element signature="e#127#742#0" expanded="false" />
-            <element signature="e#778#1442#0" expanded="false" />
-            <element signature="e#1486#1792#0" expanded="false" />
-            <element signature="e#2910#3467#0" expanded="false" />
-            <element signature="e#3499#3888#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="16" column="48" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -1073,17 +1054,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/suggest_manager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="65" column="8" lean-forward="false" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#361#1008#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/storemgr.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -1099,9 +1069,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/databasemgr.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+        <state relative-caret-position="175">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="27" column="43" lean-forward="true" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/suggest_manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="111" column="71" lean-forward="false" selection-start-line="111" selection-start-column="71" selection-end-line="111" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#361#1008#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/suggest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="96" column="13" lean-forward="false" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
+          <folding>
+            <element signature="e#127#742#0" expanded="false" />
+            <element signature="e#778#1442#0" expanded="false" />
+            <element signature="e#1486#1792#0" expanded="false" />
+            <element signature="e#2910#3467#0" expanded="false" />
+            <element signature="e#3499#3888#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -109,7 +109,7 @@ class SuggestMgr(object):
 
     def findAllSuggest(self, stockId:int) -> dict:
 
-        return [suggest for suggest in self.suggests if suggest.stock == stockId]
+        return [suggest for suggest in self.suggests if suggest.stockId == stockId]
 
     def getCloseAfter(self, date:str, stockId:str, days:[int]) -> [int]:
 
