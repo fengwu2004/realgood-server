@@ -31,7 +31,11 @@ class PoolStock(object):
 
         return AnalyseSettingManager.instance().getStockWeight(self.stockId)
 
-    def getPredayIncreaseWeight(self, day: datetime):
+    def getPredayIncreaseWeight(self, day: datetime, adddate:datetime):
+
+        if day < adddate:
+
+            return 0
 
         return AnalyseSettingManager.instance().getPredayIncreaseWeight(self.stockId, day)
 
