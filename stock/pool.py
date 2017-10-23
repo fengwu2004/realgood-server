@@ -49,7 +49,7 @@ class PoolStock(object):
 
         self.weight += self.getConsultorWeight()
 
-        self.predayincreaseweight += self.getPredayIncreaseWeight(day)
+        self.predayincreaseweight += self.getPredayIncreaseWeight(day, datetime.strptime(self.addedDate, '%Y-%m-%d'))
 
         self.weight += self.predayincreaseweight
 
