@@ -5,6 +5,9 @@ from data.suggest import Suggest, Consultor, SuggestScore
 from data.databasemgr import DatabaseMgr
 from typing import Dict
 
+from data.suggest_manager import SuggestMgr
+
+
 def loadAllStockFromDB() -> Dict[str, Stock]:
     stocks = dict()
 
@@ -162,6 +165,8 @@ def saveSuggests(newsuggests: set):
     DatabaseMgr.instance().suggests.remove({})
 
     DatabaseMgr.instance().suggests.insert_many(reuslts)
+
+    SuggestMgr.instance().load()
 
 def loadSuggests() -> [Suggest]:
 

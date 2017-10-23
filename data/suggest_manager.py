@@ -63,6 +63,10 @@ class SuggestMgr(object):
 
         self.suggests = storemgr.loadSuggests()
 
+    def load(self):
+
+        self.suggests = storemgr.loadSuggests()
+
     def loadSuggestsOfDate(self, dtstr:str):
 
         return [suggest for suggest in self.suggests if suggest.date == dtstr]
