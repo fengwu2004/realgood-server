@@ -1,5 +1,5 @@
 # 计算区间振幅
-from stock.stockstoremgr import loadStock
+from stockmgr.stockstoremgr import loadStock
 import time
 from data.suggest import RangeTrend
 from data.stock import Stock, DayValue

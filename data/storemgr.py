@@ -3,6 +3,73 @@ from datetime import datetime
 from data.stock import Stock, DayValue
 from data.suggest import Suggest, Consultor, SuggestScore
 from data.databasemgr import DatabaseMgr
+from typing import Dict
+
+def loadAllStockFromDB() -> Dict[str, Stock]:
+    stocks = dict()
+
+    items = DatabaseMgr.instance().stocks.find({}, {'_id': 0})
+
+    for item in items:
+
+        if 'id' in item:
+
+            print(item['id'])
+
+            stockId = item['id']
+
+            stocks[stockId] = Stock.fromJson(item)
+
+    return stocks
+
+_instance = None
+class StockMgr(object):
+
+    @classmethod
+    def instance(cls):
+
+        global _instance
+
+        if _instance is None:
+
+            _instance = StockMgr()
+
+        if _instance.date != datetime.now().strftime('%Y-%m-%d'):
+
+            _instance.loadStocks()
+
+        return _instance
+
+    def loadStocks(self):
+
+        d = datetime.now().timestamp()
+
+        self.date = datetime.now().strftime('%Y-%m-%d')
+
+        print('begin load stocks')
+
+        self.stocks = loadAllStockFromDB()
+
+        print('load stocks finish')
+
+        print(datetime.now().timestamp() - d)
+
+    def getStock(self, stockId:str):
+
+        if stockId in self.stocks:
+
+            return self.stocks[stockId]
+
+        return None
+
+    def __init__(self):
+
+        self.stocks = None
+
+        self.date = None
+
+        self.loadStocks()
+
 
 def getStockLevel(stockId:str) -> int:
 
@@ -38,13 +105,7 @@ def checkUser(name, pwd):
 
 def getStock(stockId:str) -> Stock:
 
-    items = DatabaseMgr.instance().stocks.find({'id': stockId}, {'_id': 0})
-
-    for item in items:
-
-        return Stock.fromJson(item)
-
-    return None
+    return StockMgr.instance().getStock(stockId)
 
 def getStockDayvalue(stockId:str, day:str) -> DayValue:
 
@@ -68,11 +129,11 @@ def loadSuggestOfConsultor(consultorId:int) -> [Suggest]:
 
 def getStockName(stockId:str):
 
-    items = DatabaseMgr.instance().stocks.find({'id': stockId}, {'_id': 0})
+    stock = StockMgr.instance().getStock(stockId)
 
-    for item in items:
-        
-        return item['name']
+    if stock is not None:
+
+        return stock.name
 
     return None
 

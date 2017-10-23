@@ -1,8 +1,8 @@
 import json
 
-from data import storemgr, SuggestHistoryManager
+from data.suggest_manager import SuggestMgr
 from webserver.RequestBaseManager import RequestBaseManager
-from data.suggest import *
+
 
 class FindHistorySuggest(RequestBaseManager):
     
@@ -18,7 +18,7 @@ class FindHistorySuggest(RequestBaseManager):
         
         day = data['history']
 
-        items = SuggestHistoryManager.instance().getHistorySuggest(int(day))
+        items = SuggestMgr.instance().getHistorySuggest(int(day))
 
         results = list(map(lambda suggest: suggest.toJson(), items))
 

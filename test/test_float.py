@@ -1,4 +1,7 @@
 from datetime import datetime
+from data.storemgr import *
+
+items = DatabaseMgr.instance().stocks.find({'id':'600125'}, {'_id': 0})
 
 p = 1.02030239239
 

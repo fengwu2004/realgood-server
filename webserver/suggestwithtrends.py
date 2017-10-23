@@ -1,4 +1,4 @@
-from data import SuggestHistoryManager
+from data import suggest_manager
 from webserver.RequestBaseManager import RequestBaseManager
 
 class HandleSuggestTrends(RequestBaseManager):
@@ -9,7 +9,7 @@ class HandleSuggestTrends(RequestBaseManager):
             
             self.write({'success': -1})
 
-        self.write({'success': 1, 'data': SuggestHistoryManager.instance().findTrends})
+        self.write({'success': 1, 'data': suggest_manager.instance().findTrends})
         
         return
 

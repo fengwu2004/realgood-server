@@ -1,12 +1,8 @@
 from os import walk
-from stock.load import getLines, formatData
+from stockmgr.load import getLines, formatData
 from pymongo import MongoClient
+from data.databasemgr import DatabaseMgr
 import json
-
-# uri = "mongodb://yanli:9394@localhost:27017/recommond?authMechanism=SCRAM-SHA-1"
-uri = "mongodb://yanli:9394@123.207.213.131:27017/recommond?authMechanism=SCRAM-SHA-1"
-
-client = MongoClient(uri)
 
 def saveToDB():
     
@@ -20,11 +16,10 @@ def saveToDB():
     
     print(f)
 
-
     stocks = []
     
     for file in f:
-    
+
         filePath = mypath + file
         
         if filePath.find('.txt') == -1:
@@ -35,19 +30,9 @@ def saveToDB():
     
         stocks.append(stock.toJson())
 
-    db = client["recommond"]
-    
-    coll = db['stocks']
+    DatabaseMgr.instance().stocks.remove({})
 
-    coll.remove({})
-    
-    coll.insert_many(stocks)
-
-    db = client["recommond"]
-
-    collection = db['stockinfo']
-
-    collection.remove({})
+    DatabaseMgr.instance().stocks.insert_many(stocks)
 
     result = []
 
@@ -61,6 +46,8 @@ def saveToDB():
 
         result.append(unit)
 
-    collection.insert_many(result)
+    DatabaseMgr.instance().stockInfos.remove({})
+
+    DatabaseMgr.instance().stockInfos.insert_many(result)
 
 saveToDB()

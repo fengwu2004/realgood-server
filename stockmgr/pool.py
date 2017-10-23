@@ -1,14 +1,11 @@
-from data.suggest import Suggest
-from data.stock import Stock
-from typing import Dict, List, Tuple
-from datetime import datetime
-from stock.analyse_setting_manager import AnalyseSettingManager
-from functools import reduce
-from stock.retrive_trade_days import getTradeDayCount, getNextTradeDay
-from stock.consultor_score_manager import retriveConsulterRate, ConsultorScoreManager
-from data import SuggestHistoryManager
-from data.storemgr import *
 from collections import namedtuple
+from typing import Tuple
+
+from data.storemgr import *
+from stockmgr.analyse_setting_manager import AnalyseSettingManager
+from stockmgr.consultor_score_manager import retriveConsulterRate, ConsultorScoreManager
+from stockmgr.retrive_trade_days import getTradeDayCount
+
 
 class PoolStock(object):
     def __init__(self):
@@ -214,7 +211,7 @@ class PoolA(object):
 
 def getDayValues(stockId:str, dt0:datetime, dt1:datetime):
 
-    stock = SuggestHistoryManager.instance().getStock(stockId)
+    stock = StockMgr.instance().getStock(stockId)
 
     if stock is None:
 

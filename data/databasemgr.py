@@ -2,6 +2,8 @@ from pymongo import MongoClient
 
 _instance = None
 
+_debug = False
+
 class DatabaseMgr(object):
 
     @classmethod
@@ -31,12 +33,14 @@ class DatabaseMgr(object):
     
     @property
     def stocks(self):
-        
-        # client = MongoClient('localhost', 27017)
-        #
-        # db = client["recommond"]
-        #
-        # return db['stocks']
+
+        if _debug:
+
+            client = MongoClient('localhost', 27017)
+
+            db = client["recommond"]
+
+            return db['stocks']
         
         return self.db['stocks']
 
@@ -62,6 +66,14 @@ class DatabaseMgr(object):
 
     @property
     def stockInfos(self):
+
+        if _debug:
+
+            client = MongoClient('localhost', 27017)
+
+            db = client["recommond"]
+
+            return db['stockinfo']
         
         return self.db['stockinfo']
 

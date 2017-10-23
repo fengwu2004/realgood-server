@@ -1,5 +1,5 @@
 from data.databasemgr import DatabaseMgr
-from stock.consultor_manager import ConsultorManager
+from stockmgr.consultor_manager import ConsultorManager
 from data.suggest import Suggest
 
 items = DatabaseMgr.instance().suggests.find({}, {'_id':0})

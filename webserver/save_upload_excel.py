@@ -2,7 +2,7 @@ from io import BytesIO
 from data import storemgr
 from data.suggest import Suggest, Consultor
 from openpyxl import load_workbook
-from stock.consultor_manager import ConsultorManager
+from stockmgr.consultor_manager import ConsultorManager
 from webserver.RequestBaseManager import RequestBaseManager
 from datetime import datetime
 

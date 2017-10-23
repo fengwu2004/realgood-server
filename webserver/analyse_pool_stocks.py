@@ -1,8 +1,6 @@
-import json
-
-from data import storemgr, SuggestHistoryManager
+from stockmgr.fill_pool import getPool
 from webserver.RequestBaseManager import RequestBaseManager
-from stock.fill_pool import getPool
+
 
 class FindPoolStocks(RequestBaseManager):
     

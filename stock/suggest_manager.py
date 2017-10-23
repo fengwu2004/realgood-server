@@ -1,4 +1,0 @@
-
-class SuggestManager(object):
-
-    pass

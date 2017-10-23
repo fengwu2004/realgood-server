@@ -2,9 +2,9 @@ from typing import List
 from collections import defaultdict
 from data.suggest import SuggestScore, Suggest, Consultor
 from openpyxl import load_workbook
-from stock.consultor_manager import ConsultorManager
+from stockmgr.consultor_manager import ConsultorManager
 
-from stock.analyse_setting_manager import AnalyseSettingManager
+from stockmgr.analyse_setting_manager import AnalyseSettingManager
 
 _ratesettings = []
 
@@ -28,7 +28,7 @@ def initRateSetting() -> List[RateSetting]:
 
         return _ratesettings
 
-    wb = load_workbook('./stock/ratesetting.xlsx')
+    wb = load_workbook('./stockmgr/ratesetting.xlsx')
 
     ws = wb.active
 

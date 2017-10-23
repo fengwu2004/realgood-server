@@ -1,12 +1,10 @@
 # 计算区间涨跌幅度
 import json
 
-from data.suggest import Consultor
-from stock.consultor_manager import ConsultorManager
-from webserver import tokenManager
+from data import suggest_manager
+from stockmgr.consultor_manager import ConsultorManager
 from webserver.RequestBaseManager import RequestBaseManager
-from data import storemgr
-from data import SuggestHistoryManager
+
 
 class CalcRangeTrend(RequestBaseManager):
 
@@ -26,7 +24,7 @@ class CalcRangeTrend(RequestBaseManager):
 
         consltor = ConsultorManager.instance().retriveConsultor(consultorName, consultorCompany)
         
-        temps = SuggestHistoryManager.instance().findRangetrends(consltor)
+        temps = suggest_manager.instance().findRangetrends(consltor)
     
         res = {'success': 1, 'data': temps}
 

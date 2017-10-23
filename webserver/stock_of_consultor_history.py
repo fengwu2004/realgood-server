@@ -1,6 +1,7 @@
 import json
 
-from data import storemgr, SuggestHistoryManager
+from data.storemgr import *
+from data.suggest_manager import *
 from webserver.RequestBaseManager import RequestBaseManager
 
 
@@ -20,7 +21,7 @@ class FindStockSuggestHistory(RequestBaseManager):
 
         stockId = storemgr.getStockId(stockname)
 
-        items = SuggestHistoryManager.instance().findAllSuggest(stockId)
+        items = SuggestMgr.instance().findAllSuggest(stockId)
 
         jsonvalue = list(map(lambda item: item.toJson(), items))
 
