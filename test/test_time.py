@@ -1,13 +1,14 @@
 import time
 from stockmgr.retrive_trade_days import *
 import sys
+import math
 
-for p in sys.path:
-    print(p)
-
-t = getNextTradeDay('2017-9-10')
-
-print(t)
+# for p in sys.path:
+#     print(p)
+#
+# t = getNextTradeDay('2017-9-10')
+#
+# print(t)
 #
 # t0 = time.mktime(time.strptime('2017-9-10', '%Y-%m-%d'))
 #
@@ -17,6 +18,14 @@ print(t)
 #
 #     print('ok')
 
-for i in range(100 + 1, 100 + 2):
+stocklist = ['394848', '2384', '323', '34', '546765', '77876']
 
-    print(i)
+print(stocklist[0:1])
+
+v = 3300/500
+
+print(math.ceil(v))
+
+# for i in range(100 + 1, 100 + 2):
+#
+#     print(i)

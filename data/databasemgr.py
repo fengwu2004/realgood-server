@@ -2,7 +2,7 @@ from pymongo import MongoClient
 
 _instance = None
 
-_debug = False
+_debug = True
 
 class DatabaseMgr(object):
 
@@ -19,11 +19,9 @@ class DatabaseMgr(object):
     
     def __init__(self):
 
-        uri = "mongodb://yanli:9394@localhost:27017/recommond?authMechanism=SCRAM-SHA-1"
+        # uri = "mongodb://yanli:9394@localhost:27017/recommond?authMechanism=SCRAM-SHA-1"
 
-        if _debug:
-
-            uri = "mongodb://yanli:9394@123.207.213.131:27017/recommond?authMechanism=SCRAM-SHA-1"
+        uri = "mongodb://yanli:9394@123.207.213.131:27017/recommond?authMechanism=SCRAM-SHA-1"
     
         self.client = MongoClient(uri)
     
@@ -79,6 +77,14 @@ class DatabaseMgr(object):
             return db['stockinfo']
         
         return self.db['stockinfo']
+
+    def stockvolumof(self, dt:str):
+
+        client = MongoClient('localhost', 27017)
+
+        db = client["recommond"]
+
+        return db[dt]
 
     @property
     def users(self):

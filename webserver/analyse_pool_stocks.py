@@ -1,4 +1,4 @@
-from stockmgr.fill_pool import getPool
+from stockmgr.pool import PoolA
 from webserver.RequestBaseManager import RequestBaseManager
 
 
@@ -12,6 +12,6 @@ class FindPoolStocks(RequestBaseManager):
     
             return
 
-        pool = getPool()
+        PoolA.intance().doRunFrom('2017-4-30')
 
-        self.write({'success': 1, 'data': pool.getReuslt()})
+        self.write({'success': 1, 'data': PoolA.intance().getReuslt()})

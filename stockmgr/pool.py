@@ -1,10 +1,11 @@
 from collections import namedtuple
 from typing import Tuple
 
+from data import storemgr
 from data.storemgr import *
 from stockmgr.analyse_setting_manager import AnalyseSettingManager
 from stockmgr.consultor_score_manager import retriveConsulterRate, ConsultorScoreManager
-from stockmgr.retrive_trade_days import getTradeDayCount
+from stockmgr.retrive_trade_days import getTradeDayCount, getNextTradeDay
 
 
 class PoolStock(object):
@@ -86,11 +87,25 @@ class PoolStock(object):
 # a:是否是持仓股票，是，权重20
 # b:关注次数，关注次数2(20),3(30),4(35),40
 # c:单日较大涨幅，5%
+
+_intance = None
+
 class PoolA(object):
     
     def __init__(self):
 
         self.stocks = []
+
+    @classmethod
+    def intance(cls):
+
+        global _intance
+
+        if _intance is None:
+
+            _intance = PoolA()
+
+        return _intance
     
     # 每天运行一遍，检查池中的股票
     # 1：股票到达止损点，从池中清除
@@ -111,6 +126,34 @@ class PoolA(object):
                 poolstock.updateWeight(dt)
         
         self.sortStocks()
+
+    def doRunFrom(self, dt:str):
+
+        self.stocks = []
+
+        dt = getNextTradeDay(dt)
+
+        while dt:
+
+            dtstr = dt.strftime('%Y-%m-%d')
+
+            print(dtstr)
+
+            allSuggests = storemgr.loadSuggestsOfDate(dtstr)
+
+            for suggest in allSuggests:
+
+                self.addSuggest(suggest)
+
+            t = datetime.now()
+
+            self.run(dt)
+
+            print(datetime.now() - t)
+
+            dt = getNextTradeDay(dtstr)
+
+        self.show()
 
     def getReuslt(self):
 
