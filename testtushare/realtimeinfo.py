@@ -38,7 +38,7 @@ def run():
 
     global results
 
-    everycount = 500
+    everycount = 1
 
     total = math.ceil(len(stocklist)/everycount)
 
@@ -52,7 +52,7 @@ def run():
 
         endindex = min(end, len(stocklist) - 1)
 
-        df = ts.get_realtime_quotes(stocklist[start:endindex])
+        df = ts.get_hist_data(stocklist[start], start='2017-10-26',end='', ktype = 5)
 
         codes = df.code
 

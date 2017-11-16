@@ -1,5 +1,7 @@
 mylist = [21, 22, 23, 24, 25]
 
-a = mylist[2:1]
+with max(mylist[10:10]) as a:
+
+    print(a)
 
 print('ok')

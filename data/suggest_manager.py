@@ -137,6 +137,26 @@ class SuggestMgr(object):
 
         return [suggest for suggest in self.suggests if suggest.consultorId == consultorId]
 
+    def getMaxMinIncreaseInDays(self, suggest:Suggest, day:int):
+
+        stock = storemgr.getStock(suggest.stockId)
+
+        index = stock.getDayIndex(suggest.date)
+
+        dayseqs = stock.dayvalues[index:index + day]
+
+        if len(dayseqs) == 0:
+
+            return 0, 0
+
+        initvalue = stock.dayvalues[index].close
+
+        maxvalue = max(dayseqs, lambda dayvalue:dayvalue.close)
+
+        minvalue = min(dayseqs, lambda dayvalue:dayvalue.close)
+
+        return '%.1f' % (maxvalue - initvalue)/initvalue, '%.1f' % (minvalue - initvalue)/initvalue,
+
     def findRangetrends(self, consultor:Consultor):
 
         suggests = self.loadSuggestOfConsultor(consultor.id)

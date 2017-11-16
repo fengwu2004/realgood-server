@@ -25,7 +25,11 @@ class FindHistorySuggest(RequestBaseManager):
 
             item = suggest.toJson()
 
-            item['score'] = ConsultorScoreManager.instance().getConsultorWeight(suggest.consultorId)
+            maxminincrease = SuggestMgr.instance().getMaxMinIncreaseInDays(suggest, int(day))
+
+            item['max'] = maxminincrease[0]
+
+            item['min'] = maxminincrease[1]
 
             results.append(item)
 

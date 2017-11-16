@@ -2,7 +2,7 @@ from pymongo import MongoClient
 
 _instance = None
 
-_debug = True
+_debug = False
 
 class DatabaseMgr(object):
 
