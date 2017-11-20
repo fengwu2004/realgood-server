@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="719e5223-de70-49d4-a2ab-afe0f484a8ca" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setup.py" afterPath="$PROJECT_DIR$/setup.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,7 +17,7 @@
     <SUITE FILE_PATH="coverage/realgood_server$trading.coverage" NAME="trading Coverage Results" MODIFIED="1508981812363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare/stock" />
     <SUITE FILE_PATH="coverage/realgood_server$consultor_score_manager.coverage" NAME="consultor_score_manager Coverage Results" MODIFIED="1508242211152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stock" />
     <SUITE FILE_PATH="coverage/realgood_server$recommond_unit.coverage" NAME="recommond_unit Coverage Results" MODIFIED="1507802223747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
-    <SUITE FILE_PATH="coverage/realgood_server$main.coverage" NAME="main Coverage Results" MODIFIED="1511188902942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/realgood_server$main.coverage" NAME="main Coverage Results" MODIFIED="1511193443350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/realgood_server$consulter_rate_system.coverage" NAME="consulter_rate_system Coverage Results" MODIFIED="1507435412534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stock" />
     <SUITE FILE_PATH="coverage/realgood_server$test_list.coverage" NAME="test_list Coverage Results" MODIFIED="1510797737129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/realgood_server$test_float.coverage" NAME="test_float Coverage Results" MODIFIED="1511148999096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
@@ -66,28 +65,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="setup.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/setup.py">
+      <file leaf-file-name="dapi.py" pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare/tsdata/dapi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="finder.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Library/Python/3.6/lib/python/site-packages/cx_Freeze/finder.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="285" column="27" lean-forward="false" selection-start-line="285" selection-start-column="27" selection-end-line="285" selection-end-column="27" />
-              <folding />
+            <state relative-caret-position="135">
+              <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testtushare/__init__.py">
+        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare/tsdata/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare/tsdata/test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -96,23 +97,65 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="retrive_stock_basic.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stockmgr/retrive_stock_basic.py">
+      <file leaf-file-name="trpc.py" pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare/tsdata/trpc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+            <state relative-caret-position="465">
+              <caret line="31" column="8" lean-forward="false" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="netutil.py" pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/netutil.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="196" column="0" lean-forward="false" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="realtimeinfo.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testtushare/realtimeinfo.py">
+      <file leaf-file-name="tcpserver.py" pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/tcpserver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="130">
+              <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.py" pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-219">
+              <caret line="1950" column="11" lean-forward="false" selection-start-line="1950" selection-start-column="11" selection-end-line="1950" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="23" column="6" lean-forward="true" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare/tsdata/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="106">
+              <caret line="72" column="4" lean-forward="false" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="4" />
               <folding>
-                <element signature="e#0#20#0" expanded="true" />
+                <element signature="e#0#34#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -121,48 +164,8 @@
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-310">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="18" column="58" lean-forward="false" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="suggest_candlesticks.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webserver/suggest_candlesticks.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="storemgr.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/storemgr.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webserver/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="916">
+              <caret line="130" column="56" lean-forward="false" selection-start-line="130" selection-start-column="56" selection-end-line="130" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -179,13 +182,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>exp</find>
-      <find>getStockDayvalue</find>
-      <find>loadSuggestOfConsultor</find>
-      <find>getStockName</find>
-      <find>module/historydetail</find>
-      <find>suggest_manager</find>
-      <find>suggest.stock</find>
       <find>consultorscores</find>
       <find>stocks</find>
       <find>self.stocks</find>
@@ -209,6 +205,13 @@
       <find>expor</find>
       <find>tsdata</find>
       <find>tushare</find>
+      <find>tushare.tsdata.dapi</find>
+      <find>subModuleName</find>
+      <find>utils</find>
+      <find>tsdata.dapi</find>
+      <find>set_log_dir</find>
+      <find>_jrpc</find>
+      <find>trpc</find>
     </findStrings>
     <replaceStrings>
       <replace>Suggest</replace>
@@ -224,9 +227,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/stock/pool_a.py" />
-        <option value="$PROJECT_DIR$/stock/fill_pool_a.py" />
-        <option value="$PROJECT_DIR$/analyse/calc_detail_suggest.py" />
         <option value="$PROJECT_DIR$/analyse/calc_history_suggest_of_stock.py" />
         <option value="$PROJECT_DIR$/analyse/SuggestHistoryManager.py" />
         <option value="$PROJECT_DIR$/data/__init__.py" />
@@ -275,6 +275,9 @@
         <option value="$PROJECT_DIR$/data/databasemgr.py" />
         <option value="$PROJECT_DIR$/testtushare/realtimeinfo.py" />
         <option value="$PROJECT_DIR$/setup.py" />
+        <option value="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare/tsdata/dapi.py" />
+        <option value="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare/tsdata/__init__.py" />
+        <option value="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare/__init__.py" />
       </list>
     </option>
   </component>
@@ -374,13 +377,46 @@
             </path>
             <path>
               <item name="realgood-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="realgood-server" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
             <path>
               <item name="realgood-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="realgood-server" type="462c0819:PsiDirectoryNode" />
-              <item name="webserver" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6.1 (/Library/Frameworks/Python.framework/Versions/3.6/bin/python3.6) &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="realgood-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6.1 (/Library/Frameworks/Python.framework/Versions/3.6/bin/python3.6) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="python3.6" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="realgood-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6.1 (/Library/Frameworks/Python.framework/Versions/3.6/bin/python3.6) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="realgood-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6.1 (/Library/Frameworks/Python.framework/Versions/3.6/bin/python3.6) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="tushare" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="realgood-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6.1 (/Library/Frameworks/Python.framework/Versions/3.6/bin/python3.6) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="tushare" type="462c0819:PsiDirectoryNode" />
+              <item name="tsdata" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="realgood-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6.1 (/Library/Frameworks/Python.framework/Versions/3.6/bin/python3.6) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="tushare-1.0.5-py3.6.egg-info" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -584,8 +620,8 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2111437" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33431086" sideWeight="0.493517" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4457478" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3117932" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4648094" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3117932" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298217" sideWeight="0.49196786" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3841642" sideWeight="0.49675852" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -648,174 +684,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/stockmgr/consultor_manager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stockmgr/fill_pool.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="39" column="10" lean-forward="false" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webserver/analyse_pool_stocks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/urllib/request.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="649" column="0" lean-forward="false" selection-start-line="649" selection-start-column="0" selection-end-line="649" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/datetime.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="1644" column="8" lean-forward="false" selection-start-line="1644" selection-start-column="8" selection-end-line="1644" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare/stock/cons.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pandas/core/indexes/range.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2956">
-          <caret line="21" column="6" lean-forward="false" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stockmgr/pool.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2280">
-          <caret line="159" column="50" lean-forward="false" selection-start-line="159" selection-start-column="40" selection-end-line="159" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stockmgr/retrive_trade_days.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="75" column="4" lean-forward="false" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2017.2/python_stubs/-2010535109/time.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2385">
-          <caret line="159" column="4" lean-forward="false" selection-start-line="159" selection-start-column="4" selection-end-line="159" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pymongo/collection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38655">
-          <caret line="2607" column="0" lean-forward="false" selection-start-line="2607" selection-start-column="0" selection-end-line="2607" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4620">
-          <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare/stock/trading.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9210">
-          <caret line="627" column="32" lean-forward="false" selection-start-line="627" selection-start-column="32" selection-end-line="627" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testtushare/save_yestoday_volume.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="31" column="23" lean-forward="false" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stockmgr/consultor_score_manager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="95" column="8" lean-forward="false" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/test/decimaltestdata/min.decTest">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare/stock/fundamental.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1535">
-          <caret line="435" column="30" lean-forward="false" selection-start-line="435" selection-start-column="30" selection-end-line="435" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Python/3.6/lib/python/site-packages/werkzeug/datastructures.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="580" column="8" lean-forward="false" selection-start-line="580" selection-start-column="8" selection-end-line="580" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pandas/core/frame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="852" column="8" lean-forward="false" selection-start-line="852" selection-start-column="8" selection-end-line="852" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webserver/stock_of_consultor_history.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="23" column="38" lean-forward="false" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/suggest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_stock_info.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_savetofile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_time.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="26" column="15" lean-forward="false" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_remove_save.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -874,14 +742,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22050">
-          <caret line="1508" column="0" lean-forward="false" selection-start-line="1508" selection-start-column="0" selection-end-line="1508" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webserver/suggest_history.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -916,7 +776,7 @@
         <state relative-caret-position="360">
           <caret line="52" column="22" lean-forward="false" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
           <folding>
-            <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#0#22#0" expanded="false" />
             <element signature="e#378#1050#0" expanded="false" />
           </folding>
         </state>
@@ -962,14 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="18" column="58" lean-forward="false" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webserver/suggest_candlesticks.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -986,6 +838,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/testtushare/realtimeinfo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/data/storemgr.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -994,36 +856,240 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare/__init__.py">
+    <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-310">
+        <state relative-caret-position="30">
+          <caret line="3" column="128" lean-forward="false" selection-start-line="3" selection-start-column="128" selection-end-line="3" selection-end-column="128" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/random.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testtushare/realtimeinfo.py">
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/threading.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare/stock/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare/fund/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare/util/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare/util/conns.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="49" column="4" lean-forward="false" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Library/Python/3.6/lib/python/site-packages/cx_Freeze/finder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="285" column="27" lean-forward="false" selection-start-line="285" selection-start-column="27" selection-end-line="285" selection-end-column="27" />
+        <state relative-caret-position="154">
+          <caret line="276" column="49" lean-forward="false" selection-start-line="276" selection-start-column="43" selection-end-line="276" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare/bond/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare/coins/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2017.2/python_stubs/-2010535109/time.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="159" column="4" lean-forward="false" selection-start-line="159" selection-start-column="4" selection-end-line="159" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/utils/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare-1.0.5-py3.6.egg-info/top_level.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare-1.0.5-py3.6.egg-info/installed-files.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1820">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare-1.0.5-py3.6.egg-info/PKG-INFO">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-811">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare-1.0.5-py3.6.egg-info/SOURCES.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-72">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare-1.0.5-py3.6.egg-info/dependency_links.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/traceback.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare/tsdata/jrpc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="12" lean-forward="false" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare/tsdata/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare/tsdata/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="72" column="4" lean-forward="false" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare/tsdata/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="916">
+          <caret line="130" column="56" lean-forward="false" selection-start-line="130" selection-start-column="56" selection-end-line="130" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare/tsdata/trpc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="8" lean-forward="false" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/netutil.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="196" column="0" lean-forward="false" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/tcpserver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-219">
+          <caret line="1950" column="11" lean-forward="false" selection-start-line="1950" selection-start-column="11" selection-end-line="1950" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare/tsdata/dapi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="23" column="6" lean-forward="true" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
           <folding />
         </state>
       </provider>
