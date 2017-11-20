@@ -1,9 +1,11 @@
 import json
+
+from data.storemgr import StockMgr
 from data.suggest_manager import SuggestMgr
 from stockmgr.consultor_score_manager import ConsultorScoreManager
 from webserver.RequestBaseManager import RequestBaseManager
 
-class FindHistorySuggest(RequestBaseManager):
+class FindCandlesticks(RequestBaseManager):
     
     def post (self, *args, **kwargs):
         
@@ -23,14 +25,10 @@ class FindHistorySuggest(RequestBaseManager):
 
         for suggest in suggests:
 
-            item = suggest.toJson()
+            stock = StockMgr.instance().getStock(suggest.stockId)
 
-            maxminincrease = SuggestMgr.instance().getMaxMinIncreaseInDays(suggest, int(day))
+            stockbasic = StockMgr.instance().getStockbasic(suggest.stockId)
 
-            item['high'] = maxminincrease[0]
-
-            item['low'] = maxminincrease[1]
-
-            results.append(item)
+            results.append({'stock':stock.toJson(), 'pe':stockbasic.pe, 'marketcap':stockbasic.outstanding})
 
         self.write({'success': 1, 'data':results})

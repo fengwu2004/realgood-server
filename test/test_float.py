@@ -1,14 +1,11 @@
 from datetime import datetime
 from data.storemgr import *
+from data.stock import *
 
-items = DatabaseMgr.instance().stocks.find({'id':'600125'}, {'_id': 0})
+# stock = StockMgr.instance().getStock('600125')
+#
+# maxvalue = max(stock.dayvalues, key = lambda dayvalue:dayvalue.close)
 
-p = 1.02030239239
+maxvalue = '%.1f' % ((928.3 - 4848)/234)
 
-b = '%.1f' % p
-
-print(b)
-
-t = datetime.strptime('2018-9-8', '%Y-%m-%d').strftime('%Y-%m-%d')
-
-print(t)
+print(maxvalue)

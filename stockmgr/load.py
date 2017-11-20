@@ -45,7 +45,7 @@ def formatData(lines):
     
         values = line.split('\t')
 
-        if getTime(values[0]) < time.strptime('2017/4/01', '%Y/%m/%d'):
+        if getTime(values[0]) < time.strptime('2017/1/01', '%Y/%m/%d'):
             
             continue
 

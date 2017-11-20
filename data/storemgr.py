@@ -6,7 +6,7 @@ from data.databasemgr import DatabaseMgr
 from typing import Dict
 
 from data.suggest_manager import SuggestMgr
-
+import tushare as ts
 
 def loadAllStockFromDB() -> Dict[str, Stock]:
     stocks = dict()
@@ -57,7 +57,9 @@ class StockMgr(object):
 
         print(datetime.now().timestamp() - d)
 
-    def getStock(self, stockId:str):
+        self.stockbasic = ts.get_stock_basics()
+
+    def getStock(self, stockId:str) -> Stock:
 
         if stockId in self.stocks:
 
@@ -71,7 +73,13 @@ class StockMgr(object):
 
         self.date = None
 
+        self.stockbasic = None
+
         self.loadStocks()
+
+    def getStockbasic(self, stockId:str):
+
+        return self.stockbasic.loc[stockId]
 
 
 def getStockLevel(stockId:str) -> int:

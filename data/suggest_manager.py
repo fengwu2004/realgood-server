@@ -151,11 +151,11 @@ class SuggestMgr(object):
 
         initvalue = stock.dayvalues[index].close
 
-        maxvalue = max(dayseqs, lambda dayvalue:dayvalue.close)
+        maxvalue = max(dayseqs, key = lambda dayvalue:dayvalue.close)
 
-        minvalue = min(dayseqs, lambda dayvalue:dayvalue.close)
+        minvalue = min(dayseqs, key = lambda dayvalue:dayvalue.close)
 
-        return '%.1f' % (maxvalue - initvalue)/initvalue, '%.1f' % (minvalue - initvalue)/initvalue,
+        return '%.1f' % ((maxvalue.close - initvalue)/initvalue), '%.1f' % ((minvalue.close - initvalue)/initvalue),
 
     def findRangetrends(self, consultor:Consultor):
 

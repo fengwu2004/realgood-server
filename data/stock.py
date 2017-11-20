@@ -21,13 +21,13 @@ class DayValue(object):
     def toJson(self):
 
         return {
-            'open':self.open,
-            'close':self.close,
-            'min': self.min,
-            'max': self.max,
-            'date': self.date,
+            'Open':self.open,
+            'Close':self.close,
+            'Low': self.min,
+            'High': self.max,
+            'Date': self.date,
             'tradeamount': self.tradeamount,
-            'tradevolume': self.tradevolume,
+            'Volume': self.tradevolume,
         }
 
     @classmethod
@@ -35,19 +35,19 @@ class DayValue(object):
 
         obj = DayValue()
 
-        obj.open = jsonvalue['open']
+        obj.open = jsonvalue['Open']
 
-        obj.close = jsonvalue['close']
+        obj.close = jsonvalue['Close']
 
-        obj.min = jsonvalue['min']
+        obj.min = jsonvalue['Low']
 
-        obj.max = jsonvalue['max']
+        obj.max = jsonvalue['High']
 
-        obj.date = jsonvalue['date']
+        obj.date = jsonvalue['Date']
 
         obj.tradeamount = jsonvalue['tradeamount']
 
-        obj.tradevolume = jsonvalue['tradevolume']
+        obj.tradevolume = jsonvalue['Volume']
 
         return obj
 
