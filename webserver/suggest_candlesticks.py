@@ -23,11 +23,17 @@ class FindCandlesticks(RequestBaseManager):
 
         results = []
 
+        stockids = set()
+
         for suggest in suggests:
 
-            stock = StockMgr.instance().getStock(suggest.stockId)
+            stockids.add(suggest.stockId)
 
-            stockbasic = StockMgr.instance().getStockbasic(suggest.stockId)
+        for stockid in list(stockids):
+
+            stock = StockMgr.instance().getStock(stockid)
+
+            stockbasic = StockMgr.instance().getStockbasic(stockid)
 
             results.append({'stock':stock.toJson(), 'pe':stockbasic.pe, 'marketcap':stockbasic.outstanding})
 
