@@ -2,7 +2,7 @@ from pymongo import MongoClient
 
 _instance = None
 
-_debug = False
+_debug = True
 
 class DatabaseMgr(object):
 
@@ -54,6 +54,10 @@ class DatabaseMgr(object):
     def stockLevels(self):
 
         return self.db['stock_level']
+
+    def industry(self):
+
+        return self.db['industry']
 
     @property
     def suggests(self):

@@ -81,6 +81,19 @@ class StockMgr(object):
 
         return self.stockbasic.loc[stockId]
 
+    def getIndustryStocks(self, industry:str):
+
+        items = DatabaseMgr.instance().industry().find({'firstindustry':industry}, {'_id':0})
+
+        stocks = None
+
+        for item in items:
+
+            stocks = list(item['stocks'])
+
+        return stocks
+
+
 
 def getStockLevel(stockId:str) -> int:
 

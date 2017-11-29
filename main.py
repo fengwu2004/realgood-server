@@ -10,7 +10,8 @@ from webserver.stock_of_consultor_history import FindStockSuggestHistory
 from webserver.suggest_candlesticks import FindCandlesticks
 from webserver.suggest_history import FindHistorySuggest
 from webserver.suggestwithtrends import HandleSuggestTrends
-
+from webserver.IndustryManager import IndustryManager
+from webserver.HandleIndustryCandleStick import HandleIndustryCandlestickRequest
 
 def make_app():
     return tornado.web.Application([
@@ -21,6 +22,8 @@ def make_app():
         (r"/analyse/rangetrend", CalcRangeTrend),
         (r"/history/suggestwithtrends", HandleSuggestTrends),
         (r"/analyse/poolstock", FindPoolStocks),
+        (r"/allindustry", IndustryManager),
+        (r"/industry", HandleIndustryCandlestickRequest),
         (r"/login", loginManager),
     ])
 
