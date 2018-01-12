@@ -6,8 +6,8 @@ build_exe_options = {"packages": ["jwt", 'appdirs', 'packaging', 'tornado', 'ope
 print(build_exe_options['path'])
 
 setup(
-    name = 'pack',
+    name = 'guifoo',
     version = '0.1',
     options = {'build_exe': build_exe_options},
-    executables = [Executable('main.py', base = None)]
+    executables = [Executable('main.py', base = 'Console')]
 )

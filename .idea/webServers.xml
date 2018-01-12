@@ -10,6 +10,14 @@
           <option name="port" value="22" />
         </fileTransfer>
       </webServer>
+      <webServer id="9be2678a-39d8-489c-a902-136c6c285878" name="mqc" url="http://123.206.230.152">
+        <fileTransfer host="123.206.230.152" port="22" rootFolder="/root/server/stock" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

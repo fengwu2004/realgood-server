@@ -59,6 +59,16 @@ class StockMgr(object):
 
         self.stockbasic = ts.get_stock_basics()
 
+    def checkIsSelfSelect(self, stockId:str) -> bool:
+
+        items = DatabaseMgr.instance().selfselect.find({"stockid":stockId}, {'_id':0})
+
+        for item in items:
+
+            return True
+
+        return False
+
     def getStock(self, stockId:str) -> Stock:
 
         if stockId in self.stocks:

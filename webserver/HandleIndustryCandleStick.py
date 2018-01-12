@@ -22,6 +22,8 @@ class HandleIndustryCandlestickRequest(RequestBaseManager):
 
             stock = StockMgr.instance().getStock(item['id'])
 
+            isselfselect = StockMgr.instance().checkIsSelfSelect(item['id'])
+
             try:
                 stockbasic = StockMgr.instance().getStockbasic(item['id'])
 
@@ -29,6 +31,6 @@ class HandleIndustryCandlestickRequest(RequestBaseManager):
 
                 continue
 
-            results.append({'stock':stock.toJson(), 'pe':stockbasic.pe, 'marketcap':stockbasic.outstanding})
+            results.append({'stock':stock.toJson(), 'pe':stockbasic.pe, 'marketcap':stockbasic.outstanding, 'isselfselect':isselfselect})
 
         self.write({'success': 1, 'data':results})

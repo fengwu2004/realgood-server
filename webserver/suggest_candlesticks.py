@@ -35,6 +35,8 @@ class FindCandlesticks(RequestBaseManager):
 
             stockbasic = StockMgr.instance().getStockbasic(stockid)
 
-            results.append({'stock':stock.toJson(), 'pe':stockbasic.pe, 'marketcap':stockbasic.outstanding})
+            isselfselect = StockMgr.instance().checkIsSelfSelect(stockid)
+
+            results.append({'stock':stock.toJson(), 'pe':stockbasic.pe, 'marketcap':stockbasic.outstanding, 'isselfselect':isselfselect})
 
         self.write({'success': 1, 'data':results})

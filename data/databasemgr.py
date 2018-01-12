@@ -2,7 +2,7 @@ from pymongo import MongoClient
 
 _instance = None
 
-_debug = True
+_debug = False
 
 class DatabaseMgr(object):
 
@@ -21,7 +21,7 @@ class DatabaseMgr(object):
 
         # uri = "mongodb://yanli:9394@localhost:27017/recommond?authMechanism=SCRAM-SHA-1"
 
-        uri = "mongodb://yanli:9394@123.207.213.131:27017/recommond?authMechanism=SCRAM-SHA-1"
+        uri = "mongodb://yanli:9394@123.206.230.152:27017/recommond?authMechanism=SCRAM-SHA-1"
     
         self.client = MongoClient(uri)
     
@@ -34,14 +34,6 @@ class DatabaseMgr(object):
     
     @property
     def stocks(self):
-
-        if _debug:
-
-            client = MongoClient('localhost', 27017)
-
-            db = client["recommond"]
-
-            return db['stocks']
         
         return self.db['stocks']
 
@@ -71,24 +63,17 @@ class DatabaseMgr(object):
 
     @property
     def stockInfos(self):
-
-        if _debug:
-
-            client = MongoClient('localhost', 27017)
-
-            db = client["recommond"]
-
-            return db['stockinfo']
         
         return self.db['stockinfo']
 
     def stockvolumof(self, dt:str):
 
-        client = MongoClient('localhost', 27017)
+        return self.db[dt]
 
-        db = client["recommond"]
+    @property
+    def selfselect(self):
 
-        return db[dt]
+        return self.db['selfselect']
 
     @property
     def users(self):
