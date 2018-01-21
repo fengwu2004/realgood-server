@@ -37,7 +37,7 @@ class StockMgr(object):
 
             _instance = StockMgr()
 
-        if _instance.date != datetime.now().strftime('%Y-%m-%d'):
+        if _instance.date != datetime.now().strftime('%Y/%m/%d'):
 
             _instance.loadStocks()
 
@@ -47,17 +47,21 @@ class StockMgr(object):
 
         d = datetime.now().timestamp()
 
-        self.date = datetime.now().strftime('%Y-%m-%d')
+        self.date = datetime.now().strftime('%Y/%m/%d')
 
-        print('begin load stocks')
+        # print('begin load stocks')
 
         self.stocks = loadAllStockFromDB()
 
-        print('load stocks finish')
+        # print('load stocks finish')
 
-        print(datetime.now().timestamp() - d)
+        # print(datetime.now().timestamp() - d)
 
         self.stockbasic = ts.get_stock_basics()
+
+    def checkIsLowVolatility(self, stock:str) -> bool:
+
+        pass
 
     def checkIsSelfSelect(self, stockId:str) -> bool:
 

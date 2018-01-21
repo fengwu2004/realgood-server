@@ -8,9 +8,9 @@ class DayValue(object):
 
         self.close = 0
 
-        self.min = 0
+        self.low = 0
 
-        self.max = 0
+        self.high = 0
 
         self.date = ''
 
@@ -18,13 +18,59 @@ class DayValue(object):
 
         self.tradevolume = 0
 
+    def isHammer(self):
+
+        return self.isHammer_green() or self.isHammer_red()
+
+    def isHammer_green(self):
+
+        if self.close < self.open:
+
+            return False
+
+        if (self.high - self.low)/self.open < 0.06:
+
+            return False
+
+        if self.open - self.close != 0 and (self.open - self.low)/(self.close - self.open) < 2:
+
+            return False
+
+        if (self.high - self.close)/self.open > 0.01:
+
+            return False
+
+        return True
+
+        pass
+
+    def isHammer_red(self):
+
+        if self.open < self.close:
+
+            return False
+
+        if (self.high - self.low)/self.open < 0.06:
+
+            return False
+
+        if self.open - self.close != 0 and (self.close - self.low)/(self.open - self.close) < 2:
+
+            return False
+
+        if (self.high - self.open)/self.open > 0.01:
+
+            return False
+
+        return True
+
     def toJson(self):
 
         return {
             'Open':self.open,
             'Close':self.close,
-            'Low': self.min,
-            'High': self.max,
+            'Low': self.low,
+            'High': self.high,
             'Date': self.date,
             'tradeamount': self.tradeamount,
             'Volume': self.tradevolume,
@@ -39,9 +85,9 @@ class DayValue(object):
 
         obj.close = jsonvalue['Close']
 
-        obj.min = jsonvalue['Low']
+        obj.low = jsonvalue['Low']
 
-        obj.max = jsonvalue['High']
+        obj.high = jsonvalue['High']
 
         obj.date = jsonvalue['Date']
 
@@ -61,6 +107,45 @@ class Stock(object):
 
         self.dayvalues = []
 
+    def findIndex(self, date:str):
+
+        t0 = time.strptime(date, '%Y/%m/%d')
+
+        index = 0
+
+        for dayvalue in self.dayvalues:
+
+            t = time.strptime(dayvalue.date, '%Y/%m/%d')
+
+            if t < t0:
+
+                index += 1
+            else:
+
+                break
+
+        return index
+
+    def findHeighestValue(self, date:str) -> DayValue:
+
+        start = self.findIndex(date)
+
+        if start >= len(self.dayvalues):
+
+            return None
+
+        return max(self.dayvalues[start:], key = lambda x: x.close)
+
+    def findLowestValue(self, date:str) -> DayValue:
+
+        start = self.findIndex(date)
+
+        if start >= len(self.dayvalues):
+
+            return None
+
+        return min(self.dayvalues[start:], key = lambda x: x.low)
+
     def getDayValue(self, index:int) -> DayValue:
 
         if index < 0:
@@ -75,7 +160,7 @@ class Stock(object):
 
     def getDayIndex(self, date:str):
 
-        t0 = time.strptime(date, '%Y-%m-%d')
+        t0 = time.strptime(date, '%Y/%m/%d')
 
         index = 0
 

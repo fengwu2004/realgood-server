@@ -2,38 +2,38 @@ from datetime import datetime, timedelta
 import time
 
 holidays = [
-    '2017-01-01',
-    '2017-01-02',
-    '2017-01-27',
-    '2017-01-28',
-    '2017-01-29',
-    '2017-01-30',
-    '2017-01-31',
-    '2017-02-01',
-    '2017-02-02',
-    '2017-04-02',
-    '2017-04-03',
-    '2017-04-04',
-    '2017-04-29',
-    '2017-04-30',
-    '2017-05-01',
-    '2017-05-28',
-    '2017-05-29',
-    '2017-05-30',
-    '2017-10-01',
-    '2017-10-02',
-    '2017-10-03',
-    '2017-10-04',
-    '2017-10-05',
-    '2017-10-06',
-    '2017-10-07',
-    '2017-10-08']
+    '2017/01/01',
+    '2017/01/02',
+    '2017/01/27',
+    '2017/01/28',
+    '2017/01/29',
+    '2017/01/30',
+    '2017/01/31',
+    '2017/02/01',
+    '2017/02/02',
+    '2017/04/02',
+    '2017/04/03',
+    '2017/04/04',
+    '2017/04/29',
+    '2017/04/30',
+    '2017/05/01',
+    '2017/05/28',
+    '2017/05/29',
+    '2017/05/30',
+    '2017/10/01',
+    '2017/10/02',
+    '2017/10/03',
+    '2017/10/04',
+    '2017/10/05',
+    '2017/10/06',
+    '2017/10/07',
+    '2017/10/08']
 
 def dt2t(dt:datetime)->time.struct_time:
     
-    timestr = dt.strftime('%Y-%m-%d')
+    timestr = dt.strftime('%Y/%m/%d')
     
-    return time.strptime(timestr, '%Y-%m-%d')
+    return time.strptime(timestr, '%Y/%m/%d')
 
 # time to datatime
 def t2dt(t:time.struct_time) -> datetime:
@@ -47,7 +47,7 @@ def isHolidays(dt:datetime) -> bool:
     
         return True
     
-    timestr = dt.strftime('%Y-%m-%d')
+    timestr = dt.strftime('%Y/%m/%d')
     
     for item in holidays:
     
@@ -59,7 +59,7 @@ def isHolidays(dt:datetime) -> bool:
 
 def getPreTradeDay(date:str) -> datetime:
 
-    dt = datetime.strptime(date, '%Y-%m-%d')
+    dt = datetime.strptime(date, '%Y/%m/%d')
 
     dt = dt - timedelta(days = 1)
 
@@ -75,7 +75,7 @@ def getPreTradeDay(date:str) -> datetime:
 
 def getNextTradeDay(date:str) -> datetime:
     
-    dt = datetime.strptime(date, '%Y-%m-%d')
+    dt = datetime.strptime(date, '%Y/%m/%d')
 
     dt = dt + timedelta(days = 1)
 
@@ -112,14 +112,14 @@ def getTradeDayCount(dt1:datetime, dt2:datetime) -> int:
 # test
 def test():
 
-    dt1 = datetime.strptime('2017-10-1', '%Y-%m-%d' )
+    dt1 = datetime.strptime('2017/10/1', '%Y/%m/%d' )
 
-    dt2 = datetime.strptime('2017-10-16', '%Y-%m-%d')
+    dt2 = datetime.strptime('2017/10/16', '%Y/%m/%d')
 
     d = getTradeDayCount(dt1, dt2)
 
     print(d)
     
-    print(getPreTradeDay('2017-10-2'))
+    print(getPreTradeDay('2017/10/2'))
     
 test()

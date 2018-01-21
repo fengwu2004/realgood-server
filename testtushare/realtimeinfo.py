@@ -12,9 +12,9 @@ stocklist = list()
 
 def loadYestodayVolums():
 
-    dt = getPreTradeDay('2017-10-27')
+    dt = getPreTradeDay('2017/10/27')
 
-    dtstr = dt.strftime('%Y-%m-%d')
+    dtstr = dt.strftime('%Y/%m/%d')
 
     items = DatabaseMgr.instance().stockvolumof(dtstr).find({}, {'_id':0})
 

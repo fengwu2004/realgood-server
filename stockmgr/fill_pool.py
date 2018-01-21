@@ -9,11 +9,11 @@ def getPool():
 
     pool = PoolA()
 
-    dt = getNextTradeDay('2017-4-30')
+    dt = getNextTradeDay('2017/4/30')
 
     while dt:
 
-        dtstr = dt.strftime('%Y-%m-%d')
+        dtstr = dt.strftime('%Y/%m/%d')
 
         print(dtstr)
 

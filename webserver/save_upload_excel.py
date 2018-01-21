@@ -18,7 +18,7 @@ def getItems(ws) -> set:
         
         temp = str(ws['A' + index].value)
         
-        obj.date = datetime.strptime(temp[0:10], '%Y-%m-%d').strftime('%Y-%m-%d')
+        obj.date = datetime.strptime(temp[0:10], '%Y/%m/%d').strftime('%Y/%m/%d')
 
         obj.stockId = ws['D' + index].value
 

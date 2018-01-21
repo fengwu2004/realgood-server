@@ -11,13 +11,13 @@ def getSuggestCount(suggeststock:Suggest, day):
     
     count = 0
 
-    t0 = time.mktime(time.strptime(suggeststock.date, '%Y-%m-%d'))
+    t0 = time.mktime(time.strptime(suggeststock.date, '%Y/%m/%d'))
 
     for item in suggeststocks:
 
         if item.stockName == suggeststock.stockName:
         
-            t = time.mktime(time.strptime(item.date, '%Y-%m-%d'))
+            t = time.mktime(time.strptime(item.date, '%Y/%m/%d'))
             
             if t0 < t < t0 + day * 24 * 3600:
                 
@@ -39,7 +39,7 @@ def getSuggestCounts(suggeststock:Suggest, days:[int]):
 #
 def getSuggestTrends(suggeststock:Suggest, days:[int]):
     
-    items = getCloseAfter(time.strptime(suggeststock.date, '%Y-%m-%d'), suggeststock.stockName, days)
+    items = getCloseAfter(time.strptime(suggeststock.date, '%Y/%m/%d'), suggeststock.stockName, days)
     
     return items
 

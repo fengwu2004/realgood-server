@@ -6,7 +6,7 @@ suggests = loadSuggests()
 
 def doS(suggest):
 
-    suggest.date = datetime.strptime(suggest.date, '%Y-%m-%d').strftime('%Y-%m-%d')
+    suggest.date = datetime.strptime(suggest.date, '%Y/%m/%d').strftime('%Y/%m/%d')
 
     return suggest
 

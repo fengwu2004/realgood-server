@@ -79,9 +79,9 @@ class SuggestMgr(object):
 
         while day > 0:
 
-            dt = getPreTradeDay(dt.strftime('%Y-%m-%d'))
+            dt = getPreTradeDay(dt.strftime('%Y/%m/%d'))
 
-            items = self.loadSuggestsOfDate(dt.strftime('%Y-%m-%d'))
+            items = self.loadSuggestsOfDate(dt.strftime('%Y/%m/%d'))
 
             results.extend(items)
 

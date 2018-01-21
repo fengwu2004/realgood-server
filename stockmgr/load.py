@@ -53,9 +53,9 @@ def formatData(lines):
 
         dayvalue.open = float(values[1])
 
-        dayvalue.max = float(values[2])
+        dayvalue.high = float(values[2])
 
-        dayvalue.min = float(values[3])
+        dayvalue.low = float(values[3])
 
         dayvalue.close = float(values[4])
 

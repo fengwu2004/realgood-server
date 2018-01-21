@@ -29,7 +29,7 @@ class AnalyseSettingManager(object):
 
     def getPredayIncreaseWeight(self, stockId:str, dt:datetime) -> int:
 
-        dayvalue = storemgr.getStockDayvalue(stockId, dt.strftime('%Y-%m-%d'))
+        dayvalue = storemgr.getStockDayvalue(stockId, dt.strftime('%Y/%m/%d'))
 
         if dayvalue is None:
 

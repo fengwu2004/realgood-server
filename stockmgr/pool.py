@@ -47,13 +47,13 @@ class PoolStock(object):
 
         self.weight += self.getConsultorWeight()
 
-        self.predayincreaseweight += self.getPredayIncreaseWeight(day, datetime.strptime(self.addedDate, '%Y-%m-%d'))
+        self.predayincreaseweight += self.getPredayIncreaseWeight(day, datetime.strptime(self.addedDate, '%Y/%m/%d'))
 
         self.weight += self.predayincreaseweight
 
     def checkDie(self, dt: datetime) -> bool:
 
-        startdt = datetime.strptime(self.addedDate, '%Y-%m-%d')
+        startdt = datetime.strptime(self.addedDate, '%Y/%m/%d')
 
         count = getTradeDayCount(startdt, dt)
 
@@ -73,7 +73,7 @@ class PoolStock(object):
 
         for suggest in self.suggests:
 
-            startdt = datetime.strptime(suggest.date, '%Y-%m-%d')
+            startdt = datetime.strptime(suggest.date, '%Y/%m/%d')
 
             increase = getMaxIncrease(self.stockId, startdt, dt)
 
@@ -135,7 +135,7 @@ class PoolA(object):
 
         while dt:
 
-            dtstr = dt.strftime('%Y-%m-%d')
+            dtstr = dt.strftime('%Y/%m/%d')
 
             print(dtstr)
 
@@ -157,7 +157,7 @@ class PoolA(object):
 
     def getReuslt(self):
 
-        dtstr = datetime.now().strftime('%Y-%m-%d')
+        dtstr = datetime.now().strftime('%Y/%m/%d')
 
         Item = namedtuple('Item', 'name adddate consultor trend total increase')
 
@@ -192,7 +192,7 @@ class PoolA(object):
 
     def show(self):
 
-        dtstr = datetime.now().strftime('%Y-%m-%d')
+        dtstr = datetime.now().strftime('%Y/%m/%d')
 
         for poolstock in self.stocks:
 

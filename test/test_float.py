@@ -1,11 +1,8 @@
 from datetime import datetime
 from data.storemgr import *
 from data.stock import *
+import tushare as ts
 
-# stock = StockMgr.instance().getStock('600125')
-#
-# maxvalue = max(stock.dayvalues, key = lambda dayvalue:dayvalue.close)
+value = ts.get_today_all()
 
-maxvalue = '%.1f' % ((928.3 - 4848)/234)
-
-print(maxvalue)
+print(value[0:1])
