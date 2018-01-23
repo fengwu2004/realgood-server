@@ -22,6 +22,12 @@ class HandleIndustryCandlestickRequest(RequestBaseManager):
 
             stock = StockMgr.instance().getStock(item['id'])
 
+            if stock is None:
+
+                continue
+
+            lowvolatility = StockMgr.instance().checkIsLowVolatility(stock.id)
+
             isselfselect = StockMgr.instance().checkIsSelfSelect(item['id'])
 
             try:
@@ -31,6 +37,6 @@ class HandleIndustryCandlestickRequest(RequestBaseManager):
 
                 continue
 
-            results.append({'stock':stock.toJson(), 'pe':stockbasic.pe, 'marketcap':stockbasic.outstanding, 'isselfselect':isselfselect})
+            results.append({'stock':stock.toJson(), 'lowvolatility':lowvolatility, 'pe':stockbasic.pe, 'marketcap':stockbasic.outstanding, 'isselfselect':isselfselect})
 
         self.write({'success': 1, 'data':results})

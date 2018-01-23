@@ -18,10 +18,6 @@ for item in items:
 
         break
 
-# stock = StockMgr.instance().getStock('002807')
-
-# values = [print(dayvalue.date) for dayvalue in stock.dayvalues if dayvalue.isHammer()]
-
 value = stock.findHeighestValue('2017/1/1')
 
 value0 = stock.findLowestValue(value.date)

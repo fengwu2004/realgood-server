@@ -1,6 +1,5 @@
 from os import walk
 from stockmgr.load import getLines, formatData
-from pymongo import MongoClient
 from data.databasemgr import DatabaseMgr
 import json
 

@@ -59,9 +59,34 @@ class StockMgr(object):
 
         self.stockbasic = ts.get_stock_basics()
 
-    def checkIsLowVolatility(self, stock:str) -> bool:
+    def checkIsLowVolatility(self, stockId:str) -> bool:
 
-        pass
+        stock = self.getStock(stockId)
+
+        valuemax = stock.findHeighestValue('2017/1/1')
+
+        if valuemax is None:
+
+            return False
+
+        valuemin = stock.findLowestValue(valuemax.date)
+
+        if valuemin.isHammer() is not True:
+
+            return False
+
+        if valuemin is None:
+
+            return False
+
+        value = stock.findHeighestValue(valuemin.date)
+
+        if value is None:
+
+            return False
+
+        return (value.high - valuemin.low) / valuemin.open < 0.15
+
 
     def checkIsSelfSelect(self, stockId:str) -> bool:
 
@@ -106,8 +131,6 @@ class StockMgr(object):
             stocks = list(item['stocks'])
 
         return stocks
-
-
 
 def getStockLevel(stockId:str) -> int:
 
