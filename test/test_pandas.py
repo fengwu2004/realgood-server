@@ -64,7 +64,7 @@ for key in dic:
 
     industrys.append(temp)
 
-DatabaseMgr.instance().industry().remove({})
+DatabaseMgr.instance().industry.remove({})
 
-DatabaseMgr.instance().industry().insert_many(industrys)
+DatabaseMgr.instance().industry.insert_many(industrys)
 

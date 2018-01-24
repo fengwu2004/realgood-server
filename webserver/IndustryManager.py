@@ -10,7 +10,7 @@ class IndustryManager(RequestBaseManager):
     
     def post(self):
         
-        items = DatabaseMgr.instance().industry().find({}, {'_id':0})
+        items = DatabaseMgr.instance().industry.find({}, {'_id':0})
 
         results = [item['firstindustry'] for item in items]
 

@@ -122,7 +122,7 @@ class StockMgr(object):
 
     def getIndustryStocks(self, industry:str):
 
-        items = DatabaseMgr.instance().industry().find({'firstindustry':industry}, {'_id':0})
+        items = DatabaseMgr.instance().industry.find({'firstindustry':industry}, {'_id':0})
 
         stocks = None
 

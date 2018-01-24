@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="719e5223-de70-49d4-a2ab-afe0f484a8ca" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/databasemgr.py" afterPath="$PROJECT_DIR$/data/databasemgr.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/stock.py" afterPath="$PROJECT_DIR$/data/stock.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stockmgr/stockstoremgr.py" afterPath="$PROJECT_DIR$/stockmgr/stockstoremgr.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_float.py" afterPath="$PROJECT_DIR$/test/test_float.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/storemgr.py" afterPath="$PROJECT_DIR$/data/storemgr.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_pandas.py" afterPath="$PROJECT_DIR$/test/test_pandas.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/IndustryManager.py" afterPath="$PROJECT_DIR$/webserver/IndustryManager.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,7 +37,7 @@
     <SUITE FILE_PATH="coverage/realgood_server$calc_history_recommonds.coverage" NAME="calc_history_recommonds Coverage Results" MODIFIED="1504883817877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/analyse" />
     <SUITE FILE_PATH="coverage/realgood_server$every_day_run.coverage" NAME="every_day_run Coverage Results" MODIFIED="1505264687784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/realgood_server$test_remove_the_same.coverage" NAME="test_remove_the_same Coverage Results" MODIFIED="1508380179097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/realgood_server$stockstoremgr.coverage" NAME="stockstoremgr Coverage Results" MODIFIED="1516702482546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stockmgr" />
+    <SUITE FILE_PATH="coverage/realgood_server$stockstoremgr.coverage" NAME="stockstoremgr Coverage Results" MODIFIED="1516802130543" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stockmgr" />
     <SUITE FILE_PATH="coverage/realgood_server$calc_detail_suggest.coverage" NAME="calc_detail_suggest Coverage Results" MODIFIED="1505208433161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/analyse" />
     <SUITE FILE_PATH="coverage/realgood_server$test_savetofile.coverage" NAME="test_savetofile Coverage Results" MODIFIED="1504707949998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/realgood_server$suggest.coverage" NAME="suggest Coverage Results" MODIFIED="1508724300811" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
@@ -73,11 +71,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="stock.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="stock.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/stock.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="60" column="34" lean-forward="false" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
+            <state relative-caret-position="-1150">
+              <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -91,6 +89,16 @@
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="storemgr.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data/storemgr.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="124" column="47" lean-forward="false" selection-start-line="124" selection-start-column="47" selection-end-line="124" selection-end-column="47" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -115,57 +123,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fundamental.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Library/Python/3.6/lib/python/site-packages/tushare/stock/fundamental.py">
+      <file leaf-file-name="stockstoremgr.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stockmgr/stockstoremgr.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1851">
-              <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+            <state relative-caret-position="240">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndustryManager.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webserver/IndustryManager.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="storemgr.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/storemgr.py">
+      <file leaf-file-name="test_remove_save.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_remove_save.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#29#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stockstoremgr.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stockmgr/stockstoremgr.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-157">
-              <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_pandas.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_pandas.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="22" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_text_file.py" pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/distutils/tests/test_text_file.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="206">
+              <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -174,9 +158,21 @@
       <file leaf-file-name="databasemgr.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/databasemgr.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="51" column="8" lean-forward="false" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
+            <state relative-caret-position="128">
+              <caret line="52" column="8" lean-forward="false" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_pandas.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_pandas.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -192,11 +188,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>build</find>
-      <find>ex</find>
-      <find>ws</find>
-      <find>industry</find>
-      <find>open</find>
       <find>openpyxl</find>
       <find>sw</find>
       <find>begin load stocks</find>
@@ -222,6 +213,11 @@
       <find>def fun\(\)\:\n\n    df \= ts\.get_stock_basics\(\)\n\n    d \= df\.loc\[\:\,\[\'industry\'\]\]\n\n    dic \= defaultdict\(list\)\n\n    for index\, item in enumerate\(d\.index\)\:\n\n        name \= d\.loc\[item\, \'industry\'\]\n\n        print\(index\, name\)\n\n        dic\[d\.loc\[item\, \'industry\'\]\]\.append\(item\)\n\n    industrys \= \[\]\n\n    for key in dic\:\n\n        arrays \= list\(\)\n\n        print\(key\)\n\n        for value in dic\[key\]\:\n\n            stockid \= value\n\n            arrays\.append\(\{\'id\'\:stockid\}\)\n\n        temp \= \{\'firstindustry\'\:key\, \'stocks\'\:arrays\}\n\n        industrys\.append\(temp\)\n\n    DatabaseMgr\.instance\(\)\.industry\.remove\(\{\}\)\n\n    DatabaseMgr\.instance\(\)\.industry\.insert_many\(industrys\)</find>
       <find>eport</find>
       <find>export</find>
+      <find>instance().industry</find>
+      <find>instance</find>
+      <find>DatabaseMgr.instance</find>
+      <find>DatabaseMgr.instance().</find>
+      <find>DatabaseMgr.instance().industry</find>
     </findStrings>
     <replaceStrings>
       <replace>Suggest</replace>
@@ -264,14 +260,12 @@
         <option value="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare/tsdata/dapi.py" />
         <option value="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare/tsdata/__init__.py" />
         <option value="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tushare/__init__.py" />
-        <option value="$PROJECT_DIR$/webserver/IndustryManager.py" />
         <option value="$PROJECT_DIR$/test/test_industry.py" />
         <option value="$PROJECT_DIR$/webserver/suggest_candlesticks.py" />
         <option value="$PROJECT_DIR$/webserver/HandleSelfSelect.py" />
         <option value="$PROJECT_DIR$/webserver/HandleAddSelfSelect.py" />
         <option value="$PROJECT_DIR$/stockmgr/load.py" />
         <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$PROJECT_DIR$/test/test_pandas.py" />
         <option value="$PROJECT_DIR$/stockmgr/wave_strategy.py" />
         <option value="$PROJECT_DIR$/data/suggest_manager.py" />
         <option value="$PROJECT_DIR$/testtushare/realtimeinfo.py" />
@@ -286,12 +280,14 @@
         <option value="$PROJECT_DIR$/test/test_list.py" />
         <option value="$PROJECT_DIR$/stockmgr/retrive_trade_days.py" />
         <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/data/storemgr.py" />
         <option value="$PROJECT_DIR$/webserver/HandleIndustryCandleStick.py" />
         <option value="$PROJECT_DIR$/data/databasemgr.py" />
         <option value="$PROJECT_DIR$/stockmgr/stockstoremgr.py" />
         <option value="$PROJECT_DIR$/test/test_float.py" />
         <option value="$PROJECT_DIR$/data/stock.py" />
+        <option value="$PROJECT_DIR$/webserver/IndustryManager.py" />
+        <option value="$PROJECT_DIR$/test/test_pandas.py" />
+        <option value="$PROJECT_DIR$/data/storemgr.py" />
       </list>
     </option>
   </component>
@@ -450,7 +446,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test_float">
+  <component name="RunManager" selected="Python.stockstoremgr">
     <configuration default="true" type="js.build_tools.grunt" factoryName="Grunt.js">
       <node-interpreter value="project" />
       <envs />
@@ -562,8 +558,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.test_float" />
-        <item index="1" class="java.lang.String" itemvalue="Python.stockstoremgr" />
+        <item index="0" class="java.lang.String" itemvalue="Python.stockstoremgr" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test_float" />
         <item index="2" class="java.lang.String" itemvalue="Python.main" />
         <item index="3" class="java.lang.String" itemvalue="Python.test_pandas" />
         <item index="4" class="java.lang.String" itemvalue="Python.test_list" />
@@ -600,14 +596,14 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28152493" sideWeight="0.5032415" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36363637" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.398827" sideWeight="0.493517" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.398827" sideWeight="0.493517" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26832846" sideWeight="0.49675852" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24230146" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298217" sideWeight="0.48367348" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3841642" sideWeight="0.49675852" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3020528" sideWeight="0.493517" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3020528" sideWeight="0.493517" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298217" sideWeight="0.46938777" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -918,13 +914,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_remove_save.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="51" lean-forward="false" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_time.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -937,14 +926,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webserver/IndustryManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -993,34 +974,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/databasemgr.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="51" column="8" lean-forward="false" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/storemgr.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_pandas.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="22" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/distutils/tests/test_text_file.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1053,16 +1006,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stockmgr/stockstoremgr.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-157">
-          <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_float.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1075,8 +1018,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/stock.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1150">
+          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stockmgr/stockstoremgr.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="60" column="34" lean-forward="false" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/databasemgr.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="52" column="8" lean-forward="false" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_pandas.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webserver/IndustryManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_remove_save.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/storemgr.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="124" column="47" lean-forward="false" selection-start-line="124" selection-start-column="47" selection-end-line="124" selection-end-column="47" />
           <folding />
         </state>
       </provider>
