@@ -22,7 +22,7 @@ class DayValue(object):
 
         return self.isHammer_green() or self.isHammer_red()
 
-    def isHammer_green(self):
+    def isHammer_red(self):
 
         if self.close < self.open:
 
@@ -36,7 +36,7 @@ class DayValue(object):
 
             return False
 
-        if (self.high - self.close)/self.open > 0.01:
+        if (self.high - self.open)/(self.high - self.low) > 0.33:
 
             return False
 
@@ -44,7 +44,7 @@ class DayValue(object):
 
         pass
 
-    def isHammer_red(self):
+    def isHammer_green(self):
 
         if self.open < self.close:
 
@@ -58,7 +58,7 @@ class DayValue(object):
 
             return False
 
-        if (self.high - self.open)/self.open > 0.01:
+        if (self.high - self.close) / (self.high - self.low) > 0.33:
 
             return False
 
