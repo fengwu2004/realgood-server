@@ -25,8 +25,6 @@ class SuggestInfo(object):
 
 # print(str(item.toJson()))
 
-a = [1, 2, 3, 3, 5]
+import math
 
-for t in a:
-    
-    print(t)
+print(math.pow(1.3, 6))

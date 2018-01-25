@@ -7,7 +7,7 @@ from webserver.analyse_pool_stocks import FindPoolStocks
 from webserver.calc_range_trend import CalcRangeTrend
 from webserver.loginManager import loginManager
 from webserver.save_upload_excel import SaveSuggestExcel
-from webserver.stock_of_consultor_history import FindStockSuggestHistory
+from webserver.stock_of_consultor_history import FindStockSuggestHistory, StockMgr
 from webserver.suggest_candlesticks import FindCandlesticks
 from webserver.suggest_history import FindHistorySuggest
 from webserver.suggestwithtrends import HandleSuggestTrends
@@ -30,6 +30,9 @@ def make_app():
         (r"/addtoselfselect", HandleAddSelfSelectRequest),
         (r"/login", loginManager),
     ])
+
+StockMgr.instance()
+print('load finish')
 
 if __name__ == "__main__":
     app = make_app()

@@ -3,6 +3,7 @@ from stockmgr.load import getLines, formatData
 from data.databasemgr import DatabaseMgr
 import json
 import tushare as ts
+import math
 from collections import defaultdict
 
 def fun():
@@ -17,8 +18,6 @@ def fun():
 
         name = d.loc[item, 'industry']
 
-        print(index, name)
-
         dic[d.loc[item, 'industry']].append(item)
 
     industrys = []
@@ -27,7 +26,13 @@ def fun():
 
         arrays = list()
 
+        realkey = key
+
         print(key)
+
+        if isinstance(key, str) is not True:
+
+            realkey = '其他'
 
         for value in dic[key]:
 
@@ -35,13 +40,15 @@ def fun():
 
             arrays.append({'id':stockid})
 
-        temp = {'firstindustry':key, 'stocks':arrays}
+        temp = {'firstindustry':realkey, 'stocks':arrays}
 
         industrys.append(temp)
 
     DatabaseMgr.instance().industry.remove({})
 
     DatabaseMgr.instance().industry.insert_many(industrys)
+
+fun()
 
 def saveToDB():
     
@@ -89,4 +96,4 @@ def saveToDB():
 
     DatabaseMgr.instance().stockInfos.insert_many(result)
 
-saveToDB()
+# saveToDB()
