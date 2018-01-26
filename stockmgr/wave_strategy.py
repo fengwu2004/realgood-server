@@ -4,11 +4,11 @@ class WaveStrategyUnit(object):
     def __init__(self, stock, alpha):
         
         self.maxs = []
-        
-        self.alpha = alpha
-        
+
         self.mins = []
-        
+
+        self.alpha = alpha
+
         self.id = stock.id
         
         self.lastday = 0

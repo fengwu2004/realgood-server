@@ -1,5 +1,5 @@
 import time
-
+alpha = 0.18
 class DayValue(object):
 
     def __init__(self):
@@ -107,6 +107,10 @@ class Stock(object):
 
         self.dayvalues = []
 
+        self.maxs = []
+
+        self.mins = []
+
     def findIndex(self, date:str):
 
         t0 = time.strptime(date, '%Y/%m/%d')
@@ -125,6 +129,10 @@ class Stock(object):
                 break
 
         return index
+
+    def isNew(self) -> bool:
+
+        return len(self.dayvalues) < 45
 
     def findHeighestValue(self, date:str) -> DayValue:
 
@@ -190,7 +198,68 @@ class Stock(object):
             'dayvalues':dayvalues
         }
 
-        pass
+    # 高点依次升高
+    def increaseTrend(self):
+
+        return all([self.maxs[i] < self.maxs[i + 1] for i in range(len(self.maxs) - 1)]) and all([self.mins[i] < self.mins[i + 1] for i in range(len(self.mins) - 1)])
+
+    def calcMinsAndMaxs(self):
+
+        self.maxs = []
+
+        self.mins = []
+
+        totals = self.dayvalues
+
+        if len(totals) <= 0:
+
+            return
+
+        i = 0
+
+        dayvalue = totals[0]
+
+        tempMin = dayvalue
+
+        tempMax = dayvalue
+
+        while i < len(totals) - 1:
+
+            i = i + 1
+
+            dayvalue = totals[i]
+
+            if tempMax is not None and dayvalue.close < tempMax.close * (1 - alpha):
+
+                self.maxs.append(tempMax)
+
+                tempMax = None
+
+                tempMin = dayvalue
+
+                continue
+
+            if tempMin is not None and dayvalue.close < tempMin.close:
+
+                tempMin = dayvalue
+
+                continue
+
+            if tempMin is not None and dayvalue.close > tempMin.close * (1 + alpha):
+
+                self.mins.append(tempMin)
+
+                tempMin = None
+
+                tempMax = dayvalue
+
+                continue
+
+            if tempMax is not None and dayvalue.close > tempMax.close:
+
+                tempMax = dayvalue
+
+                continue
 
     @classmethod
     def fromJson(cls, jsonvalue):

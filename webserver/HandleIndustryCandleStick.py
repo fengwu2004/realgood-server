@@ -22,21 +22,22 @@ class HandleIndustryCandlestickRequest(RequestBaseManager):
 
             stock = StockMgr.instance().getStock(item['id'])
 
-            if stock is None:
+            if stock is None or stock.isNew():
 
                 continue
+
+            increase = stock.increaseTrend()
 
             lowvolatility = StockMgr.instance().checkIsLowVolatility(stock.id)
 
             isselfselect = StockMgr.instance().checkIsSelfSelect(item['id'])
 
-            try:
-                stockbasic = StockMgr.instance().getStockbasic(item['id'])
+            stockbasic = StockMgr.instance().getStockbasic(item['id'])
 
-            except Exception:
+            if stockbasic is None:
 
                 continue
 
-            results.append({'stock':stock.toJson(), 'lowvolatility':lowvolatility, 'pe':stockbasic.pe, 'marketcap':stockbasic.outstanding, 'isselfselect':isselfselect})
+            results.append({'stock':stock.toJson(), 'increase':increase, 'lowvolatility':lowvolatility, 'pe':stockbasic.pe, 'marketcap':stockbasic.outstanding, 'isselfselect':isselfselect})
 
         self.write({'success': 1, 'data':results})

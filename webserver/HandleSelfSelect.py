@@ -18,13 +18,20 @@ class HandleSelfSelectRequest(RequestBaseManager):
 
             stock = StockMgr.instance().getStock(item['stockid'])
 
-            try:
-                stockbasic = StockMgr.instance().getStockbasic(item['stockid'])
-
-            except Exception:
+            if stock is None or stock.isNew():
 
                 continue
 
-            results.append({'stock':stock.toJson(), 'pe':stockbasic.pe, 'marketcap':stockbasic.outstanding, 'isselfselect':True})
+            lowvolatility = StockMgr.instance().checkIsLowVolatility(stock.id)
+
+            increase = stock.increaseTrend()
+
+            stockbasic = StockMgr.instance().getStockbasic(item['id'])
+
+            if stockbasic is None:
+
+                continue
+
+            results.append({'stock':stock.toJson(), 'increase':increase, 'lowvolatility':lowvolatility, 'pe':stockbasic.pe, 'marketcap':stockbasic.outstanding, 'isselfselect':True})
 
         self.write({'success': 1, 'data':results})

@@ -21,7 +21,11 @@ def loadAllStockFromDB() -> Dict[str, Stock]:
 
             stockId = item['id']
 
-            stocks[stockId] = Stock.fromJson(item)
+            stock = Stock.fromJson(item)
+
+            stock.calcMinsAndMaxs()
+
+            stocks[stockId] = stock
 
     return stocks
 
@@ -36,8 +40,6 @@ class StockMgr(object):
         if _instance is None:
 
             _instance = StockMgr()
-
-        if _instance.date != datetime.now().strftime('%Y/%m/%d'):
 
             _instance.loadStocks()
 
@@ -118,7 +120,14 @@ class StockMgr(object):
 
     def getStockbasic(self, stockId:str):
 
-        return self.stockbasic.loc[stockId]
+        try:
+            basic = self.stockbasic.loc[stockId]
+
+            return basic
+
+        except Exception:
+
+            return None
 
     def getIndustryStocks(self, industry:str):
 
