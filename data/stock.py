@@ -201,7 +201,7 @@ class Stock(object):
     # 高点依次升高
     def increaseTrend(self):
 
-        return all([self.maxs[i] < self.maxs[i + 1] for i in range(len(self.maxs) - 1)]) and all([self.mins[i] < self.mins[i + 1] for i in range(len(self.mins) - 1)])
+        return all([self.maxs[i].close < self.maxs[i + 1].close for i in range(len(self.maxs) - 1)]) and all([self.mins[i].close < self.mins[i + 1].close for i in range(len(self.mins) - 1)])
 
     def calcMinsAndMaxs(self):
 
