@@ -14,8 +14,10 @@ from webserver.suggestwithtrends import HandleSuggestTrends
 from webserver.IndustryManager import IndustryManager
 from webserver.HandleIndustryCandleStick import HandleIndustryCandlestickRequest
 from webserver.HandleSelfSelect import HandleSelfSelectRequest
+from webserver.HandleFilterStocks import HandleFilterStocks
 
 def make_app():
+
     return tornado.web.Application([
         (r"/upload/recommond", SaveSuggestExcel),
         (r"/history/suggest", FindHistorySuggest),
@@ -27,6 +29,7 @@ def make_app():
         (r"/allindustry", IndustryManager),
         (r"/industry", HandleIndustryCandlestickRequest),
         (r"/getSelfSelect", HandleSelfSelectRequest),
+        (r"/getAllFilteredStocks", HandleFilterStocks),
         (r"/addtoselfselect", HandleAddSelfSelectRequest),
         (r"/login", loginManager),
     ])
