@@ -32,7 +32,7 @@ class HandleFilterStocks(RequestBaseManager):
 
             lowvolatility = StockMgr.instance().checkIsLowVolatility(stock.id)
 
-            if lowvolatility is not True or increase is not True:
+            if lowvolatility is not True and increase is not True:
 
                 continue
 
