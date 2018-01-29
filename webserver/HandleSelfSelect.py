@@ -16,17 +16,19 @@ class HandleSelfSelectRequest(RequestBaseManager):
 
         for item in items:
 
-            stock = StockMgr.instance().getStock(item['stockid'])
+            stockid = item['stockid']
+
+            stock = StockMgr.instance().getStock(stockid)
 
             if stock is None or stock.isNew():
 
                 continue
 
-            lowvolatility = StockMgr.instance().checkIsLowVolatility(stock.id)
+            lowvolatility = StockMgr.instance().checkIsLowVolatility(stockid)
 
             increase = stock.increaseTrend()
 
-            stockbasic = StockMgr.instance().getStockbasic(item['id'])
+            stockbasic = StockMgr.instance().getStockbasic(stockid)
 
             if stockbasic is None:
 
