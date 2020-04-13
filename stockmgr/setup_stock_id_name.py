@@ -55,7 +55,7 @@ def add():
     
     stocks = storemgr.loadFromDB()
     
-    uri = "mongodb://yanli:9394@123.207.213.131:27017/recommond?authMechanism=SCRAM-SHA-1"
+    uri = "mongodb://localhost:27017/recommond?authMechanism=SCRAM-SHA-1"
     
     client = MongoClient(uri)
     

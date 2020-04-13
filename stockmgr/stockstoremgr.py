@@ -3,7 +3,6 @@ from stockmgr.load import getLines, formatData
 from data.databasemgr import DatabaseMgr
 import json
 import tushare as ts
-import math
 from collections import defaultdict
 
 def fun():
@@ -48,11 +47,9 @@ def fun():
 
     DatabaseMgr.instance().industry.insert_many(industrys)
 
-fun()
-
 def saveToDB():
     
-    mypath = '/Users/yan/Desktop/export/'
+    mypath = '/Users/yan/Desktop/tdx/'
     
     f = []
     

@@ -42,8 +42,6 @@ class DayValue(object):
 
         return True
 
-        pass
-
     def isHammer_green(self):
 
         if self.open < self.close:

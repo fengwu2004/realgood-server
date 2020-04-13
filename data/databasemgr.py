@@ -19,7 +19,7 @@ class DatabaseMgr(object):
     
     def __init__(self):
 
-        uri = "mongodb://yanli:9394@localhost:27017/recommond?authMechanism=SCRAM-SHA-1"
+        uri = "mongodb://172.28.222.231:27017/recommond?authMechanism=SCRAM-SHA-1"
 
         # uri = "mongodb://yanli:9394@123.206.230.152:27017/recommond?authMechanism=SCRAM-SHA-1"
 

@@ -151,16 +151,6 @@ def getStockLevel(stockId:str) -> int:
 
     return -1
 
-def getConsultorLevel(consultor:Consultor) -> int:
-
-    items = DatabaseMgr.instance().consultorLevels.find({'name':consultor.name, 'company':consultor.company})
-
-    for item in items:
-
-        return item['level']
-
-    return -1
-
 def checkUser(name, pwd):
     
     user = DatabaseMgr.instance().users.find({'name': name})
@@ -185,18 +175,6 @@ def getStockDayvalue(stockId:str, day:str) -> DayValue:
 
     return stock.getDayValue(index - 1)
 
-def loadSuggestOfConsultor(consultorId:int) -> [Suggest]:
-
-    items = DatabaseMgr.instance().suggests.find({'consultorId': consultorId}, {'_id': 0})
-
-    results = []
-
-    for item in items:
-        
-        results.append(Suggest.fromJson(item))
-
-    return results
-
 def getStockName(stockId:str):
 
     stock = StockMgr.instance().getStock(stockId)
@@ -218,58 +196,6 @@ def getStockId(name:str):
         return item['id']
 
     return None
-
-def saveSuggests(newsuggests: set):
-
-    suggests = loadSuggests()
-
-    for suggest in suggests:
-
-        newsuggests.add(suggest)
-
-    reuslts = list(map(lambda item: item.toJson(), newsuggests))
-
-    DatabaseMgr.instance().suggests.remove({})
-
-    DatabaseMgr.instance().suggests.insert_many(reuslts)
-
-    SuggestMgr.instance().load()
-
-def loadSuggests() -> [Suggest]:
-
-    items = DatabaseMgr.instance().suggests.find({}, {'_id': 0})
-
-    return list(map(lambda item: Suggest.fromJson(item), items))
-
-def loadSuggestsOfDate(date:str) -> [Suggest]:
-
-    suggests = loadSuggests()
-
-    return list(filter(lambda suggest: suggest.date == date, suggests))
-
-def formatSuggests():
-    
-    items = DatabaseMgr.instance().suggests.find({}, {'_id': 0})
-    
-    results = []
-    
-    for item in items:
-        
-        obj = Suggest()
-        
-        obj.stockId = item['stockId']
-
-        obj.date = item['date']
-
-        obj.stockName = item['stockName']
-        
-        obj.consultorId = item['consultorId']
-        
-        results.append(obj.toJson())
-
-    DatabaseMgr.instance().suggestscopy.remove({})
-
-    DatabaseMgr.instance().suggestscopy.insert_many(results)
 
 def checkIsNewStock(stockId, dtstr:str):
 
