@@ -2,50 +2,7 @@ from os import walk
 from stockmgr.load import getLines, formatData
 from data.databasemgr import DatabaseMgr
 import json
-import tushare as ts
 from collections import defaultdict
-
-def fun():
-
-    df = ts.get_stock_basics()
-
-    d = df.loc[:,['industry']]
-
-    dic = defaultdict(list)
-
-    for index, item in enumerate(d.index):
-
-        name = d.loc[item, 'industry']
-
-        dic[d.loc[item, 'industry']].append(item)
-
-    industrys = []
-
-    for key in dic:
-
-        arrays = list()
-
-        realkey = key
-
-        print(key)
-
-        if isinstance(key, str) is not True:
-
-            realkey = '其他'
-
-        for value in dic[key]:
-
-            stockid = value
-
-            arrays.append({'id':stockid})
-
-        temp = {'firstindustry':realkey, 'stocks':arrays}
-
-        industrys.append(temp)
-
-    DatabaseMgr.instance().industry.remove({})
-
-    DatabaseMgr.instance().industry.insert_many(industrys)
 
 def saveToDB():
     
