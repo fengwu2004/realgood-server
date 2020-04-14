@@ -1,12 +1,12 @@
 from os import walk
-from stockmgr.load import getLines, formatData
+from load import getLines, formatData
 from data.databasemgr import DatabaseMgr
 import json
 from collections import defaultdict
 
 def saveToDB():
     
-    mypath = '/Users/yan/Desktop/tdx/'
+    mypath = 'C:/Users/Administrator/Desktop/tdx-gbk'
     
     f = []
     
